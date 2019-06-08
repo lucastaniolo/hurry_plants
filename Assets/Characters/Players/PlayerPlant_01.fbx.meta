@@ -5,7 +5,17 @@ labels:
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlayerPlant_01_Body_Mat
+    second: {fileID: 2100000, guid: d341d7d2957d4e648963b011a19cb2b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlayerPlant_01_Head_Mat
+    second: {fileID: 2100000, guid: 0adf4c2161f906546939f2b8a86f7dc7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
