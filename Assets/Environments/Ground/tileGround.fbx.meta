@@ -5,7 +5,12 @@ labels:
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 663acceca7587d6468423dabd42a4eab, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
