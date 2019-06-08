@@ -1,13 +1,23 @@
 fileFormatVersion: 2
-guid: d24918232a4c8df42a2b9b682d375319
+guid: 1305fe20dd0c2114281c909e377dca16
 ModelImporter:
-  serializedVersion: 27
+  serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BossPlant_Body_Mat
+    second: {fileID: 2100000, guid: aebf8b7ba781d644c92b69363d83e036, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BossPlant_Vase_Mat
+    second: {fileID: 2100000, guid: d5190d30187e8454482b9a76354b8252, type: 2}
   materials:
     importMaterials: 1
-    materialName: 0
-    materialSearch: 1
+    materialName: 1
+    materialSearch: 0
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -38,11 +48,10 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    sortHierarchyByName: 1
     importVisibility: 1
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -69,6 +78,7 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -86,9 +96,8 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
-  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
