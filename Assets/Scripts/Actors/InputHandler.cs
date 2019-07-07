@@ -2,13 +2,11 @@
 using System.Linq;
 using UnityEngine;
 
-[System.Serializable]
 public class InputHandler : MonoBehaviour
 {
     public Vector3 Direction { get; private set; }
 
-    [SerializeField]
-    public Dictionary<Vector2, float> directions = new Dictionary<Vector2, float>();
+    public readonly Dictionary<Vector2, float> directions = new Dictionary<Vector2, float>();
 
     private void Awake()
     {

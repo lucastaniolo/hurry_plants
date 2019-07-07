@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GamepadInput;
 
-public class Player : MonoBehaviour
+public class Player : SimpleStateMachine
 {
     public Pickable Pickable;
     public Picker Picker;
@@ -11,35 +11,53 @@ public class Player : MonoBehaviour
     public GroundMovement GroundMovement;
     public InputHandler InputHandler;
 
-    private enum State
-    {
-        IDLE,
-        RUNNING,
-        FLYING,
-        CAPTURED,
-    }
-
-    private State state;
+    private enum PlayerStates { IDLE, RUNNING, FLYING, CAPTURED }
 
     void Start()
     {
 
     }
 
-    private void Update()
+    protected override void EarlyGlobalSuperUpdate()
     {
-        switch (state)
-        {
-            case State.IDLE:
-                Pickable.SetPickable();
-                break;
-            case State.RUNNING:
-                break;
-            case State.FLYING:
-                break;
-            case State.CAPTURED:
-                break;
-        }
+
+    }
+
+    protected override void LateGlobalSuperUpdate()
+    {
+
+    }
+
+    private void RUNNING_FixedUpdate()
+    {
+        if (InputHandler.Direction != Vector3.zero) //Comment this to enable always moving mechanic
+            GroundMovement.Move(InputHandler.Direction);
+        else
+            currentState = PlayerStates.IDLE;
+    }
+
+    private void IDLE_EnterState()
+    {
+        Pickable.SetPickable(true);
+    }
+
+    private void IDLE_ExitState()
+    {
+        Pickable.SetPickable(false);
+    }
+
+    private void CAPTURED_EnterState()
+    {
+
+    }
+
+    private void CAPTURED_UpdateState()
+    {
+
+    }
+
+    private void CAPTURED_ExitState()
+    {
 
     }
 
@@ -57,5 +75,10 @@ public class Player : MonoBehaviour
         var from = transform.position + Vector3.up;
         var to = from + transform.forward * 1.5f;
         Gizmos.DrawLine(from, to);
+    }
+
+    private void OnPicked()
+    {
+        currentState = PlayerStates.CAPTURED;
     }
 }
