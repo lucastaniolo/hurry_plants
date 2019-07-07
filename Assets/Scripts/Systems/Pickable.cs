@@ -4,34 +4,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Pickable : MonoBehaviour
+public class Pickable : SimpleStateMachine
 {
-    private bool pickable;
-
-    [SerializeField] private Collider collider;
+    [SerializeField] private Collider collider; //Set via inspector
 
     [HideInInspector] public UnityEvent OnPickableReady = new UnityEvent();
     [HideInInspector] public UnityEvent OnPicked = new UnityEvent();
     [HideInInspector] public UnityEvent OnThrowed = new UnityEvent();
 
-    void Start()
+    private enum PickableStates { NOT_PICKABLE, PICKABLE, PICKED, THROWED }
+
+    private void PICKABLE_EnterState()
     {
-        
+        OnPicked.Invoke();
     }
 
-    void Update()
+    public void SetPickable(bool canBePicked)
     {
-        
-    }
+        currentState = canBePicked ? PickableStates.PICKABLE : PickableStates.NOT_PICKABLE;
 
-    public void SetPickable(bool canBePicked = true)
-    {
-        pickable = canBePicked;
         OnPickableReady.Invoke();
     }
 
-    public void Picked()
+    public void Pick()
     {
-        OnPicked.Invoke();
+
     }
 }

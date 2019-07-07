@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GamepadInput;
 
 public class Player : SimpleStateMachine
 {
@@ -30,35 +29,39 @@ public class Player : SimpleStateMachine
 
     private void RUNNING_FixedUpdate()
     {
+        print("RUNNING_FixedUpdate");
         if (InputHandler.Direction != Vector3.zero) //Comment this to enable always moving mechanic
             GroundMovement.Move(InputHandler.Direction);
         else
             currentState = PlayerStates.IDLE;
     }
 
+
     private void IDLE_EnterState()
     {
+        print("IDLE_EnterState");
         Pickable.SetPickable(true);
     }
 
     private void IDLE_ExitState()
     {
+        print("IDLE_ExitState");
         Pickable.SetPickable(false);
     }
 
     private void CAPTURED_EnterState()
     {
-
+        print("CAPTURED_EnterState");
     }
 
     private void CAPTURED_UpdateState()
     {
-
+        print("CAPTURED_UpdateState");
     }
 
     private void CAPTURED_ExitState()
     {
-
+        print("CAPTURED_ExitState");
     }
 
     private void FixedUpdate()
