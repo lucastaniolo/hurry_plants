@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        NavigatorManager.LoadMenu();
+        if (SceneManager.GetActiveScene().name == "StartUp")
+            NavigatorManager.LoadMenu();
     }
 
     private void Update()
