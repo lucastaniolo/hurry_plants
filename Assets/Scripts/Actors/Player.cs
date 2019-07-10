@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : SimpleStateMachine
 {
@@ -14,12 +12,16 @@ public class Player : SimpleStateMachine
 
     void Start()
     {
+        Pickable.OnPicked.AddListener(() => currentState = PlayerStates.CAPTURED);
+        Pickable.OnThrowed.AddListener(() => currentState = PlayerStates.FLYING);
 
+        currentState = PlayerStates.IDLE;
     }
 
     protected override void EarlyGlobalSuperUpdate()
     {
-
+        if (InputHandler.ThrowButton)
+            Picker.Throw();
     }
 
     protected override void LateGlobalSuperUpdate()
@@ -29,7 +31,6 @@ public class Player : SimpleStateMachine
 
     private void RUNNING_FixedUpdate()
     {
-        print("RUNNING_FixedUpdate");
         if (InputHandler.Direction != Vector3.zero) //Comment this to enable always moving mechanic
             GroundMovement.Move(InputHandler.Direction);
         else
@@ -39,38 +40,31 @@ public class Player : SimpleStateMachine
 
     private void IDLE_EnterState()
     {
-        print("IDLE_EnterState");
-        Pickable.SetPickable(true);
+        Pickable.SetIdle();
+    }
+
+    private void IDLE_Update()
+    {
+        if (InputHandler.Direction != Vector3.zero)
+            currentState = PlayerStates.RUNNING;
     }
 
     private void IDLE_ExitState()
     {
-        print("IDLE_ExitState");
-        Pickable.SetPickable(false);
+        Pickable.SetIdle();
     }
 
     private void CAPTURED_EnterState()
     {
-        print("CAPTURED_EnterState");
     }
 
     private void CAPTURED_UpdateState()
     {
-        print("CAPTURED_UpdateState");
+
     }
 
     private void CAPTURED_ExitState()
     {
-        print("CAPTURED_ExitState");
-    }
-
-    private void FixedUpdate()
-    {
-        //var direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        //GroundMovement.Move(direction);
-
-        if (InputHandler.Direction != Vector3.zero) //Comment this to enable always moving mechanic
-            GroundMovement.Move(InputHandler.Direction);
     }
 
     private void OnDrawGizmos()
@@ -78,10 +72,5 @@ public class Player : SimpleStateMachine
         var from = transform.position + Vector3.up;
         var to = from + transform.forward * 1.5f;
         Gizmos.DrawLine(from, to);
-    }
-
-    private void OnPicked()
-    {
-        currentState = PlayerStates.CAPTURED;
     }
 }

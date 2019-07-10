@@ -6,6 +6,8 @@ public class InputHandler : MonoBehaviour
 {
     public Vector3 Direction { get; private set; }
 
+    public bool ThrowButton { get; private set; }
+
     public readonly Dictionary<Vector2, float> directions = new Dictionary<Vector2, float>();
 
     private void Awake()
@@ -17,6 +19,12 @@ public class InputHandler : MonoBehaviour
     }
 
     private void Update()
+    {
+        HandleDirection();
+        HandleActions();
+    }
+
+    private void HandleDirection()
     {
         // UP
         if (Input.GetKey(KeyCode.W))
@@ -45,5 +53,10 @@ public class InputHandler : MonoBehaviour
         var dir = directions.OrderBy(d => d.Value).FirstOrDefault(d => d.Value != 0);
 
         Direction = dir.Value == 0 ? Vector3.zero : new Vector3(dir.Key.x, 0, dir.Key.y);
+    }
+
+    private void HandleActions()
+    {
+        ThrowButton = Input.GetKeyDown(KeyCode.Space);
     }
 }
