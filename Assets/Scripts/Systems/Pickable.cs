@@ -3,7 +3,8 @@ using UnityEngine.Events;
 
 public class Pickable : SimpleStateMachine
 {
-    [SerializeField] private Collider collider; //Set via inspector
+    [SerializeField] private Collider trigger; //Set via inspector
+    [SerializeField] private Collider wall; //Set via inspector
 
     [HideInInspector] public UnityEvent OnPickableReady = new UnityEvent();
     [HideInInspector] public UnityEvent OnPicked = new UnityEvent();
@@ -29,17 +30,21 @@ public class Pickable : SimpleStateMachine
     private void PICKED_EnterState()
     {
         animator?.SetBool("IsPicked", true);
+        wall.enabled = false;
+        trigger.enabled = false;
         OnPicked.Invoke();
     }
 
     private void PICKED_ExitState()
     {
         animator?.SetBool("IsPicked", false);
+        wall.enabled = true;
+        trigger.enabled = true;
+        Picker = null;
     }
 
     private void THROWED_EnterState()
     {
-        Picker = null;
         transform.SetParent(null);
         animator?.SetBool("IsFlying", true);
         OnThrowed.Invoke();
@@ -72,4 +77,8 @@ public class Pickable : SimpleStateMachine
     public void SetIdle() => currentState = PickableStates.IDLE;
     public void SetThrow() => currentState = PickableStates.THROWED;
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        //if (collision.other.)   
+    }
 }

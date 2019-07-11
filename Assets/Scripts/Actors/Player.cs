@@ -51,7 +51,7 @@ public class Player : SimpleStateMachine
 
     private void IDLE_ExitState()
     {
-        Pickable.SetIdle();
+        
     }
 
     private void CAPTURED_EnterState()

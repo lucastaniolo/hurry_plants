@@ -8,6 +8,7 @@ public class Picker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Check if we are already carrying something
         if (Pickable != null) return;
 
         var pickable = other.GetComponent<Pickable>();
