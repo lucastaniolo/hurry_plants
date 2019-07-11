@@ -22,6 +22,7 @@ public class Picker : MonoBehaviour
         Pickable = pickable;
         Pickable.transform.SetParent(PickedPoint);
         Pickable.transform.rotation = PickedPoint.rotation;
+        Pickable.transform.localPosition = Vector3.zero;
     }
 
     public void Throw()

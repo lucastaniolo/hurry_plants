@@ -40,7 +40,8 @@ public class Pickable : SimpleStateMachine
     private void THROWED_EnterState()
     {
         Picker = null;
-        animator?.SetTrigger("Throw");
+        transform.SetParent(null);
+        animator?.SetBool("IsFlying", true);
         OnThrowed.Invoke();
     }
 
@@ -49,8 +50,14 @@ public class Pickable : SimpleStateMachine
         AirMovement.Move(transform.forward);
     }
 
+    private void THROWED_ExitState()
+    {
+        animator?.SetBool("IsFlying", false);
+    }
+
     public bool Pick(Picker picker)
     {
+        // Return false if we can't be picked up at this moment
         if (Picker != null &&
             (PickableStates)currentState != PickableStates.IDLE &&
             (PickableStates)currentState != PickableStates.THROWED)
