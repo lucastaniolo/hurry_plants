@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1305fe20dd0c2114281c909e377dca16
+guid: 013af5318e16b3c45b01037db7352eaa
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -7,17 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BossPlant_Body_Mat
-    second: {fileID: 2100000, guid: be4051ed4a7570348ba7e647a7ab4741, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BossPlant_Vase_Mat
-    second: {fileID: 2100000, guid: 3ec172115f73e4b4e880c74a02c1842b, type: 2}
+      name: bomb_mat
+    second: {fileID: 2100000, guid: c05a939b6c399d14eae6e42a9f0a516d, type: 2}
   materials:
     importMaterials: 1
-    materialName: 1
-    materialSearch: 0
+    materialName: 0
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -33,7 +28,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -49,9 +44,9 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -69,20 +64,15 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 180
+    normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 1
-  referencedClips:
-  - b5b70cc6817966a41955b9f7012d6eef
-  - c523b8ac04078624e83548a392042322
-  - f06e807df7d9a944b9a9107c7498bbf0
-  - 2c8d2145be2eaf6459cc9dce41a1dff9
-  - b25755a733c799d4bb3ea3049a0d68e3
-  importAnimation: 0
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 3
@@ -96,12 +86,12 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: bossPlant_root_jnt1
+    rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
