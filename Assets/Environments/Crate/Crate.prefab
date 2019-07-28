@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8179634888070776337}
   - component: {fileID: 2927247204615437278}
   - component: {fileID: 8940102292721287590}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crate_geo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6398655270001111145}
-  m_Layer: 0
+  - component: {fileID: 896552298282004067}
+  - component: {fileID: 1100943680}
+  m_Layer: 9
   m_Name: Crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +102,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7969065432215585402}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -108,3 +110,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &896552298282004067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969065432215585402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0cfd65c9e01fe74fb65da5699560fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3,
+    type: 3}
+--- !u!65 &1100943680
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969065432215585402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}

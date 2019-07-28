@@ -1,25 +1,29 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Picker : MonoBehaviour
 {
     public Transform PickedPoint;
+    public Transform ThrowPoint;
     public Pickable Pickable;
     private Animator Animator = null;
+    public Collider Collider { get; private set; }
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        // Check if we are already carrying something
-        if (Pickable != null) return;
-
-        var pickable = other.GetComponent<Pickable>();
-        if (pickable == null) return;
-
-        if (pickable.Pick(this))
-            Pick(pickable);
+        Collider = GetComponent<Collider>();
     }
 
-    private void Pick(Pickable pickable)
+    public void TryPick(Pickable pickable)
     {
+        if (Pickable != null) 
+        {
+            pickable.ResolvePick(false);
+            return;
+        }
+
+        pickable.ResolvePick(true);
+
         Pickable = pickable;
         Pickable.transform.SetParent(PickedPoint);
         Pickable.transform.rotation = PickedPoint.rotation;

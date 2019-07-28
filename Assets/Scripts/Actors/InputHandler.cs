@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using GamepadInput;
 
 public class InputHandler : MonoBehaviour
 {
+    public GamePad.Index gamePadIndex;
+
     public Vector3 Direction { get; private set; }
 
     public bool ThrowButton { get; private set; }
@@ -20,8 +23,11 @@ public class InputHandler : MonoBehaviour
 
     private void Update()
     {
-        HandleDirection();
-        HandleActions();
+        if (gamePadIndex == GamePad.Index.One)
+        {
+            HandleDirection();
+            HandleActions();
+        }
     }
 
     private void HandleDirection()

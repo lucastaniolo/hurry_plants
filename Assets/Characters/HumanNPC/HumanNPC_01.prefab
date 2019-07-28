@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1672896944}
   - component: {fileID: 1672896946}
   - component: {fileID: 1249278483232764808}
+  - component: {fileID: 1084853378716326080}
   m_Layer: 8
   m_Name: HumanNPC_01
   m_TagString: Victim
@@ -60,9 +61,9 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8112406289605747336}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.25
+  m_Radius: 0.2
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
@@ -81,7 +82,8 @@ MonoBehaviour:
   DebugGui: 0
   DebugGuiPosition: {x: 0, y: 0}
   DebugGuiTitle: Simple Machine
-  collider: {fileID: 1672896943}
+  trigger: {fileID: 1672896943}
+  wall: {fileID: 1672896943}
   OnPickableReady:
     m_PersistentCalls:
       m_Calls: []
@@ -97,6 +99,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnHit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Picker: {fileID: 0}
   AirMovement: {fileID: 1672896946}
 --- !u!114 &1672896946
@@ -125,6 +131,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f459a926378d5774eb51012e806b1046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickable: {fileID: 1672896944}
+  hitFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3, type: 3}
+  respawner: {fileID: 1084853378716326080}
+--- !u!114 &1084853378716326080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112406289605747336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267ab6049aa81a84292bca708693a849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  timeToSpawn: 3
+  spawnFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3, type: 3}
+  registerSpawnFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3,
+    type: 3}
 --- !u!1001 &6209317017803287375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,6 +232,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8f3e32e448809874b936106f5586f25e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56574f17f97c5514b9cb3507e9f8d6cb, type: 3}
 --- !u!4 &1391990668899532885 stripped

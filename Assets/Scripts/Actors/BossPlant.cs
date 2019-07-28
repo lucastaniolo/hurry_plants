@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossPlant : MonoBehaviour
+public class BossPlant : MonoBehaviour, IObjective
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Animator animator;
 
-    // Update is called once per frame
-    void Update()
+    public void ObjectiveHit()
     {
-        
+        animator.SetTrigger("Eat");
     }
 }
