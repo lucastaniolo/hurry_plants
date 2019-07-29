@@ -5,6 +5,7 @@ public class Respawner : MonoBehaviour
 { 
     [HideInInspector] public UnityEvent OnSpawn = new UnityEvent();
     private Vector3 startPosition;
+    private Quaternion startRotation;
 
     [SerializeField] private float timeToSpawn;
     [SerializeField] private GameObject spawnFx;
@@ -13,16 +14,20 @@ public class Respawner : MonoBehaviour
     private void Start()
     {
         startPosition = transform.position;
+        startRotation = transform.rotation;
     }
 
     public void Respawn()
     {
+        transform.position = startPosition;
+        transform.rotation = startRotation;
         gameObject.SetActive(true);
         Instantiate(spawnFx, startPosition, Quaternion.identity);
     }
 
     public void Register()
     {
+        Debug.Log("Register Spawn");
         gameObject.SetActive(false);
         Instantiate(registerSpawnFx, startPosition, Quaternion.identity);
         SpawnManager.ME.RegisterSpawn(this, timeToSpawn);

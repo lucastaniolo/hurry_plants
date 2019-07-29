@@ -48,6 +48,7 @@ public class Pickable : SimpleStateMachine
         // wall.enabled = true;
         trigger.enabled = true;
         rigidbody.isKinematic = false;
+        Invoke(nameof(ResetIgnoreCollision), 0.2f);
     }
 
     private void THROWED_EnterState()
@@ -67,6 +68,11 @@ public class Pickable : SimpleStateMachine
     private void THROWED_ExitState()
     {
         animator?.SetBool("IsFlying", false);
+    }
+
+    private void ResetIgnoreCollision()
+    {
+        Physics.IgnoreCollision(trigger, Picker.Collider, false);
     }
 
     public bool Pick(Picker picker)
@@ -114,6 +120,7 @@ public class Pickable : SimpleStateMachine
         else if ((PickableStates)currentState == PickableStates.THROWED)
         {
             OnHit.Invoke(collision.gameObject);
+            currentState = PickableStates.IDLE;
         }
     }
 }
