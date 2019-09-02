@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 501973484676c4e4bbfdd4338497876d
+guid: aef402b2c5715f24bb04c00507110ed9
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -38,10 +38,10 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -66,12 +66,8 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - daf121ffbdb214843bb57c1a688f69f6
-  - ddd690b803b5fbc4b890eab3c1d608a9
-  - b933af5ee23f9df43a38e3248adbe8c6
-  - 02f0a773ba14b1046b8681f8fde9fe9a
-  importAnimation: 0
+  referencedClips: []
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 3
@@ -85,12 +81,12 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: humanNPC_root_jnt1
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
