@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &2647354893091993063
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048144372645320374}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bddffa04f4f1ca14bb3b5883be44a68f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6430834150090839012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,11 +131,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.027
       objectReference: {fileID: 0}
-    - target: {fileID: 8967749249850448850, guid: a665d45a0833e6641a0c94c0f51b820e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: cb8e1b6c7d0fb5d46953618c965dba09, type: 2}
     - target: {fileID: 4109906369954403064, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -127,5 +141,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.069
       objectReference: {fileID: 0}
+    - target: {fileID: 8967749249850448850, guid: a665d45a0833e6641a0c94c0f51b820e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cb8e1b6c7d0fb5d46953618c965dba09, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a665d45a0833e6641a0c94c0f51b820e, type: 3}
+--- !u!1 &2048144372645320374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4995215340609783122, guid: a665d45a0833e6641a0c94c0f51b820e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6430834150090839012}
+  m_PrefabAsset: {fileID: 0}

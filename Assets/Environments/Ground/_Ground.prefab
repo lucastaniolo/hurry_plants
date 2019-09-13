@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4131222891173002440}
-  - {fileID: 8307688792881247810}
+  - {fileID: 1810755721626739429}
   m_Father: {fileID: 6920865279610705481}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,7 +63,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3904728897198464344
+--- !u!1001 &6655102482865768959
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -73,17 +73,12 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 47f3e936ebe492d4d86e695579009b65,
         type: 3}
       propertyPath: m_Name
-      value: GRASS
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 47f3e936ebe492d4d86e695579009b65,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 47f3e936ebe492d4d86e695579009b65,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 47f3e936ebe492d4d86e695579009b65,
         type: 3}
@@ -103,7 +98,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 47f3e936ebe492d4d86e695579009b65,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 47f3e936ebe492d4d86e695579009b65,
         type: 3}
@@ -142,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 61895657af158ac4bbcbbdb2f7edef2a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47f3e936ebe492d4d86e695579009b65, type: 3}
---- !u!4 &8307688792881247810 stripped
+--- !u!4 &1810755721626739429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 47f3e936ebe492d4d86e695579009b65,
     type: 3}
-  m_PrefabInstance: {fileID: 3904728897198464344}
+  m_PrefabInstance: {fileID: 6655102482865768959}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8948575057124104146
 PrefabInstance:
