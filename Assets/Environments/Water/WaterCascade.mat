@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterFlow
-  m_Shader: {fileID: -6465566751694194690, guid: 3595be1c08de3f0499e12d28a7ae368b,
+  m_Name: WaterCascade
+  m_Shader: {fileID: -6465566751694194690, guid: 82008ec610f7b5c4da12a9be88096561,
     type: 3}
   m_ShaderKeywords: _SPECULAR_SETUP
   m_LightmapFlags: 4
@@ -42,6 +42,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_3C1259B9:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_B5515429:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -73,16 +77,32 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_8F5730BC_Out:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_A21BAF62_Out:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_69561786_Texture:
+        m_Texture: {fileID: 2800000, guid: fdbf95e270a49e04d8eb2b4c019a6e1c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_1F12D02C: 8.53
-    - Vector1_3B5C326D: 3.57
+    - Vector1_1F12D02C: 4.61
+    - Vector1_3B5C326D: 5.62
+    - Vector1_574D3C09: -0.1
     - Vector1_5B946D5A: 0
-    - Vector1_9B68AAF1: 2.81
+    - Vector1_9B68AAF1: 2.49
     - Vector1_A6C9F7DC: 0
-    - Vector1_AFFD8DC9: 12
-    - Vector1_E12285F: 3.73
+    - Vector1_AFFD8DC9: 17.6
+    - Vector1_B2AA276A: -0.13
+    - Vector1_D6C9DABD: 4
+    - Vector1_E12285F: 1.49
     - Vector1_EA481F89: -11.03
-    - Vector1_EC85CAA3: 0
+    - Vector1_EC85CAA3: 1.52
+    - Vector1_FA7A0F65: 0.33
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -107,7 +127,8 @@ Material:
     m_Colors:
     - Color_1DEE13BB: {r: 337.79395, g: 337.79395, b: 337.79395, a: 0}
     - Color_40FE48ED: {r: 0.39569244, g: 0.7169812, b: 0.66817653, a: 1}
-    - Color_BC9D835B: {r: 0, g: 0.59721714, b: 0.9433962, a: 1}
+    - Color_81FC0989: {r: 0.10693307, g: 0.13142154, b: 0.8396226, a: 0.3647059}
+    - Color_BC9D835B: {r: 0.7075472, g: 0.6860746, b: 0.630785, a: 1}
     - Color_DF34C157: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0}
     - _BaseColor: {r: 0.12615699, g: 0.37141398, b: 0.764151, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
