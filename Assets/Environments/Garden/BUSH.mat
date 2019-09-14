@@ -21,18 +21,30 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BUSH
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 6cd9c4bddd385054686854bb8ca9b4df,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_13B5FE1C:
+        m_Texture: {fileID: 2800000, guid: 4122b93bb3d2af647b26cbd570f39c1a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_3BABA401:
+        m_Texture: {fileID: 2800000, guid: 4122b93bb3d2af647b26cbd570f39c1a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_3C1259B9:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 4122b93bb3d2af647b26cbd570f39c1a, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -61,7 +73,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_2CC0B226_Out:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_44476A7C_Out:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_6FCEEA54_Out:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_335B3A86: 1
+    - Vector1_5D30D814: 0.41
+    - Vector1_6B76DB54: 0.07
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -84,6 +111,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_60FAA560: {r: 0.07098792, g: 1, b: 0, a: 0}
+    - Color_8C1547AB: {r: 0.95283014, g: 0, b: 0, a: 1}
+    - Color_B6D25606: {r: 0.06486455, g: 0.10412467, b: 0.013655695, a: 0}
+    - Color_DF34C157: {r: 0, g: 0, b: 0, a: 0}
+    - Vector3_453BC6EB: {r: 0, g: 0.7, b: 2, a: 0}
     - _BaseColor: {r: 0.8679245, g: 0.6722777, b: 0.41349235, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

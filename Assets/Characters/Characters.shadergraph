@@ -10,7 +10,7 @@
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.BooleanShaderProperty"
             },
-            "JSONnodeData": "{\n    \"m_Name\": \"Texture or Color\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"d6e6f462-38ae-42d1-b71a-b871a00b35e4\"\n    },\n    \"m_DefaultReferenceName\": \"Boolean_ED438E34\",\n    \"m_OverrideReferenceName\": \"\",\n    \"m_Value\": false\n}"
+            "JSONnodeData": "{\n    \"m_Name\": \"Active Texture\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"d6e6f462-38ae-42d1-b71a-b871a00b35e4\"\n    },\n    \"m_DefaultReferenceName\": \"Boolean_ED438E34\",\n    \"m_OverrideReferenceName\": \"\",\n    \"m_Value\": true\n}"
         },
         {
             "typeInfo": {
@@ -87,7 +87,7 @@
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.PropertyNode"
             },
-            "JSONnodeData": "{\n    \"m_GuidSerialized\": \"4fcdbb24-4750-4ef5-b1a2-a7b498d52667\",\n    \"m_GroupGuidSerialized\": \"00000000-0000-0000-0000-000000000000\",\n    \"m_Name\": \"Property\",\n    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\": \"2\",\n            \"x\": -1580.0,\n            \"y\": -423.0000305175781,\n            \"width\": 131.0,\n            \"height\": 77.0\n        }\n    },\n    \"m_SerializableSlots\": [\n        {\n            \"typeInfo\": {\n                \"fullName\": \"UnityEditor.ShaderGraph.BooleanMaterialSlot\"\n            },\n            \"JSONnodeData\": \"{\\n    \\\"m_Id\\\": 0,\\n    \\\"m_DisplayName\\\": \\\"Texture or Color\\\",\\n    \\\"m_SlotType\\\": 1,\\n    \\\"m_Priority\\\": 2147483647,\\n    \\\"m_Hidden\\\": false,\\n    \\\"m_ShaderOutputName\\\": \\\"Out\\\",\\n    \\\"m_StageCapability\\\": 3,\\n    \\\"m_Value\\\": false,\\n    \\\"m_DefaultValue\\\": false\\n}\"\n        }\n    ],\n    \"m_PreviewExpanded\": true,\n    \"m_PropertyGuidSerialized\": \"d6e6f462-38ae-42d1-b71a-b871a00b35e4\"\n}"
+            "JSONnodeData": "{\n    \"m_GuidSerialized\": \"4fcdbb24-4750-4ef5-b1a2-a7b498d52667\",\n    \"m_GroupGuidSerialized\": \"00000000-0000-0000-0000-000000000000\",\n    \"m_Name\": \"Property\",\n    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\": \"2\",\n            \"x\": -1580.0,\n            \"y\": -423.0000305175781,\n            \"width\": 131.0,\n            \"height\": 77.0\n        }\n    },\n    \"m_SerializableSlots\": [\n        {\n            \"typeInfo\": {\n                \"fullName\": \"UnityEditor.ShaderGraph.BooleanMaterialSlot\"\n            },\n            \"JSONnodeData\": \"{\\n    \\\"m_Id\\\": 0,\\n    \\\"m_DisplayName\\\": \\\"Active Texture\\\",\\n    \\\"m_SlotType\\\": 1,\\n    \\\"m_Priority\\\": 2147483647,\\n    \\\"m_Hidden\\\": false,\\n    \\\"m_ShaderOutputName\\\": \\\"Out\\\",\\n    \\\"m_StageCapability\\\": 3,\\n    \\\"m_Value\\\": false,\\n    \\\"m_DefaultValue\\\": false\\n}\"\n        }\n    ],\n    \"m_PreviewExpanded\": true,\n    \"m_PropertyGuidSerialized\": \"d6e6f462-38ae-42d1-b71a-b871a00b35e4\"\n}"
         },
         {
             "typeInfo": {
