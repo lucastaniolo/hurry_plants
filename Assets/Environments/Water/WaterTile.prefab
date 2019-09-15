@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8418145816737264413
 Transform:
   m_ObjectHideFlags: 0
@@ -4869,7 +4869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5843854817213567599}
   m_Layer: 0
-  m_Name: WaterTile
+  m_Name: WaterTile01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4951,7 +4951,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f7e70f92e046e7540aac91f031b66702, type: 2}
+  - {fileID: 2100000, guid: 04a53af9d9c297246b431e6c8910ed60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4978,11 +4978,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5843854817213567599}
     m_Modifications:
-    - target: {fileID: 4835787855914888158, guid: f3b89a7cad4c305489180d939555d53e,
-        type: 3}
-      propertyPath: m_Name
-      value: _Earth
-      objectReference: {fileID: 0}
     - target: {fileID: 5747414732255317701, guid: f3b89a7cad4c305489180d939555d53e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5037,6 +5032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835787855914888158, guid: f3b89a7cad4c305489180d939555d53e,
+        type: 3}
+      propertyPath: m_Name
+      value: _Earth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3b89a7cad4c305489180d939555d53e, type: 3}
