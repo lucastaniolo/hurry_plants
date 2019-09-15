@@ -14,7 +14,7 @@ public class PickUpElement<O> : MonoBehaviour where O : IObjective
         var elementt = GetComponent<PickUpElement<O>>();
     }
 
-    protected virtual void OnHit(GameObject hitObject)
+    protected virtual void OnHit(Pickable throwedPickable, GameObject hitObject)
     {
         Instantiate(hitFx, transform.position, Quaternion.identity);
 
