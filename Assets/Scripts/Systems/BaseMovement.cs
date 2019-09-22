@@ -5,14 +5,12 @@ public abstract class BaseMovement : MonoBehaviour
     [SerializeField] protected float baseSpeed;
     [SerializeField] protected Rigidbody rigidbody;
 
-    public abstract void Move(Vector3 direction, float speedMultiplier = 1f);
-
-    public enum Direction { LEFT, RIGHT, UP, DOWN }
-    protected Direction direction;
-
-
-
-    public void Rotate(Vector3 input)
+    public virtual void Move(Vector3 direction)
+    {
+        rigidbody.MovePosition(rigidbody.position + baseSpeed * Time.deltaTime * direction);
+    }
+    
+    protected void Rotate(Vector3 input)
     {
         var angle = 0f;
 

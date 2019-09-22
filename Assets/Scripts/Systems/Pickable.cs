@@ -3,18 +3,15 @@ using UnityEngine.Events;
 
 public class Pickable : SimpleStateMachine
 {
-    [SerializeField] private Collider trigger; //Set via inspector
-    [SerializeField] private Collider wall; //Set via inspector
+    [SerializeField] private Collider trigger;
+    [SerializeField] private AirMovement airMovement;
 
-    [HideInInspector] public UnityEvent OnPickableReady = new UnityEvent();
     [HideInInspector] public UnityEvent OnPicked = new UnityEvent();
     [HideInInspector] public UnityEvent OnThrowed = new UnityEvent();
     [HideInInspector] public OnHit OnHit = new OnHit();
 
-    public enum PickableStates { NOT_PICKABLE, IDLE, PICKED, THROWED }
-
-    public Picker Picker;
-    public AirMovement AirMovement;
+    private enum PickableStates { Idle, Picked, Thrown }
+    private Picker picker;
 
     public Collider Collider => trigger;
     
@@ -23,7 +20,7 @@ public class Pickable : SimpleStateMachine
 
     private void Start()
     {
-        currentState = PickableStates.IDLE;
+        currentState = PickableStates.Idle;
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -38,7 +35,7 @@ public class Pickable : SimpleStateMachine
         // wall.enabled = false;
         trigger.enabled = false;
         rigidbody.isKinematic = true;
-        Physics.IgnoreCollision(trigger, Picker.Collider);
+        Physics.IgnoreCollision(trigger, picker.Collider);
         OnPicked.Invoke();
     }
 
@@ -50,35 +47,34 @@ public class Pickable : SimpleStateMachine
         rigidbody.isKinematic = false;
     }
 
-    private void THROWED_EnterState()
+    private void THROWN_EnterState()
     {
         transform.SetParent(null);
         animator?.SetBool("IsFlying", true);
-        transform.position = Picker.ThrowPoint.position;
+        transform.position = picker.ThrowPoint.position;
         OnThrowed.Invoke();
-        Picker = null;
+        picker = null;
     }
 
-    private void THROWED_FixedUpdate()
+    private void THROWN_FixedUpdate()
     {
-        AirMovement.Move(transform.forward);
+        airMovement.Move(transform.forward);
     }
 
-    private void THROWED_ExitState()
+    private void THROWN_ExitState()
     {
         animator?.SetBool("IsFlying", false);
-        
     }
 
     public bool Pick(Picker picker)
     {
-        if (Picker != null &&
-            (PickableStates)currentState != PickableStates.IDLE &&
-            (PickableStates)currentState != PickableStates.THROWED)
+        if (this.picker != null &&
+            (PickableStates)currentState != PickableStates.Idle &&
+            (PickableStates)currentState != PickableStates.Thrown)
             return false;
 
-        Picker = picker;
-        currentState = PickableStates.PICKED;
+        this.picker = picker;
+        currentState = PickableStates.Picked;
 
         return true;
     }
@@ -87,35 +83,35 @@ public class Pickable : SimpleStateMachine
     {
         if (success)
         {
-            currentState = PickableStates.PICKED;
+            currentState = PickableStates.Picked;
         }
         else
         {
-            Picker = null;
+            picker = null;
         }
     }
 
-    public void SetIdle() => currentState = PickableStates.IDLE;
-    public void SetThrow() => currentState = PickableStates.THROWED;
+    public void SetIdle() => currentState = PickableStates.Idle;
+    public void SetThrow() => currentState = PickableStates.Thrown;
 
     private void OnCollisionEnter(Collision collision)
     {
         // Return false if we can't be picked up at this moment
-        if (Picker != null &&
-            (PickableStates)currentState != PickableStates.IDLE &&
-            (PickableStates)currentState != PickableStates.THROWED)
+        if (picker != null &&
+            (PickableStates)currentState != PickableStates.Idle &&
+            (PickableStates)currentState != PickableStates.Thrown)
             return;
         
-        Picker = collision.gameObject.GetComponent<Picker>();
+        picker = collision.gameObject.GetComponent<Picker>();
 
-        if (Picker != null)
+        if (picker != null)
         {
-            Picker.TryPick(this);
+            picker.TryPick(this);
         }
-        else if ((PickableStates)currentState == PickableStates.THROWED)
+        else if ((PickableStates)currentState == PickableStates.Thrown)
         {
             OnHit.Invoke(this, collision.gameObject);
-            currentState = PickableStates.IDLE;
+            currentState = PickableStates.Idle;
         }
     }
 }

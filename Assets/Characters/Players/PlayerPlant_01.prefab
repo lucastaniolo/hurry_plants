@@ -192,11 +192,11 @@ MonoBehaviour:
   DebugGui: 1
   DebugGuiPosition: {x: 0, y: 0}
   DebugGuiTitle: Simple Machine
-  Pickable: {fileID: 844168689}
-  Picker: {fileID: 844168688}
-  AirMovement: {fileID: 844168686}
-  GroundMovement: {fileID: 844168683}
-  InputHandler: {fileID: 844168690}
+  pickable: {fileID: 844168689}
+  picker: {fileID: 844168688}
+  airMovement: {fileID: 844168686}
+  groundMovement: {fileID: 844168683}
+  inputHandler: {fileID: 844168690}
 --- !u!114 &844168686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PickedPoint: {fileID: 1203584209}
   ThrowPoint: {fileID: 1421691243030279878}
-  Pickable: {fileID: 0}
 --- !u!114 &844168689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,13 +261,8 @@ MonoBehaviour:
   DebugGui: 0
   DebugGuiPosition: {x: 0, y: 0}
   DebugGuiTitle: Simple Machine
-  trigger: {fileID: 0}
-  wall: {fileID: 844168682}
-  OnPickableReady:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  trigger: {fileID: 844168682}
+  airMovement: {fileID: 844168686}
   OnPicked:
     m_PersistentCalls:
       m_Calls: []
@@ -283,8 +277,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: OnHit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  Picker: {fileID: 0}
-  AirMovement: {fileID: 844168686}
 --- !u!114 &844168690
 MonoBehaviour:
   m_ObjectHideFlags: 0

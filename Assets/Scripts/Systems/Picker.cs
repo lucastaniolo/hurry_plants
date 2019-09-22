@@ -5,8 +5,8 @@ public class Picker : MonoBehaviour
 {
     public Transform PickedPoint;
     public Transform ThrowPoint;
-    public Pickable Pickable;
-    private Animator Animator = null;
+    private Pickable pickable;
+    private Animator animator = null;
     public Collider Collider { get; private set; }
 
     private void Start()
@@ -14,34 +14,34 @@ public class Picker : MonoBehaviour
         Collider = GetComponent<Collider>();
     }
 
-    public void TryPick(Pickable pickable)
+    public void TryPick(Pickable target)
     {
-        if (Pickable != null) 
+        if (pickable != null) 
         {
-            pickable.ResolvePick(false);
+            target.ResolvePick(false);
             return;
         }
 
-        pickable.ResolvePick(true);
+        target.ResolvePick(true);
 
-        Pickable = pickable;
-        Pickable.OnHit.AddListener(ResetCollision);
-        Pickable.transform.SetParent(PickedPoint);
-        Pickable.transform.rotation = PickedPoint.rotation;
-        Pickable.transform.localPosition = Vector3.zero;
+        pickable = target;
+        pickable.OnHit.AddListener(ResetCollision);
+        pickable.transform.SetParent(PickedPoint);
+        pickable.transform.rotation = PickedPoint.rotation;
+        pickable.transform.localPosition = Vector3.zero;
     }
 
-    private void ResetCollision(Pickable throwedPickable, GameObject pickable)
+    private void ResetCollision(Pickable thrownPickable, GameObject pickable)
     {
-        Physics.IgnoreCollision(Collider, throwedPickable.Collider, false);
+        Physics.IgnoreCollision(Collider, thrownPickable.Collider, false);
     }
 
     public void Throw()
     {
-        if (Pickable == null) return;
+        if (pickable == null) return;
 
-        Animator?.SetTrigger("Throw");
-        Pickable.SetThrow();
-        Pickable = null;
+        animator?.SetTrigger("Throw");
+        pickable.SetThrow();
+        pickable = null;
     }
 }

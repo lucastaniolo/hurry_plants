@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AirMovement : BaseMovement
 {
-    public override void Move(Vector3 direction, float speedMultiplier = 3f)
+    public override void Move(Vector3 direction)
     {
-        rigidbody.MovePosition(rigidbody.position + direction * baseSpeed * Time.deltaTime * speedMultiplier);
     }
 }

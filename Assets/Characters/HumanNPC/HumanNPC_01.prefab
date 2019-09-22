@@ -83,12 +83,7 @@ MonoBehaviour:
   DebugGuiPosition: {x: 0, y: 0}
   DebugGuiTitle: Simple Machine
   trigger: {fileID: 1672896943}
-  wall: {fileID: 1672896943}
-  OnPickableReady:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  airMovement: {fileID: 1672896946}
   OnPicked:
     m_PersistentCalls:
       m_Calls: []
@@ -103,8 +98,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: OnHit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  Picker: {fileID: 0}
-  AirMovement: {fileID: 1672896946}
 --- !u!114 &1672896946
 MonoBehaviour:
   m_ObjectHideFlags: 0
