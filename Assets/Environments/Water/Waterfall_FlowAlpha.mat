@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Waterfall
-  m_Shader: {fileID: -6465566751694194690, guid: 2837ab9ab7835b74ca15e8ef815a7c16,
+  m_Name: Waterfall_FlowAlpha
+  m_Shader: {fileID: -6465566751694194690, guid: 23ae5ae1d2c130b4cbeafdf4bf202d46,
     type: 3}
   m_ShaderKeywords: _SPECULAR_SETUP
   m_LightmapFlags: 4
@@ -80,7 +80,7 @@ Material:
     - Vector1_42BC10A: 4
     - Vector1_5B946D5A: 0
     - Vector1_70634A6B: 0
-    - Vector1_9B68AAF1: 0.2
+    - Vector1_9B68AAF1: 0.26
     - Vector1_A6C9F7DC: 7.6
     - Vector1_AFFD8DC9: 30
     - Vector1_E12285F: 2
@@ -111,7 +111,7 @@ Material:
     m_Colors:
     - Color_1DEE13BB: {r: 337.79395, g: 337.79395, b: 337.79395, a: 0}
     - Color_40FE48ED: {r: 309.20786, g: 654.5569, b: 766.9961, a: 1}
-    - Color_BC9D835B: {r: 0.244304, g: 0.565118, b: 0.8490566, a: 1}
+    - Color_BC9D835B: {r: 0, g: 0, b: 0, a: 1}
     - Color_DF34C157: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0}
     - _BaseColor: {r: 0.12615699, g: 0.37141398, b: 0.764151, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
