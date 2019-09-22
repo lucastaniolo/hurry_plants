@@ -24,12 +24,12 @@ public class Pickable : SimpleStateMachine
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void IDLE_EnterState()
+    private void Idle_EnterState()
     {
         animator?.SetTrigger("Idle");
     }
 
-    private void PICKED_EnterState()
+    private void Picked_EnterState()
     {
         animator?.SetBool("IsPicked", true);
         // wall.enabled = false;
@@ -39,7 +39,7 @@ public class Pickable : SimpleStateMachine
         OnPicked.Invoke();
     }
 
-    private void PICKED_ExitState()
+    private void Picked_ExitState()
     {
         animator?.SetBool("IsPicked", false);
         // wall.enabled = true;
@@ -47,7 +47,7 @@ public class Pickable : SimpleStateMachine
         rigidbody.isKinematic = false;
     }
 
-    private void THROWN_EnterState()
+    private void Thrown_EnterState()
     {
         transform.SetParent(null);
         animator?.SetBool("IsFlying", true);
@@ -56,12 +56,12 @@ public class Pickable : SimpleStateMachine
         picker = null;
     }
 
-    private void THROWN_FixedUpdate()
+    private void Thrown_FixedUpdate()
     {
         airMovement.Move(transform.forward);
     }
 
-    private void THROWN_ExitState()
+    private void Thrown_ExitState()
     {
         animator?.SetBool("IsFlying", false);
     }

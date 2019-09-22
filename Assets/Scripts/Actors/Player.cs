@@ -29,7 +29,7 @@ public class Player : SimpleStateMachine
 
     }
 
-    private void RUNNING_FixedUpdate()
+    private void Running_FixedUpdate()
     {
         if (inputHandler.Direction != Vector3.zero) //Comment this to enable always moving mechanic
             groundMovement.Move(inputHandler.Direction);
@@ -38,32 +38,32 @@ public class Player : SimpleStateMachine
     }
 
 
-    private void IDLE_EnterState()
+    private void Idle_EnterState()
     {
         pickable.SetIdle();
     }
 
-    private void IDLE_Update()
+    private void Idle_Update()
     {
         if (inputHandler.Direction != Vector3.zero)
             currentState = PlayerStates.Running;
     }
 
-    private void IDLE_ExitState()
+    private void Idle_ExitState()
     {
         
     }
 
-    private void CAPTURED_EnterState()
+    private void Captured_EnterState()
     {
     }
 
-    private void CAPTURED_UpdateState()
+    private void Captured_UpdateState()
     {
 
     }
 
-    private void CAPTURED_ExitState()
+    private void Captured_ExitState()
     {
     }
 
