@@ -45,8 +45,8 @@ ModelImporter:
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -73,12 +73,52 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips:
   - 75740fb22ac60b54bbabd3eaa1e137f7
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: bomb_sk(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bomb_grp
+      parentName: bomb_sk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bomb_geo
+      parentName: bomb_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bomb_root_jnt1
+      parentName: bomb_sk(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: core_jnt1
+      parentName: bomb_root_jnt1
+      position: {x: -0, y: 0.29999998, z: 0}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wick_jnt1
+      parentName: core_jnt1
+      position: {x: -0.29999998, y: 6.661338e-17, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wick_jnt2
+      parentName: wick_jnt1
+      position: {x: -0.099999994, y: -4.4962398e-17, z: 0}
+      rotation: {x: 0, y: 0, z: 0.16539425, w: 0.9862276}
+      scale: {x: 1, y: 1, z: 1}
+    - name: wick_jnt3
+      parentName: wick_jnt2
+      position: {x: -0.17043053, y: -3.5527136e-17, z: 1.566017e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -89,10 +129,10 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: bomb_root_jnt1
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
