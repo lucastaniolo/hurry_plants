@@ -2,26 +2,26 @@
 
 public class Player : SimpleStateMachine
 {
-    public Pickable Pickable;
-    public Picker Picker;
-    public AirMovement AirMovement;
-    public GroundMovement GroundMovement;
-    public InputHandler InputHandler;
+    [SerializeField] public Pickable pickable;
+    [SerializeField] public Picker picker;
+    [SerializeField] public AirMovement airMovement;
+    [SerializeField] public GroundMovement groundMovement;
+    [SerializeField] public InputHandler inputHandler;
 
-    private enum PlayerStates { IDLE, RUNNING, FLYING, CAPTURED }
+    private enum PlayerStates { Idle, Running, Flying, Captured }
 
-    void Start()
+    private void Start()
     {
-        Pickable.OnPicked.AddListener(() => currentState = PlayerStates.CAPTURED);
-        Pickable.OnThrowed.AddListener(() => currentState = PlayerStates.FLYING);
+        pickable.OnPicked.AddListener(() => currentState = PlayerStates.Captured);
+        pickable.OnThrowed.AddListener(() => currentState = PlayerStates.Flying);
 
-        currentState = PlayerStates.IDLE;
+        currentState = PlayerStates.Idle;
     }
 
     protected override void EarlyGlobalSuperUpdate()
     {
-        if (InputHandler.ThrowButton)
-            Picker.Throw();
+        if (inputHandler.ThrowButton)
+            picker.Throw();
     }
 
     protected override void LateGlobalSuperUpdate()
@@ -31,22 +31,22 @@ public class Player : SimpleStateMachine
 
     private void RUNNING_FixedUpdate()
     {
-        if (InputHandler.Direction != Vector3.zero) //Comment this to enable always moving mechanic
-            GroundMovement.Move(InputHandler.Direction);
+        if (inputHandler.Direction != Vector3.zero) //Comment this to enable always moving mechanic
+            groundMovement.Move(inputHandler.Direction);
         else
-            currentState = PlayerStates.IDLE;
+            currentState = PlayerStates.Idle;
     }
 
 
     private void IDLE_EnterState()
     {
-        Pickable.SetIdle();
+        pickable.SetIdle();
     }
 
     private void IDLE_Update()
     {
-        if (InputHandler.Direction != Vector3.zero)
-            currentState = PlayerStates.RUNNING;
+        if (inputHandler.Direction != Vector3.zero)
+            currentState = PlayerStates.Running;
     }
 
     private void IDLE_ExitState()
