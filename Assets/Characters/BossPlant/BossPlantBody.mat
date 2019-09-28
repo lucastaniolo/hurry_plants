@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NPC_OLD 1
-  m_Shader: {fileID: -6465566751694194690, guid: 5947c4d5e266e214b9bea9fa6c6d7519,
+  m_Name: BossPlantBody
+  m_Shader: {fileID: -6465566751694194690, guid: 7cace0cf71fa8b1459eac44908874d1e,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_589137F6:
-        m_Texture: {fileID: 2800000, guid: 4122b93bb3d2af647b26cbd570f39c1a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 038ebada7d7dedc47a3714a512eafe02, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_19297FC7_Out:
@@ -29,9 +29,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Boolean_24DEBF68: 0
+    - Boolean_24DEBF68: 1
     - Boolean_ED438E34: 1
-    - Vector1_F8F1095: 1.51
+    - Vector1_F8F1095: 6.16
     m_Colors:
-    - Color_59B2F0B0: {r: 0, g: 0.5566038, b: 0.08174104, a: 0}
-    - Color_EBFEF514: {r: 1, g: 0.5886391, b: 0, a: 0}
+    - Color_59B2F0B0: {r: 1, g: 1, b: 1, a: 0}
+    - Color_773638F7: {r: 0.9883373, g: 0.4553596, b: 0, a: 0}
+    - Color_865FB70: {r: 1.529438, g: 2.608238, b: 1.379225, a: 0.372549}
+    - Color_EBFEF514: {r: 0.15373823, g: 0.8490566, b: 0.028034903, a: 0}

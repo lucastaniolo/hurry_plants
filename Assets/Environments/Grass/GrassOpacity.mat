@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GRASS
+  m_Name: GrassOpacity
   m_Shader: {fileID: -6465566751694194690, guid: 7c1bfe5e34b52ac479d38fbb26474319,
     type: 3}
   m_ShaderKeywords: 
@@ -99,9 +99,12 @@ Material:
     m_Floats:
     - Boolean_24DEBF68: 0
     - Boolean_ED438E34: 1
+    - Vector1_117AC039: 0
     - Vector1_3743DDA8: 0.05
+    - Vector1_535006A8: 0
     - Vector1_5B946D5A: 0
     - Vector1_62802B98: 1
+    - Vector1_8E2F15F8: 0
     - Vector1_F8F1095: 1.02
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -128,6 +131,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_19276151: {r: 2.126218, g: 1.513579, b: 0, a: 0}
+    - Color_4CF809A2: {r: 0, g: 0, b: 0, a: 1}
     - Color_59B2F0B0: {r: 0.048171833, g: 0.23839766, b: 0.022173883, a: 0.6}
     - Color_DF34C157: {r: 0.503656, g: 0.5566037, b: 0.35444105, a: 0}
     - Color_EBFEF514: {r: 0.44282427, g: 0.735849, b: 0.17702027, a: 0}
