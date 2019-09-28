@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7842203041575957330, guid: f690a2f8259b0944a9324e1cc9e961bc,
         type: 3}
       propertyPath: m_Name
-      value: _GRASS
+      value: _Grass
       objectReference: {fileID: 0}
     - target: {fileID: 6920865279610705481, guid: f690a2f8259b0944a9324e1cc9e961bc,
         type: 3}
@@ -70,12 +70,23 @@ PrefabInstance:
     - target: {fileID: 1084897521517645531, guid: f690a2f8259b0944a9324e1cc9e961bc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084897521517645531, guid: f690a2f8259b0944a9324e1cc9e961bc,
+        type: 3}
+      propertyPath: m_Name
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 4903870151463208702, guid: f690a2f8259b0944a9324e1cc9e961bc,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -7853252093286069331, guid: d244f8d8352ce404d97add1321a0c419,
+        type: 3}
+    - target: {fileID: 1671541900362971655, guid: f690a2f8259b0944a9324e1cc9e961bc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 61895657af158ac4bbcbbdb2f7edef2a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f690a2f8259b0944a9324e1cc9e961bc, type: 3}
