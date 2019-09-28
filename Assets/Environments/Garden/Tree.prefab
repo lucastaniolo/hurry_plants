@@ -66,6 +66,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -143,6 +144,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -231,6 +233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrassWind (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739205796353821509, guid: d3f2085e5fce6af488ddb383e9756e98,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2600814764656453565, guid: d3f2085e5fce6af488ddb383e9756e98,
         type: 3}
@@ -321,6 +328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrassWind (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739205796353821509, guid: d3f2085e5fce6af488ddb383e9756e98,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2600814764656453565, guid: d3f2085e5fce6af488ddb383e9756e98,
         type: 3}
