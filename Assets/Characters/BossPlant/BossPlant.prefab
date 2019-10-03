@@ -9,6 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7405435925648478384}
+  - component: {fileID: 5613056142475155263}
+  - component: {fileID: 4310332521768016688}
+  - component: {fileID: 4537952069279276002}
+  - component: {fileID: 3632138200779570801}
   m_Layer: 0
   m_Name: BossPlant
   m_TagString: Untagged
@@ -31,6 +35,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &5613056142475155263
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7778662920148294750}
+  serializedVersion: 2
+  m_Mass: 99999
+  m_Drag: 99999
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4310332521768016688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7778662920148294750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a664f8e4ed07148bc106249e5b09e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickedPoint: {fileID: 7405435925648478384}
+  ThrowPoint: {fileID: 7405435925648478384}
+--- !u!114 &4537952069279276002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7778662920148294750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecc6e98d0ac77941b31f815e06bc15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2739065849780193108}
+  picker: {fileID: 4310332521768016688}
+--- !u!136 &3632138200779570801
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7778662920148294750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.39, z: 0}
 --- !u!1001 &1005335089585865012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98,11 +160,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 1305fe20dd0c2114281c909e377dca16,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a2a643ac7450dae45a022f2f9d3dbb45, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1305fe20dd0c2114281c909e377dca16, type: 3}
 --- !u!4 &5226741971746941486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1305fe20dd0c2114281c909e377dca16,
+    type: 3}
+  m_PrefabInstance: {fileID: 1005335089585865012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2739065849780193108 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 1305fe20dd0c2114281c909e377dca16,
     type: 3}
   m_PrefabInstance: {fileID: 1005335089585865012}
   m_PrefabAsset: {fileID: 0}
