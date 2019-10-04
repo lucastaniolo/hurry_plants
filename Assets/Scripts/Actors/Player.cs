@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Player : SimpleStateMachine
 {
@@ -7,6 +8,7 @@ public class Player : SimpleStateMachine
     [SerializeField] public AirMovement airMovement;
     [SerializeField] public GroundMovement groundMovement;
     [SerializeField] public InputHandler inputHandler;
+   
 
     private enum PlayerStates { Idle, Running, Flying, Captured }
 
@@ -16,6 +18,12 @@ public class Player : SimpleStateMachine
         pickable.OnThrowed.AddListener(() => currentState = PlayerStates.Flying);
 
         currentState = PlayerStates.Idle;
+
+    }
+
+    public void OnColliderEnter(Type type)
+    {
+        Debug.LogWarning("OnColliderEnter : " + type.Name);
     }
 
     protected override void EarlyGlobalSuperUpdate()
@@ -73,4 +81,5 @@ public class Player : SimpleStateMachine
         var to = from + transform.forward * 1.5f;
         Gizmos.DrawLine(from, to);
     }
+
 }

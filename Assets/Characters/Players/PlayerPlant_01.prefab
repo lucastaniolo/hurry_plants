@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 844168688}
   - component: {fileID: 844168689}
   - component: {fileID: 844168690}
+  - component: {fileID: 641097581702555708}
   m_Layer: 8
   m_Name: PlayerPlant_01
   m_TagString: Player
@@ -157,7 +158,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6235274205126318544}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.25
   m_Height: 1
@@ -197,6 +198,7 @@ MonoBehaviour:
   airMovement: {fileID: 844168686}
   groundMovement: {fileID: 844168683}
   inputHandler: {fileID: 844168690}
+  colliderDetection: {fileID: 641097581702555708}
 --- !u!114 &844168686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,8 +228,6 @@ MonoBehaviour:
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   timeToSpawn: 2
   spawnFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3, type: 3}
   registerSpawnFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3,
@@ -266,17 +266,12 @@ MonoBehaviour:
   OnPicked:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnThrowed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnHit:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: OnHit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &844168690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +285,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamePadIndex: 1
+--- !u!114 &641097581702555708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235274205126318544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488a61118a649cd44a39e33e81f35de9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6235274205042449622
 PrefabInstance:
   m_ObjectHideFlags: 0
