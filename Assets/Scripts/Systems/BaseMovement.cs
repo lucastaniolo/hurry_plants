@@ -7,7 +7,7 @@ public abstract class BaseMovement : MonoBehaviour
 
     public virtual void Move(Vector3 direction)
     {
-        rigidbody.MovePosition(rigidbody.position + baseSpeed * Time.deltaTime * direction);
+        rigidbody.MovePosition(rigidbody.position + baseSpeed * Time.deltaTime * direction.normalized);
     }
     
     protected void Rotate(Vector3 input)
