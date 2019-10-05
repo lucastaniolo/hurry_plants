@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using GamepadInput;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -14,10 +15,13 @@ public class GameManager : MonoBehaviour
 
     public static GameManager ME;
 
+    private InputHandler[] playersInputs;
+
     private void Awake()
     {
         ME = this;
         DontDestroyOnLoad(this);
+        playersInputs = FindObjectsOfType<InputHandler>();
     }
 
     private void Start()
@@ -31,5 +35,43 @@ public class GameManager : MonoBehaviour
         // Reload level
         if (Input.GetKeyDown(KeyCode.Escape))
             NavigatorManager.ReloadLevel();
+
+        SwitchControlledPlayer();
+    }
+
+    // Debug code
+    private void SwitchControlledPlayer()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            playersInputs[0].gamePadIndex = GamePad.Index.One;
+            playersInputs[1].gamePadIndex = GamePad.Index.Two;
+            playersInputs[2].gamePadIndex = GamePad.Index.Two;
+            playersInputs[3].gamePadIndex = GamePad.Index.Two;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            playersInputs[0].gamePadIndex = GamePad.Index.Two;
+            playersInputs[1].gamePadIndex = GamePad.Index.One;
+            playersInputs[2].gamePadIndex = GamePad.Index.Two;
+            playersInputs[3].gamePadIndex = GamePad.Index.Two;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            playersInputs[0].gamePadIndex = GamePad.Index.Two;
+            playersInputs[1].gamePadIndex = GamePad.Index.Two;
+            playersInputs[2].gamePadIndex = GamePad.Index.One;
+            playersInputs[3].gamePadIndex = GamePad.Index.Two;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            playersInputs[0].gamePadIndex = GamePad.Index.Two;
+            playersInputs[1].gamePadIndex = GamePad.Index.Two;
+            playersInputs[2].gamePadIndex = GamePad.Index.Two;
+            playersInputs[3].gamePadIndex = GamePad.Index.One;
+        }
     }
 }

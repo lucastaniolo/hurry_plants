@@ -13,6 +13,7 @@ public class Pickable : SimpleStateMachine
     private enum PickableStates { Idle, Picked, Thrown }
     private Picker picker;
 
+    public bool IsPickBlocked { get; set; }
     public Collider Collider => trigger;
     
     private Animator animator = null;
@@ -53,6 +54,7 @@ public class Pickable : SimpleStateMachine
         animator?.SetBool("IsFlying", true);
         transform.position = picker.ThrowPoint.position;
         OnThrowed.Invoke();
+        IsPickBlocked = false;
         picker = null;
     }
 
@@ -99,16 +101,17 @@ public class Pickable : SimpleStateMachine
         // Return false if we can't be picked up at this moment
         if (picker != null &&
             (PickableStates)currentState != PickableStates.Idle &&
-            (PickableStates)currentState != PickableStates.Thrown)
+            (PickableStates)currentState != PickableStates.Thrown ||
+            IsPickBlocked)
             return;
         
         picker = collision.gameObject.GetComponent<Picker>();
 
-        if (picker != null)
+        if (picker != null && !picker.IsBusy)
         {
             picker.TryPick(this);
         }
-        else if ((PickableStates)currentState == PickableStates.Thrown)
+        else if ((PickableStates)currentState == PickableStates.Thrown)    
         {
             OnHit.Invoke(this, collision.gameObject);
             currentState = PickableStates.Idle;

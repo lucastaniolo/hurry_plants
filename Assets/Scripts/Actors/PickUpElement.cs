@@ -10,8 +10,6 @@ public class PickUpElement<O> : MonoBehaviour where O : IObjective
     {
         pickable = GetComponent<Pickable>();
         pickable.OnHit.AddListener(OnHit);
-
-        var elementt = GetComponent<PickUpElement<O>>();
     }
 
     protected virtual void OnHit(Pickable throwedPickable, GameObject hitObject)

@@ -8,7 +8,6 @@ public class Player : SimpleStateMachine
     [SerializeField] public AirMovement airMovement;
     [SerializeField] public GroundMovement groundMovement;
     [SerializeField] public InputHandler inputHandler;
-   
 
     private enum PlayerStates { Idle, Running, Flying, Captured }
 
@@ -16,9 +15,15 @@ public class Player : SimpleStateMachine
     {
         pickable.OnPicked.AddListener(() => currentState = PlayerStates.Captured);
         pickable.OnThrowed.AddListener(() => currentState = PlayerStates.Flying);
-
+        pickable.OnHit.AddListener(Land);
+        
         currentState = PlayerStates.Idle;
+    }
 
+    private void Land(Pickable pickable, GameObject other)
+    {
+        currentState = PlayerStates.Idle;
+        transform.position = new Vector3(transform.position.x, 0, transform.position.z);
     }
 
     public void OnColliderEnter(Type type)
@@ -49,6 +54,7 @@ public class Player : SimpleStateMachine
     private void Idle_EnterState()
     {
         pickable.SetIdle();
+        pickable.IsPickBlocked = false;
     }
 
     private void Idle_Update()
@@ -59,7 +65,7 @@ public class Player : SimpleStateMachine
 
     private void Idle_ExitState()
     {
-        
+        pickable.IsPickBlocked = true;
     }
 
     private void Captured_EnterState()

@@ -9,6 +9,8 @@ public class Picker : MonoBehaviour
     private Animator animator = null;
     public Collider Collider { get; private set; }
 
+    public bool IsBusy => pickable != null;
+
     private void Start()
     {
         Collider = GetComponent<Collider>();
