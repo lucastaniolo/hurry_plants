@@ -3,6 +3,11 @@ using System.Linq;
 using UnityEngine;
 using GamepadInput;
 
+// TODO 
+// -Support 4 local players
+// -Add a way to test the game in single player: button/key to switch current controlled character
+// -Support Controllers: Xbox, Nintendo switch etc
+
 public class InputHandler : MonoBehaviour
 {
     public GamePad.Index gamePadIndex;
