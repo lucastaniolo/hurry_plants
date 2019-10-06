@@ -87,17 +87,12 @@ MonoBehaviour:
   OnPicked:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnThrowed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnHit:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: OnHit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1672896946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,8 +137,6 @@ MonoBehaviour:
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   timeToSpawn: 3
   spawnFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3, type: 3}
   registerSpawnFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3,
@@ -230,6 +223,23 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8f3e32e448809874b936106f5586f25e, type: 2}
+    - target: {fileID: -5716681864270162303, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5716681864270162303, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
+        type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 1827226128182048838, guid: 02f0a773ba14b1046b8681f8fde9fe9a,
+        type: 3}
+    - target: {fileID: -5716681864270162303, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
+        type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 1827226128182048838, guid: 02f0a773ba14b1046b8681f8fde9fe9a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56574f17f97c5514b9cb3507e9f8d6cb, type: 3}
 --- !u!4 &1391990668899532885 stripped

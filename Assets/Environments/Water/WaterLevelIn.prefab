@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1647035442501370445, guid: 5d270e2f070d853429016dea57443f2f,
         type: 3}
       propertyPath: m_Name
-      value: WaterWave-In
+      value: WaterLevelIn
       objectReference: {fileID: 0}
     - target: {fileID: 1647035442501370444, guid: 5d270e2f070d853429016dea57443f2f,
         type: 3}
@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 1647035442501370444, guid: 5d270e2f070d853429016dea57443f2f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 1647035442501370444, guid: 5d270e2f070d853429016dea57443f2f,
         type: 3}
@@ -82,21 +82,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5396914865114232819, guid: 5d270e2f070d853429016dea57443f2f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5396914865114232819, guid: 5d270e2f070d853429016dea57443f2f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 5396914865114232819, guid: 5d270e2f070d853429016dea57443f2f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.495
-      objectReference: {fileID: 0}
     - target: {fileID: 6895147984933084281, guid: 5d270e2f070d853429016dea57443f2f,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -127,10 +112,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.472
       objectReference: {fileID: 0}
-    - target: {fileID: 7812378794694331057, guid: 5d270e2f070d853429016dea57443f2f,
+    - target: {fileID: 5396914865114232819, guid: 5d270e2f070d853429016dea57443f2f,
         type: 3}
-      propertyPath: m_Name
-      value: ParticleMiddle
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396914865114232819, guid: 5d270e2f070d853429016dea57443f2f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396914865114232819, guid: 5d270e2f070d853429016dea57443f2f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.495
       objectReference: {fileID: 0}
     - target: {fileID: 5604203204357104873, guid: 5d270e2f070d853429016dea57443f2f,
         type: 3}
@@ -142,6 +137,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PARTICLEOUT
       objectReference: {fileID: 0}
+    - target: {fileID: 7812378794694331057, guid: 5d270e2f070d853429016dea57443f2f,
+        type: 3}
+      propertyPath: m_Name
+      value: ParticleMiddle
+      objectReference: {fileID: 0}
     - target: {fileID: 6895147984933084280, guid: 5d270e2f070d853429016dea57443f2f,
         type: 3}
       propertyPath: m_IsActive
@@ -151,6 +151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ParticleIN
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716492206451048874, guid: 5d270e2f070d853429016dea57443f2f,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterDirection
       objectReference: {fileID: 0}
     - target: {fileID: 7612621761354736132, guid: 5d270e2f070d853429016dea57443f2f,
         type: 3}
