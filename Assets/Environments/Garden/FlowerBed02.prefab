@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8052031890197108999}
   - component: {fileID: 5145600267136021259}
   - component: {fileID: 5409883090771426987}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FlowerFence02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,8 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8970277439854344901}
-  - component: {fileID: 4001973613341488647}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FlowerBed02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,19 +110,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
---- !u!65 &4001973613341488647
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5343391314230708438}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7209748335850557944
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +121,7 @@ GameObject:
   - component: {fileID: 8804047628457853953}
   - component: {fileID: 5082733964567167204}
   - component: {fileID: 4471822655046217484}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FlowerBed02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

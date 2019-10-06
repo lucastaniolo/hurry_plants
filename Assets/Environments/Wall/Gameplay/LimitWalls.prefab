@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 841150013010744934}
   - component: {fileID: 3825208654025013024}
   m_Layer: 9
-  m_Name: LimitWall (3)
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4444795239441768754}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 9.5, y: 0, z: 2}
+  m_LocalPosition: {x: 8.5, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5970496637737140006}
@@ -42,7 +42,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: -28.57, y: 4.06, z: 1}
+  m_Size: {x: 10, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8217643933501273434
 GameObject:
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 8323144784122872402}
   - component: {fileID: 8323144784122872413}
   m_Layer: 9
-  m_Name: LimitWall (2)
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8323144784122872403}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -7.5, y: 0, z: 2}
+  m_LocalPosition: {x: -8.5, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5970496637737140006}
@@ -120,7 +120,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: -28.57, y: 4.06, z: 1}
+  m_Size: {x: 10, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8323144784483886037
 GameObject:
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 8323144784483886036}
   - component: {fileID: 8323144784483886039}
   m_Layer: 9
-  m_Name: LimitWall
+  m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8323144784483886037}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.87, y: 0, z: 6}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5970496637737140006}
@@ -164,7 +164,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: -28.57, y: 4.06, z: 1}
+  m_Size: {x: 16, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8323144784840920071
 GameObject:
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8323144784840920070}
   - component: {fileID: 8323144784840920065}
   m_Layer: 9
-  m_Name: LimitWall (1)
+  m_Name: Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,7 +191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8323144784840920071}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.87, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5970496637737140006}
@@ -208,5 +208,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: -28.57, y: 4.06, z: 1}
+  m_Size: {x: 16, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
