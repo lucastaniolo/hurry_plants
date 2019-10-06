@@ -15,17 +15,19 @@ public class Player : SimpleStateMachine
     {
         pickable.OnPicked.AddListener(() => currentState = PlayerStates.Captured);
         pickable.OnThrowed.AddListener(() => currentState = PlayerStates.Flying);
-        pickable.OnHit.AddListener(Land);
+        pickable.OnHit.AddListener(OnHit);
         
         currentState = PlayerStates.Idle;
     }
 
-    private void Land(Pickable pickable, GameObject other)
+    private void OnHit(Pickable pickable, GameObject other) => Land();
+
+    private void Land()
     {
         currentState = PlayerStates.Idle;
         transform.position = new Vector3(transform.position.x, 0, transform.position.z);
     }
-
+    
     public void OnColliderEnter(Type type)
     {
         Debug.LogWarning("OnColliderEnter : " + type.Name);
@@ -85,6 +87,12 @@ public class Player : SimpleStateMachine
 
     private void Captured_ExitState()
     {
+    }
+
+    private void Flying_Update()
+    {
+        if (inputHandler.ThrowButton) 
+            Land();
     }
 
     private void OnDrawGizmos()
