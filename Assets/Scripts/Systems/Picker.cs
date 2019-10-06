@@ -9,7 +9,9 @@ public class Picker : MonoBehaviour
     private Animator animator = null;
     public Collider Collider { get; private set; }
 
-    public bool IsBusy => pickable != null;
+    public bool IsBusy => pickable != null || Unavaiable;
+    
+    public bool Unavaiable { get; set; }
 
     private void Start()
     {
@@ -44,6 +46,11 @@ public class Picker : MonoBehaviour
 
         animator?.SetTrigger("Throw");
         pickable.SetThrow();
+        pickable = null;
+    }
+
+    public void Release()
+    {
         pickable = null;
     }
 }

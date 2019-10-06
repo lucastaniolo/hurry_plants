@@ -114,8 +114,18 @@ public class Pickable : SimpleStateMachine
         else if ((PickableStates)currentState == PickableStates.Thrown)    
         {
             OnHit.Invoke(this, collision.gameObject);
-            currentState = PickableStates.Idle;
+            SetIdle();
         }
+    }
+
+    public void GetRelease()
+    {
+        transform.SetParent(null);
+        IsPickBlocked = false;
+        picker.Release();
+        picker = null;
+        transform.position = new Vector3(transform.position.x, 0, transform.position.z) + transform.forward * 0.5f;
+        SetIdle();
     }
 }
 

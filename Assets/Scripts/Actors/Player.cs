@@ -55,6 +55,7 @@ public class Player : SimpleStateMachine
     {
         pickable.SetIdle();
         pickable.IsPickBlocked = false;
+        picker.Unavaiable = false;
     }
 
     private void Idle_Update()
@@ -70,11 +71,16 @@ public class Player : SimpleStateMachine
 
     private void Captured_EnterState()
     {
+        picker.Unavaiable = true;
     }
 
-    private void Captured_UpdateState()
+    private void Captured_Update()
     {
-
+        if (inputHandler.ThrowButton)
+        {
+            pickable.GetRelease();
+            currentState = PlayerStates.Idle;
+        }
     }
 
     private void Captured_ExitState()
