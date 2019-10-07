@@ -37,6 +37,13 @@ public class Player : SimpleStateMachine
     {
         if (inputHandler.ThrowButton)
             picker.Throw();
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            var bombs = FindObjectsOfType<Pickable>();
+            foreach (var b in bombs)
+                Physics.IgnoreCollision(GetComponent<Collider>(), b.Collider, false);
+        }
     }
 
     protected override void LateGlobalSuperUpdate()
