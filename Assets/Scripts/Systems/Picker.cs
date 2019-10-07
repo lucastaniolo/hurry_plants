@@ -29,13 +29,13 @@ public class Picker : MonoBehaviour
         target.ResolvePick(true);
 
         pickable = target;
-        pickable.OnHit.AddListener(ResetCollision);
+        pickable.OnThrowFinished = ResetCollision;
         pickable.transform.SetParent(PickedPoint);
         pickable.transform.rotation = PickedPoint.rotation;
         pickable.transform.localPosition = Vector3.zero;
     }
 
-    private void ResetCollision(Pickable thrownPickable, GameObject pickable)
+    private void ResetCollision(Pickable thrownPickable)
     {
         Physics.IgnoreCollision(Collider, thrownPickable.Collider, false);
     }

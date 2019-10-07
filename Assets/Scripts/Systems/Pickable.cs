@@ -8,6 +8,7 @@ public class Pickable : SimpleStateMachine
 
     [HideInInspector] public UnityEvent OnPicked = new UnityEvent();
     [HideInInspector] public UnityEvent OnThrowed = new UnityEvent();
+    [HideInInspector] public UnityAction<Pickable> OnThrowFinished;
     [HideInInspector] public OnHit OnHit = new OnHit();
 
     private enum PickableStates { Idle, Picked, Thrown }
@@ -66,6 +67,7 @@ public class Pickable : SimpleStateMachine
     private void Thrown_ExitState()
     {
         animator?.SetBool("IsFlying", false);
+        OnThrowFinished.Invoke(this);
     }
 
     public bool Pick(Picker picker)
