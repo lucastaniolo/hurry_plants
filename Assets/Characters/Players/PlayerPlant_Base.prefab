@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 844168689}
   - component: {fileID: 844168690}
   m_Layer: 8
-  m_Name: PlayerPlant_01
+  m_Name: PlayerPlant_Base
   m_TagString: Player
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -230,6 +230,7 @@ MonoBehaviour:
   airMovement: {fileID: 844168686}
   groundMovement: {fileID: 844168683}
   inputHandler: {fileID: 844168690}
+  respawner: {fileID: 844168687}
 --- !u!114 &844168686
 MonoBehaviour:
   m_ObjectHideFlags: 0

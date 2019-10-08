@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1249278483232764808}
   - component: {fileID: 1084853378716326080}
   m_Layer: 8
-  m_Name: HumanNPC_01
+  m_Name: HumanNPCs
   m_TagString: Victim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,9 +46,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8112406289605747336}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -224,28 +224,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8f3e32e448809874b936106f5586f25e, type: 2}
-    - target: {fileID: -5716681864270162303, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
-        type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -5716681864270162303, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
-        type: 3}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 1827226128182048838, guid: 02f0a773ba14b1046b8681f8fde9fe9a,
-        type: 3}
-    - target: {fileID: -5716681864270162303, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
-        type: 3}
-      propertyPath: m_Animations.Array.data[0]
-      value: 
-      objectReference: {fileID: 1827226128182048838, guid: 02f0a773ba14b1046b8681f8fde9fe9a,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56574f17f97c5514b9cb3507e9f8d6cb, type: 3}
 --- !u!4 &1391990668899532885 stripped
@@ -266,6 +244,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: humanNPCs
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 501973484676c4e4bbfdd4338497876d,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 501973484676c4e4bbfdd4338497876d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9667444d652850540bfba2ce0cb9bc88, type: 2}
     - target: {fileID: -4216859302048453862, guid: 501973484676c4e4bbfdd4338497876d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -321,16 +309,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 501973484676c4e4bbfdd4338497876d,
-        type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 501973484676c4e4bbfdd4338497876d,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9667444d652850540bfba2ce0cb9bc88, type: 2}
     - target: {fileID: -386809478281730579, guid: 501973484676c4e4bbfdd4338497876d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

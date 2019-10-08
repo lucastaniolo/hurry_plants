@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : SimpleStateMachine
 {
@@ -8,8 +9,11 @@ public class Player : SimpleStateMachine
     [SerializeField] public AirMovement airMovement;
     [SerializeField] public GroundMovement groundMovement;
     [SerializeField] public InputHandler inputHandler;
+    [SerializeField] public Respawner respawner;
 
     private enum PlayerStates { Idle, Running, Flying, Captured }
+    
+    [HideInInspector] public UnityEvent OnPlayerDie = new UnityEvent();
 
     private void Start()
     {
@@ -102,11 +106,30 @@ public class Player : SimpleStateMachine
             Land();
     }
 
+    public void KillBy(KillType killType)
+    {
+        if (respawner.IsRespawning) return;
+        
+        picker.OnPickerDie.Invoke();
+        respawner.Register();
+        
+        Debug.Log($"{gameObject.name} was killed by {killType}");
+
+        switch (killType)
+        {
+            case KillType.Cactus:
+                break;
+            case KillType.Hole:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(killType), killType, null);
+        }
+    }
+    
     private void OnDrawGizmos()
     {
         var from = transform.position + Vector3.up;
         var to = from + transform.forward * 1.5f;
         Gizmos.DrawLine(from, to);
     }
-
 }

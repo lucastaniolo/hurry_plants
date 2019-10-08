@@ -88,6 +88,7 @@ public class Pickable : SimpleStateMachine
         if (success)
         {
             currentState = PickableStates.Picked;
+            picker.OnPickerDie.AddListener(GetRelease);
         }
         else
         {
@@ -122,6 +123,8 @@ public class Pickable : SimpleStateMachine
 
     public void GetRelease()
     {
+        if (picker == null) return;
+        
         transform.SetParent(null);
         IsPickBlocked = false;
         picker.Release();

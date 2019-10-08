@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -19,6 +17,7 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator InternalSpawn(Respawner respawner, float timer)
     {
+        respawner.IsRespawning = true;
         yield return new WaitForSeconds(timer);
         respawner.Respawn();
         Debug.Log("Respawn");

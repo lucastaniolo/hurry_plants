@@ -10,6 +10,7 @@ public class Respawner : MonoBehaviour
     [SerializeField] private float timeToSpawn;
     [SerializeField] private GameObject spawnFx;
     [SerializeField] private GameObject registerSpawnFx;
+    public bool IsRespawning { get; set; }
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class Respawner : MonoBehaviour
 
     public void Respawn()
     {
+        IsRespawning = false;
         transform.position = startPosition;
         transform.rotation = startRotation;
         gameObject.SetActive(true);

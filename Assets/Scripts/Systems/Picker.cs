@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Picker : MonoBehaviour
@@ -10,12 +11,23 @@ public class Picker : MonoBehaviour
     public Collider Collider { get; private set; }
 
     public bool IsBusy => pickable != null || Unavaiable;
-    
     public bool Unavaiable { get; set; }
 
+    [HideInInspector] public UnityEvent OnPickerDie = new UnityEvent();
+    
     private void Start()
     {
         Collider = GetComponent<Collider>();
+        OnPickerDie.AddListener(OnDie);
+    }
+
+    private void OnDie()
+    {
+        if (pickable != null)
+        {
+            pickable.OnHit.Invoke(pickable, gameObject);
+            ResetCollision(pickable);
+        }
     }
 
     public void TryPick(Pickable target)

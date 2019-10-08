@@ -1,25 +1,20 @@
-﻿using System;
-using UnityEngine;
-using System.Collections;
+﻿using UnityEngine;
+
+public enum KillType
+{
+    Cactus,
+    Hole
+}
 
 public class Killer : MonoBehaviour
 {
-    [SerializeField] public ColliderDetection colliderDetection;
-
-    // Use this for initialization
-    void Start()
+    [SerializeField] private KillType killType;
+    
+    private void OnTriggerEnter(Collider other)
     {
-        colliderDetection.OnColliderEnter = OnColliderEnter;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
-    private void OnColliderEnter(Type type)
-    {
-        Debug.LogWarning("Killer Triggered! : " + type.Name);
+        var player = other.GetComponent<Player>();
+        
+        if (player != null)
+            player.KillBy(killType);
     }
 }
