@@ -13,5 +13,8 @@ public class WaterStream : MonoBehaviour
     {
         if (groundMovement == null) return;
         groundMovement.Move(transform.forward * velocity);
+
+        if (!groundMovement.gameObject.activeInHierarchy)
+            groundMovement = null;
     }
 }
