@@ -37,25 +37,25 @@ public class InputHandler : MonoBehaviour
     private void HandleDirection()
     {
         // UP
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || GamePad.GetAxis(GamePad.Axis.LeftStick, gamePadIndex).y >= 0.5f)
             directions[Vector2.up] += Time.deltaTime;
         else
             directions[Vector2.up] = 0;
 
         // LEFT
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || GamePad.GetAxis(GamePad.Axis.LeftStick, gamePadIndex).x <= -0.5f)
             directions[Vector2.left] += Time.deltaTime;
         else
             directions[Vector2.left] = 0;
 
         // DOWN
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || GamePad.GetAxis(GamePad.Axis.LeftStick, gamePadIndex).y <= -0.5f)
             directions[Vector2.down] += Time.deltaTime;
         else
             directions[Vector2.down] = 0;
 
         // RIGHT
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || GamePad.GetAxis(GamePad.Axis.LeftStick, gamePadIndex).x >= 0.5f)
             directions[Vector2.right] += Time.deltaTime;
         else
             directions[Vector2.right] = 0;
@@ -67,6 +67,6 @@ public class InputHandler : MonoBehaviour
 
     private void HandleActions()
     {
-        ThrowButton = Input.GetKeyDown(KeyCode.Space);
+        ThrowButton = Input.GetKeyDown(KeyCode.Space) || GamePad.GetButtonDown(GamePad.Button.A, gamePadIndex);
     }
 }
