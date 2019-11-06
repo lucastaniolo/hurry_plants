@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickable: {fileID: 1672896944}
-  hitFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3, type: 3}
+  hitFx: {fileID: 0}
   respawner: {fileID: 1084853378716326080}
 --- !u!114 &1084853378716326080
 MonoBehaviour:
@@ -139,8 +139,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   timeToSpawn: 3
-  spawnFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3, type: 3}
-  registerSpawnFx: {fileID: 2381839022849172925, guid: 562e4088f260f2a44b7c64a5bfcef9c3,
+  spawnFx: {fileID: 4388063633504473860, guid: 517c865cac873cd4ca1b33e3a52d7ddc, type: 3}
+  registerSpawnFx: {fileID: 7254895888249548065, guid: 0bf93039e69d0c449a96ca8618a2e3da,
     type: 3}
 --- !u!1001 &6209317017803287375
 PrefabInstance:
@@ -239,6 +239,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8421086244394275093}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 501973484676c4e4bbfdd4338497876d,
+        type: 3}
+      propertyPath: m_Name
+      value: humanNPCs
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 501973484676c4e4bbfdd4338497876d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -293,11 +298,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 501973484676c4e4bbfdd4338497876d,
-        type: 3}
-      propertyPath: m_Name
-      value: humanNPCs
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 501973484676c4e4bbfdd4338497876d,
         type: 3}

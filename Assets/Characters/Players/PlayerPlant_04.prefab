@@ -18,10 +18,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000,
         type: 0}
-    - target: {fileID: 844168690, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
-      propertyPath: gamePadIndex
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6235274205126318545, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -76,6 +72,20 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844168687, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
+      propertyPath: spawnFx
+      value: 
+      objectReference: {fileID: 4388063633504473860, guid: 517c865cac873cd4ca1b33e3a52d7ddc,
+        type: 3}
+    - target: {fileID: 844168687, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
+      propertyPath: registerSpawnFx
+      value: 
+      objectReference: {fileID: 7254895888249548065, guid: 0bf93039e69d0c449a96ca8618a2e3da,
+        type: 3}
+    - target: {fileID: 844168690, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
+      propertyPath: gamePadIndex
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6981990194212197420, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
         type: 3}
