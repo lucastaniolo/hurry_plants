@@ -57,6 +57,7 @@ public class Pickable : SimpleStateMachine
         OnThrowed.Invoke();
         IsPickBlocked = false;
         picker = null;
+        airMovement.SetTrail(true);
     }
 
     private void Thrown_FixedUpdate()
@@ -66,6 +67,7 @@ public class Pickable : SimpleStateMachine
 
     private void Thrown_ExitState()
     {
+        airMovement.SetTrail(false);
         animator?.SetBool("IsFlying", false);
         OnThrowFinished.Invoke(this);
     }

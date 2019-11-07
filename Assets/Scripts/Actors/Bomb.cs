@@ -9,6 +9,6 @@
 // - Other bomb: explode and respawn
 // - Crate (objective): destroy
 
-﻿public class Bomb : PickUpElement<Crate>
+ public class Bomb : PickUpElement<Crate>
 {
 }

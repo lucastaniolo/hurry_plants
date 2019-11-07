@@ -55,6 +55,11 @@ public class Player : SimpleStateMachine
 
     }
 
+    private void Running_EnterState()
+    {
+        groundMovement.SetTrail(true);
+    }
+    
     private void Running_FixedUpdate()
     {
         if (inputHandler.Direction != Vector3.zero) //Comment this to enable always moving mechanic
@@ -63,6 +68,10 @@ public class Player : SimpleStateMachine
             currentState = PlayerStates.Idle;
     }
 
+    private void Running_ExitState()
+    {
+        groundMovement.SetTrail(false);
+    }
 
     private void Idle_EnterState()
     {

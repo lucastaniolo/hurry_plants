@@ -4,6 +4,12 @@ public abstract class BaseMovement : MonoBehaviour
 {
     [SerializeField] protected float baseSpeed;
     [SerializeField] protected Rigidbody rigidbody;
+    [SerializeField] protected GameObject trailFx;
+
+    private void Awake()
+    {
+        SetTrail(false);
+    }
 
     public virtual void Move(Vector3 direction)
     {
@@ -38,5 +44,11 @@ public abstract class BaseMovement : MonoBehaviour
         }
 
         rigidbody.transform.eulerAngles = new Vector3(0, angle, 0);
+    }
+
+    public void SetTrail(bool active)
+    {
+        if (trailFx != null)
+            trailFx.SetActive(active);
     }
 }
