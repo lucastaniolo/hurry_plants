@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterNoise
-  m_Shader: {fileID: -6465566751694194690, guid: 60511d6915b7fcc49b0196c53553397e,
+  m_Name: WaterNoiseTransparent
+  m_Shader: {fileID: -6465566751694194690, guid: 922db5138bda6ab4db9dc7bef52ec74e,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_37AAFE25:
-        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
+        m_Texture: {fileID: 2800000, guid: 17db346a22e4a24489d194819faf462d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_B66AF0E1:
@@ -29,22 +29,22 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2E11270D: -0
-    - Vector1_39D35881: -6.88
-    - Vector1_3B48FD24: 0.8
-    - Vector1_80CAEB23: 1.05
-    - Vector1_8E5091B8: -1.48
-    - Vector1_981A3A67: -26.42
-    - Vector1_B4AD72C2: 1
+    - Vector1_2E11270D: 0
+    - Vector1_39D35881: -0.02
+    - Vector1_3B48FD24: 0.521
+    - Vector1_80CAEB23: 0.48
+    - Vector1_86BA23A: 0.24
+    - Vector1_8E5091B8: 1.04
+    - Vector1_981A3A67: 0.38
     - Vector1_C1C7D298: 0.767
-    - Vector1_ECB3F2B8: 0.234
+    - Vector1_ECB3F2B8: 1
     m_Colors:
-    - Color_27D4D743: {r: 0.13136347, g: 0.50539804, b: 0.6792453, a: 1}
-    - Color_51A4B6EC: {r: 0, g: 0.62352943, b: 1, a: 1}
-    - Color_C347D0B: {r: 0, g: 0.7176471, b: 1, a: 0}
-    - Vector2_721EEAF4: {r: 0, g: 2, b: 0, a: 0}
-    - Vector2_DA1F7CD9: {r: 1, g: 0, b: 0, a: 0}
-    - Vector2_E9AD9031: {r: 0, g: 2, b: 0, a: 0}
+    - Color_27D4D743: {r: 0.21226418, g: 0.92110777, b: 1, a: 1}
+    - Color_51A4B6EC: {r: 1, g: 1, b: 1, a: 1}
+    - Color_C347D0B: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_721EEAF4: {r: 0, g: -1, b: 0, a: 0}
+    - Vector2_DA1F7CD9: {r: 0.37, g: 0.46, b: 0, a: 0}
+    - Vector2_E9AD9031: {r: 0, g: -1, b: 0, a: 0}
 --- !u!114 &5517894253881586063
 MonoBehaviour:
   m_ObjectHideFlags: 11

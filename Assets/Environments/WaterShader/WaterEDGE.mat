@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SpireDirection
-  m_Shader: {fileID: -6465566751694194690, guid: 84537ae16292af4469d695c107cc4427,
+  m_Name: WaterEDGE
+  m_Shader: {fileID: -6465566751694194690, guid: 60511d6915b7fcc49b0196c53553397e,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,12 +20,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_F55FE6A5:
-        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
+    - Texture2D_37AAFE25:
+        m_Texture: {fileID: 2800000, guid: 17db346a22e4a24489d194819faf462d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - Texture2D_FC82321B:
-        m_Texture: {fileID: 2800000, guid: 5cb95832a4c8d014caa71bb228973120, type: 3}
+    - Texture2D_B66AF0E1:
+        m_Texture: {fileID: 2800000, guid: 3e6a8c87ab0d12b4ebe241ac558271cc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -56,23 +56,17 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_3FFE6A7_Out_0:
-        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_58702F65_Out_0:
-        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2D979712: 0.02
-    - Vector1_5438D3BA: -0.64
-    - Vector1_6188D840: -1.42
-    - Vector1_8812FD1D: 0.78
-    - Vector1_C348BF4A: 2
-    - Vector1_EAB6937E: 0
-    - Vector1_F08A80DD: 0.39
-    - Vector1_F93BDB0B: -0.21
+    - Vector1_2E11270D: 0.22
+    - Vector1_39D35881: 0.4
+    - Vector1_3B48FD24: 0.3
+    - Vector1_5AE4170F: 0.32
+    - Vector1_80CAEB23: 16.58
+    - Vector1_8E5091B8: 1.16
+    - Vector1_981A3A67: 0.6
+    - Vector1_B4AD72C2: 0.52
+    - Vector1_C1C7D298: 0.61
+    - Vector1_ECB3F2B8: 0.211
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -95,16 +89,17 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_56010BD5: {r: 0.05660379, g: 0.05660379, b: 0.05660379, a: 0}
-    - Color_5B2F0B13: {r: 0, g: 0.12290126, b: 0.8705506, a: 0}
-    - Color_CC96F954: {r: 0, g: 2.5765078, b: 3.679308, a: 0}
-    - Vector2_644B6580: {r: 2.02, g: 1.8, b: 0, a: 0}
-    - Vector2_AAFE3DE0: {r: 8.36, g: 1.25, b: 0, a: 0}
+    - Color_27D4D743: {r: 0.08018869, g: 0.32671204, b: 1, a: 0.043137256}
+    - Color_51A4B6EC: {r: 0, g: 0, b: 0, a: 0}
+    - Color_C347D0B: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_721EEAF4: {r: 0, g: 2, b: 0, a: 0}
+    - Vector2_DA1F7CD9: {r: 0.39, g: -1.56, b: 0, a: 0}
+    - Vector2_E9AD9031: {r: 1, g: 2, b: 2, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
---- !u!114 &1063690870151186493
+--- !u!114 &5517894253881586063
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
