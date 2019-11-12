@@ -94,7 +94,7 @@ PrefabInstance:
     - target: {fileID: 6894595868130354055, guid: 6610810040b38ee48ac6d71161ba5ce4,
         type: 3}
       propertyPath: m_Name
-      value: TreeTrunkVert 1
+      value: WallBrick05
       objectReference: {fileID: 0}
     - target: {fileID: 6894595868130354055, guid: 6610810040b38ee48ac6d71161ba5ce4,
         type: 3}
@@ -156,6 +156,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 675855360828784383, guid: 6610810040b38ee48ac6d71161ba5ce4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3700714790603322524, guid: 6610810040b38ee48ac6d71161ba5ce4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -166,17 +171,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 675855360828784383, guid: 6610810040b38ee48ac6d71161ba5ce4,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8042078965133074900, guid: 6610810040b38ee48ac6d71161ba5ce4,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8139666718747400696, guid: d81d40edaf5edbd41862bbff0e04d1c8,
         type: 3}
+    - target: {fileID: 8797131268752099866, guid: 6610810040b38ee48ac6d71161ba5ce4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2201
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6598959183207013796, guid: 6610810040b38ee48ac6d71161ba5ce4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6610810040b38ee48ac6d71161ba5ce4, type: 3}
