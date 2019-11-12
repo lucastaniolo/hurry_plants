@@ -8,7 +8,11 @@ public class PickUpElement<O> : MonoBehaviour where O : IObjective
     [SerializeField] private GameObject throwFx;
     [SerializeField] private Respawner respawner;
 
-    private void Start()
+    protected GameObject HitFx => hitFx;
+    protected Respawner Respawner => respawner;
+    protected Pickable Pickable => pickable;
+    
+    private void Awake()
     {
         pickable = GetComponent<Pickable>();
         pickable.OnHit.AddListener(OnHit);
@@ -22,7 +26,7 @@ public class PickUpElement<O> : MonoBehaviour where O : IObjective
             Instantiate(throwFx, transform.position, Quaternion.identity);
     }
 
-    private void OnPick()
+    protected virtual void OnPick()
     {
         if (pickFx != null)
             Instantiate(pickFx, transform.position, Quaternion.identity);

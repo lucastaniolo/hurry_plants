@@ -1,20 +1,45 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
 public class WaterStream : MonoBehaviour
 {
     [SerializeField] private float velocity;
-    private GroundMovement groundMovement;
+    [SerializeField] private float counterVelocity;
+    private readonly List<GroundMovement> groundMovements = new List<GroundMovement>();
 
-    private void OnTriggerEnter(Collider other) => groundMovement = other.GetComponent<GroundMovement>();
-    private void OnTriggerExit(Collider other) => groundMovement = null;
+    private void OnTriggerEnter(Collider other)
+    {
+        var groundMovement = other.GetComponent<GroundMovement>();
+        if (groundMovement != null)
+            groundMovements.Add(groundMovement);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        var groundExiting = groundMovements.FirstOrDefault(g => g.gameObject == other.gameObject);
+        if (groundExiting != null)
+            groundMovements.Remove(groundExiting);
+    }
 
     private void FixedUpdate()
     {
-        if (groundMovement == null) return;
-        groundMovement.Move(transform.forward * velocity);
+        if (groundMovements == null || groundMovements.Count == 0) return;
 
-        if (!groundMovement.gameObject.activeInHierarchy)
-            groundMovement = null;
+        GroundMovement groundExiting = null;
+        foreach (var groundMovement in groundMovements)
+        {
+            if (transform.forward == groundMovement.transform.forward)
+                groundMovement.Move(transform.forward, velocity);
+            else
+                groundMovement.Move(transform.forward, counterVelocity);
+
+            if (!groundMovement.gameObject.activeInHierarchy)
+                groundExiting = groundMovement;
+        }
+        
+        if (groundExiting != null)
+            groundMovements.Remove(groundExiting);
     }
 }

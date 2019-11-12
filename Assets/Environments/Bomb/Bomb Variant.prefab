@@ -265,14 +265,17 @@ PrefabInstance:
         type: 3}
       propertyPath: pickFx
       value: 
-      objectReference: {fileID: 617123378929876957, guid: 17641dec77f19c54095e4bd499752c50,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4983437848817324871, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: throwFx
       value: 
-      objectReference: {fileID: 617123378929876957, guid: 17641dec77f19c54095e4bd499752c50,
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983437848817324871, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
+      propertyPath: countdownLabel
+      value: 
+      objectReference: {fileID: 4188197619270844021}
     - target: {fileID: 1657267491653344796, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: m_IsActive
@@ -298,6 +301,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cb8e1b6c7d0fb5d46953618c965dba09, type: 2}
+    - target: {fileID: 4000532198466364058, guid: a665d45a0833e6641a0c94c0f51b820e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a665d45a0833e6641a0c94c0f51b820e, type: 3}
 --- !u!1 &2048144372645320374 stripped
@@ -306,3 +314,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6430834150090839012}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4188197619270844021 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7143164331719126417, guid: a665d45a0833e6641a0c94c0f51b820e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6430834150090839012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -16,6 +16,11 @@ public abstract class BaseMovement : MonoBehaviour
         rigidbody.MovePosition(rigidbody.position + baseSpeed * Time.deltaTime * direction.normalized);
     }
     
+    public virtual void Move(Vector3 direction, float multiplier)
+    {
+        rigidbody.MovePosition(rigidbody.position + baseSpeed * Time.deltaTime * multiplier * direction.normalized);
+    }
+    
     protected void Rotate(Vector3 input)
     {
         var angle = 0f;

@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using GamepadInput;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,11 +19,17 @@ public class GameManager : MonoBehaviour
 
     private InputHandler[] playersInputs;
 
+    private List<Victim> victims = new List<Victim>();
+    private int objectiveCounter;
+
+    public bool IsGameOver { get; private set; }
+
     private void Awake()
     {
         ME = this;
         DontDestroyOnLoad(this);
         playersInputs = FindObjectsOfType<InputHandler>();
+        victims = FindObjectsOfType<Victim>().ToList();
     }
 
     private void Start()
@@ -33,9 +41,9 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         // Reload level
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || GamePad.GetButtonDown(GamePad.Button.Start, GamePad.Index.Any))
             NavigatorManager.ReloadLevel();
-
+        
         SwitchControlledPlayer();
     }
 
@@ -72,6 +80,16 @@ public class GameManager : MonoBehaviour
             playersInputs[1].gamePadIndex = GamePad.Index.Two;
             playersInputs[2].gamePadIndex = GamePad.Index.Two;
             playersInputs[3].gamePadIndex = GamePad.Index.One;
+        }
+    }
+
+    public void CountObjective()
+    {
+        objectiveCounter++;
+
+        if (objectiveCounter >= victims.Count)
+        {
+            IsGameOver = true;
         }
     }
 }

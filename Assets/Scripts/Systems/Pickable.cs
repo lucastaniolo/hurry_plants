@@ -56,6 +56,7 @@ public class Pickable : SimpleStateMachine
         transform.position = picker.ThrowPoint.position;
         OnThrowed.Invoke();
         IsPickBlocked = false;
+        picker.OnPickerDie.RemoveListener(GetRelease);
         picker = null;
         airMovement.SetTrail(true);
     }

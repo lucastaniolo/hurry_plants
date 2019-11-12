@@ -44,9 +44,10 @@ public class InputHandler : MonoBehaviour
         else
         {
             HandleDirection4();
-//            HandleStick();
-//            HandleActions();
         }
+        
+        HandleStick();
+        HandleActions();
     }
 
     private void HandleDirection4()
@@ -184,15 +185,12 @@ public class InputHandler : MonoBehaviour
     private void HandleStick()
     {
         var input = GamePad.GetAxis(GamePad.Axis.LeftStick, gamePadIndex);
-        
-        Debug.Log(input + " " + gamePadIndex);
+//        Debug.Log(input + " " + gamePadIndex);
 
         if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
             input.y = 0;
         else
             input.x = 0;
-
-//        Debug.Log(input);
 
         Direction = new Vector3(input.x, 0, input.y);
     }

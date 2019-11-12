@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &4575625859240969237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8542960241243353073}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b109df580a32e40bd6416cd12f5fe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTimeBtwSpawns: 0.155
-  echo: {fileID: 2670322240979431407, guid: 852b3f0e0cfeb054698270961d3f17c1, type: 3}
 --- !u!1001 &2307696550201898529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81,6 +67,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3933582539988204410, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 844168683, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
+      propertyPath: trailFx
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 844168686, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
+      propertyPath: trailFx
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 844168687, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
       propertyPath: registerSpawnFx
       value: 
@@ -91,11 +90,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4388063633504473860, guid: 517c865cac873cd4ca1b33e3a52d7ddc,
         type: 3}
-    - target: {fileID: 3933582539988204410, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5534864154086382269, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
         type: 3}
       propertyPath: m_IsActive
@@ -108,9 +102,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
---- !u!1 &8542960241243353073 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6235274205126318544, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2307696550201898529}
-  m_PrefabAsset: {fileID: 0}

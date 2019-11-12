@@ -9,6 +9,64 @@
 // - Other bomb: explode and respawn
 // - Crate (objective): destroy
 
- public class Bomb : PickUpElement<Crate>
+using System.Collections;
+using TMPro;
+using UnityEngine;
+
+public class Bomb : PickUpElement<Crate>
 {
+    [SerializeField] private int timeToExplode;
+    [SerializeField] private TextMeshPro countdownLabel;
+
+    private int timer;
+    private Transform label;
+    private Transform cameraTransform;
+
+    private void Start()
+    {
+        countdownLabel.gameObject.SetActive(false);
+        label = countdownLabel.transform;
+        cameraTransform = GameObject.FindWithTag("LookAt").transform;
+        timer = timeToExplode;
+    }
+
+    private void OnEnable()
+    {
+        countdownLabel.gameObject.SetActive(false);
+        timer = timeToExplode;
+        countdownLabel.text = timeToExplode.ToString();
+    }
+    
+    protected override void OnPick()
+    {
+        countdownLabel.gameObject.SetActive(true);
+        countdownLabel.text = timeToExplode.ToString();
+        
+        if (timer == timeToExplode)
+            StartCoroutine(Countdown());
+        
+        base.OnPick();
+    }
+
+    private IEnumerator Countdown()
+    {
+        while (timer > 0)
+        {
+            timer--;
+            countdownLabel.text = timer.ToString();
+            yield return new WaitForSeconds(1);
+        }
+        
+        Respawner.Register();
+        Instantiate(HitFx, transform.position, Quaternion.identity);
+        Pickable.GetRelease();
+    }
+
+    private void Update()
+    {
+        if (!label.gameObject.activeInHierarchy) return;
+
+        var heading = transform.position - cameraTransform.position;
+        label.LookAt(heading);
+    }
 }

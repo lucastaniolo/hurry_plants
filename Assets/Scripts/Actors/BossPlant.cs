@@ -12,6 +12,7 @@ public class BossPlant : MonoBehaviour, IObjective
     public void ObjectiveHit()
     {
         animator.SetTrigger("EatNpc");
+        GameManager.ME.CountObjective();
     }
 
     private void UpdateState(BossStates state)

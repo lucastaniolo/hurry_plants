@@ -63,6 +63,9 @@ public class Picker : MonoBehaviour
 
     public void Release()
     {
+        if (pickable == null) return;
+        
+        Physics.IgnoreCollision(Collider, pickable.Collider, false);
         pickable = null;
     }
 }
