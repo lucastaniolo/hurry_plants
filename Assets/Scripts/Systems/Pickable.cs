@@ -105,10 +105,7 @@ public class Pickable : SimpleStateMachine
     private void OnCollisionEnter(Collision collision)
     {
         // Return false if we can't be picked up at this moment
-        if (picker != null &&
-            (PickableStates)currentState != PickableStates.Idle &&
-            (PickableStates)currentState != PickableStates.Thrown ||
-            IsPickBlocked)
+        if (picker != null || IsPickBlocked || (PickableStates)currentState != PickableStates.Thrown)
             return;
         
         picker = collision.gameObject.GetComponent<Picker>();

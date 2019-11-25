@@ -39,6 +39,8 @@ public class Player : SimpleStateMachine
 
     protected override void EarlyGlobalSuperUpdate()
     {
+        pickable.IsPickBlocked = !inputHandler.PickMeButton;        
+                
         if (inputHandler.ThrowButton)
             picker.Throw();
 
@@ -76,7 +78,7 @@ public class Player : SimpleStateMachine
     private void Idle_EnterState()
     {
         pickable.SetIdle();
-        pickable.IsPickBlocked = false;
+//        pickable.IsPickBlocked = false;
         picker.Unavaiable = false;
     }
 
@@ -88,7 +90,7 @@ public class Player : SimpleStateMachine
 
     private void Idle_ExitState()
     {
-        pickable.IsPickBlocked = true;
+//        pickable.IsPickBlocked = true;
     }
 
     private void Captured_EnterState()

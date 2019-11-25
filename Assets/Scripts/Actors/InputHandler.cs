@@ -3,10 +3,6 @@ using System.Linq;
 using UnityEngine;
 using GamepadInput;
 
-// TODO      
-// -Support 4 local players
-// -Support Controllers: Xbox, Nintendo switch etc
-
 public class InputHandler : MonoBehaviour
 {
     public GamePad.Index gamePadIndex;
@@ -14,6 +10,7 @@ public class InputHandler : MonoBehaviour
     public Vector3 Direction { get; private set; }
 
     public bool ThrowButton { get; private set; }
+    public bool PickMeButton { get; private set; }
 
     public readonly Dictionary<Vector2, float> directions = new Dictionary<Vector2, float>();
 
@@ -198,5 +195,6 @@ public class InputHandler : MonoBehaviour
     private void HandleActions()
     {
         ThrowButton = GamePad.GetButtonDown(GamePad.Button.A, gamePadIndex);
+        PickMeButton = GamePad.GetButton(GamePad.Button.B, gamePadIndex);
     }
 }
