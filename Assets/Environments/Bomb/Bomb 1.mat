@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bomb
-  m_Shader: {fileID: -6465566751694194690, guid: dc9865b85247418418cc0d240d0c7906,
+  m_Name: Bomb 1
+  m_Shader: {fileID: -6465566751694194690, guid: acb0cc1d5cd17e747a952add49d3db1b,
     type: 3}
   m_ShaderKeywords: _SPECULAR_SETUP
   m_LightmapFlags: 4
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_F55FE6A5:
-        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
+        m_Texture: {fileID: 2800000, guid: 877224114e9ef894ba0ee035ea04941b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_FC82321B:
@@ -73,17 +73,17 @@ Material:
     - Boolean_ED438E34: 1
     - Vector1_2167F24A: 1
     - Vector1_2D979712: 3.78
-    - Vector1_5438D3BA: 0.01
+    - Vector1_5438D3BA: 0.07
     - Vector1_6188D840: 0.01
-    - Vector1_8812FD1D: 0.5
+    - Vector1_8812FD1D: -1.08
     - Vector1_8F894985: 6.2
     - Vector1_98D7ACEB: 0.48
     - Vector1_C348BF4A: 0.5
     - Vector1_D7F6F83C: -3.26
     - Vector1_EAB6937E: 0.63
-    - Vector1_F08A80DD: 3.78
+    - Vector1_F08A80DD: 0
     - Vector1_F8F1095: 2.42
-    - Vector1_F93BDB0B: 1.69
+    - Vector1_F93BDB0B: -0.01
     - Vector1_FE8FD46: 10.9
     - _AlphaClip: 0
     - _Blend: 0
@@ -113,12 +113,12 @@ Material:
     - Color_6197C537: {r: 1, g: 1, b: 1, a: 0}
     - Color_6EDC9A51: {r: 20.118616, g: 10.100704, b: 0, a: 0.53333336}
     - Color_B3DDA2B6: {r: 0.24437997, g: 0.061939623, b: 0, a: 0}
-    - Color_CC96F954: {r: 0.03475436, g: 0.3352687, b: 0.6698113, a: 0}
+    - Color_CC96F954: {r: 0, g: 0, b: 0, a: 0}
     - Color_D6F5176: {r: 5.133145, g: 0.33117065, b: 0.26907614, a: 1}
     - Color_E0F07555: {r: 1, g: 1, b: 1, a: 0}
     - Color_EBFEF514: {r: 1, g: 0.109178446, b: 0, a: 0.6509804}
     - Vector2_10EBFC82: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_644B6580: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_644B6580: {r: 4.24, g: 2.78, b: 0, a: 0}
     - Vector2_AAFE3DE0: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_B806DF46: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
