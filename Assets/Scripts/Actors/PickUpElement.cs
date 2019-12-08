@@ -36,23 +36,17 @@ public class PickUpElement<O> : MonoBehaviour where O : IObjective
     {
         Instantiate(hitFx, transform.position, Quaternion.identity);
 
-        var target = hitObject.GetComponent<O>();
-
-        if (target != null)
+        if (hitObject.TryGetComponent<O>(out var target))
         {
             target.ObjectiveHit();
             Destroy(gameObject);
             Debug.Log("Destroy on Hit");
             return;
         }
-
+        
         respawner.Register();
 
-        var targetRespawn = hitObject.GetComponent<Respawner>();
-
-        if (targetRespawn != null)
-        {
+        if (hitObject.TryGetComponent<Respawner>(out var targetRespawn))
             targetRespawn.Register();
-        }
     }
 }

@@ -11,14 +11,13 @@ GameObject:
   - component: {fileID: 8756598588413946646}
   - component: {fileID: 5848493458546467031}
   - component: {fileID: 1083738247857274333}
-  - component: {fileID: 5516035611281533303}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8756598588413946646
 Transform:
   m_ObjectHideFlags: 0
@@ -80,20 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &5516035611281533303
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953191882074944742}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2307696550201898529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101,6 +86,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 844168690, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
+      propertyPath: gamePadIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 69225003264553590, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1022931271445622455, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
         type: 3}
       propertyPath: m_IsActive

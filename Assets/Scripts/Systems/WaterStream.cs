@@ -11,8 +11,7 @@ public class WaterStream : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var groundMovement = other.GetComponent<GroundMovement>();
-        if (groundMovement != null)
+        if (other.TryGetComponent<GroundMovement>(out var groundMovement))
             groundMovements.Add(groundMovement);
     }
 

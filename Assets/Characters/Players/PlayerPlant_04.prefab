@@ -11,14 +11,13 @@ GameObject:
   - component: {fileID: 3488729149395237584}
   - component: {fileID: 6273312696129869640}
   - component: {fileID: 173415806730429478}
-  - component: {fileID: 5439708801530092261}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3488729149395237584
 Transform:
   m_ObjectHideFlags: 0
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &5439708801530092261
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4292472872468656249}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &631991127359808793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100,6 +86,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 69225003264553590, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 513437797381267505, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

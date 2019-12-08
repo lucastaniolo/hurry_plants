@@ -39,7 +39,8 @@ public class Player : SimpleStateMachine
 
     protected override void EarlyGlobalSuperUpdate()
     {
-        pickable.IsPickBlocked = !inputHandler.PickMeButton;        
+        pickable.IsPickBlocked = !inputHandler.PickMeButton;
+        Debug.LogWarning(gameObject.name + " PickBlocked =" + pickable.IsPickBlocked);
                 
         if (inputHandler.ThrowButton)
             picker.Throw();

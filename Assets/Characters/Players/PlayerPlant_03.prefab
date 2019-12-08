@@ -11,14 +11,13 @@ GameObject:
   - component: {fileID: 7361247776390851090}
   - component: {fileID: 7259513668654212268}
   - component: {fileID: 3677645520406715092}
-  - component: {fileID: 3945787010783513937}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7361247776390851090
 Transform:
   m_ObjectHideFlags: 0
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3945787010783513937
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7064807388981434292}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8980515045828800394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104,6 +90,16 @@ PrefabInstance:
       propertyPath: gamePadIndex
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 69225003264553590, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 513437797381267505, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 952fb699af020f743940fffc76f47256, type: 2}
     - target: {fileID: 1022931271445622455, guid: 10d25c009ce780546ab6fb6c2bf9a3a1,
         type: 3}
       propertyPath: m_IsActive

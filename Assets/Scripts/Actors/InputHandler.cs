@@ -26,6 +26,26 @@ public class InputHandler : MonoBehaviour
     {
 //        Debug.Log(GamePad.GetAxis(GamePad.Axis.LeftStick, GamePad.Index.Any));
 
+//        if (gamePadIndex == GamePad.Index.One)
+//        {
+//            HandleDirection();
+//        }
+//        else if (gamePadIndex == GamePad.Index.Two)
+//        {
+//            HandleDirection2();
+//        }
+//        else if (gamePadIndex == GamePad.Index.Three)
+//        {
+//            HandleDirection3();
+//        }
+//        else
+//        {
+//            HandleDirection4();
+//        }
+//        
+//        HandleStick();
+//        HandleActions();
+        
         if (gamePadIndex == GamePad.Index.One)
         {
             HandleDirection();
@@ -42,14 +62,12 @@ public class InputHandler : MonoBehaviour
         {
             HandleDirection4();
         }
-        
-        HandleStick();
-        HandleActions();
     }
 
     private void HandleDirection4()
     {
-        ThrowButton = Input.GetKeyDown(KeyCode.Comma);
+        ThrowButton = Input.GetKeyDown(KeyCode.Alpha5);
+        PickMeButton = Input.GetKey(KeyCode.Alpha6);
         
         // UP
         if (Input.GetKey(KeyCode.I))
@@ -82,8 +100,9 @@ public class InputHandler : MonoBehaviour
 
     private void HandleDirection3()
     {
-        ThrowButton = Input.GetKeyDown(KeyCode.KeypadMinus);
-        
+        ThrowButton = Input.GetKeyDown(KeyCode.Alpha7);
+        PickMeButton = Input.GetKey(KeyCode.Alpha8);
+
         // UP
         if (Input.GetKey(KeyCode.UpArrow))
             directions[Vector2.up] += Time.deltaTime;
@@ -115,7 +134,8 @@ public class InputHandler : MonoBehaviour
 
     private void HandleDirection()
     {
-        ThrowButton = Input.GetKeyDown(KeyCode.Space);
+        ThrowButton = Input.GetKeyDown(KeyCode.Alpha1);
+        PickMeButton = Input.GetKey(KeyCode.Alpha2);
         
         // UP
         if (Input.GetKey(KeyCode.W))
@@ -148,8 +168,9 @@ public class InputHandler : MonoBehaviour
     
     private void HandleDirection2()
     {
-        ThrowButton = Input.GetKeyDown(KeyCode.Alpha0);
-        
+        ThrowButton = Input.GetKeyDown(KeyCode.Alpha3);
+        PickMeButton = Input.GetKey(KeyCode.Alpha4);
+
         // UP
         if (Input.GetKey(KeyCode.T))
             directions[Vector2.up] += Time.deltaTime;

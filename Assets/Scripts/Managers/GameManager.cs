@@ -49,37 +49,37 @@ public class GameManager : MonoBehaviour
     // Debug code
     private void SwitchControlledPlayer()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            playersInputs[0].gamePadIndex = GamePad.Index.One;
-            playersInputs[1].gamePadIndex = GamePad.Index.Two;
-            playersInputs[2].gamePadIndex = GamePad.Index.Two;
-            playersInputs[3].gamePadIndex = GamePad.Index.Two;
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            playersInputs[0].gamePadIndex = GamePad.Index.Two;
-            playersInputs[1].gamePadIndex = GamePad.Index.One;
-            playersInputs[2].gamePadIndex = GamePad.Index.Two;
-            playersInputs[3].gamePadIndex = GamePad.Index.Two;
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            playersInputs[0].gamePadIndex = GamePad.Index.Two;
-            playersInputs[1].gamePadIndex = GamePad.Index.Two;
-            playersInputs[2].gamePadIndex = GamePad.Index.One;
-            playersInputs[3].gamePadIndex = GamePad.Index.Two;
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            playersInputs[0].gamePadIndex = GamePad.Index.Two;
-            playersInputs[1].gamePadIndex = GamePad.Index.Two;
-            playersInputs[2].gamePadIndex = GamePad.Index.Two;
-            playersInputs[3].gamePadIndex = GamePad.Index.One;
-        }
+//        if (Input.GetKeyDown(KeyCode.Alpha1))
+//        {
+//            playersInputs[0].gamePadIndex = GamePad.Index.One;
+//            playersInputs[1].gamePadIndex = GamePad.Index.Two;
+//            playersInputs[2].gamePadIndex = GamePad.Index.Two;
+//            playersInputs[3].gamePadIndex = GamePad.Index.Two;
+//        }
+//        
+//        if (Input.GetKeyDown(KeyCode.Alpha2))
+//        {
+//            playersInputs[0].gamePadIndex = GamePad.Index.Two;
+//            playersInputs[1].gamePadIndex = GamePad.Index.One;
+//            playersInputs[2].gamePadIndex = GamePad.Index.Two;
+//            playersInputs[3].gamePadIndex = GamePad.Index.Two;
+//        }
+//        
+//        if (Input.GetKeyDown(KeyCode.Alpha3))
+//        {
+//            playersInputs[0].gamePadIndex = GamePad.Index.Two;
+//            playersInputs[1].gamePadIndex = GamePad.Index.Two;
+//            playersInputs[2].gamePadIndex = GamePad.Index.One;
+//            playersInputs[3].gamePadIndex = GamePad.Index.Two;
+//        }
+//        
+//        if (Input.GetKeyDown(KeyCode.Alpha4))
+//        {
+//            playersInputs[0].gamePadIndex = GamePad.Index.Two;
+//            playersInputs[1].gamePadIndex = GamePad.Index.Two;
+//            playersInputs[2].gamePadIndex = GamePad.Index.Two;
+//            playersInputs[3].gamePadIndex = GamePad.Index.One;
+//        }
     }
 
     public void CountObjective()

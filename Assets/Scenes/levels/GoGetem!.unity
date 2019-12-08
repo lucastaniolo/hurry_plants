@@ -7158,6 +7158,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1237212085}
     m_Modifications:
+    - target: {fileID: 6294127732941977261, guid: d38ac4fde400e5c4088f941bc4d5bd59,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37783dd808332724a8857429bd6c7640, type: 2}
     - target: {fileID: 6795206497162706120, guid: d38ac4fde400e5c4088f941bc4d5bd59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12392,6 +12397,11 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4221275314353945471, guid: 03191d11e7179f840ba526bd10216a11,
+        type: 3}
+      propertyPath: m_CullingType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8542960241243353072, guid: 03191d11e7179f840ba526bd10216a11,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12452,6 +12462,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPlant_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8542960241243353073, guid: 03191d11e7179f840ba526bd10216a11,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03191d11e7179f840ba526bd10216a11, type: 3}
 --- !u!4 &1666318901 stripped
