@@ -3859,7 +3859,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 3353235042420454916, guid: 271b30c6e7d23224cb0a43e14e795884, type: 3}
     randomDistribution: 1
@@ -4806,8 +4806,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fea8c93b94e62c142ae6a081ff5c1d06, type: 2}
-  - {fileID: 2100000, guid: fea8c93b94e62c142ae6a081ff5c1d06, type: 2}
+  - {fileID: 2100000, guid: cf0382c41f0f8a6438c6b9da2fb63ffc, type: 2}
+  - {fileID: 2100000, guid: cf0382c41f0f8a6438c6b9da2fb63ffc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4831,7 +4831,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 3
+  m_MaxParticleSize: 5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0.15
   m_LengthScale: 2

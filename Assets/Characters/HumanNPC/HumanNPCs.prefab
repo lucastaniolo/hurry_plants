@@ -46,10 +46,11 @@ TrailRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -280,21 +281,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8421086244394275093}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
-        type: 3}
-      propertyPath: m_Name
-      value: HumanNPC_01
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -348,6 +334,21 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
+        type: 3}
+      propertyPath: m_Name
+      value: HumanNPC_01
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2078100985029957362, guid: 56574f17f97c5514b9cb3507e9f8d6cb,
@@ -370,11 +371,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8421086244394275093}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 501973484676c4e4bbfdd4338497876d,
+    - target: {fileID: -6057140222963153312, guid: 501973484676c4e4bbfdd4338497876d,
         type: 3}
-      propertyPath: m_Name
-      value: humanNPCs
+      propertyPath: m_Avatar
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 501973484676c4e4bbfdd4338497876d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9667444d652850540bfba2ce0cb9bc88, type: 2}
     - target: {fileID: -4216859302048453862, guid: 501973484676c4e4bbfdd4338497876d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -430,16 +436,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 501973484676c4e4bbfdd4338497876d,
+    - target: {fileID: -927199367670048503, guid: 501973484676c4e4bbfdd4338497876d,
         type: 3}
-      propertyPath: m_Avatar
-      value: 
+      propertyPath: m_Name
+      value: humanNPCs
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 501973484676c4e4bbfdd4338497876d,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9667444d652850540bfba2ce0cb9bc88, type: 2}
     - target: {fileID: -386809478281730579, guid: 501973484676c4e4bbfdd4338497876d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
