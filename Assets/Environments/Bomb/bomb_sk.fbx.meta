@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 7651d23f234712b479d5f4249c88b1bf
 ModelImporter:
-  serializedVersion: 26
+  serializedVersion: 19300
   internalIDToNameTable: []
   externalObjects:
   - first:
@@ -10,7 +10,7 @@ ModelImporter:
       name: lambert1
     second: {fileID: 2100000, guid: cb8e1b6c7d0fb5d46953618c965dba09, type: 2}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -75,7 +75,6 @@ ModelImporter:
   referencedClips:
   - 75740fb22ac60b54bbabd3eaa1e137f7
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -133,8 +132,10 @@ ModelImporter:
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 1
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -27,7 +27,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_5E38C12A:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5e4f0c1452875d64f976b3a534fee989, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_9AB14764:
@@ -40,10 +40,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_2A83F532: 0
-    - Vector1_2D57A03: 0
+    - Vector1_2D57A03: 2.66
     - Vector1_31FAECE3: 1
     - Vector1_39E8F1A8: 5
-    - Vector1_B0A2529A: 0
+    - Vector1_B0A2529A: 1.32
     - Vector1_BDF28BF7: 0
     - Vector1_CA724AD8: 0.05
     - Vector1_DBEED185: 0
@@ -90,7 +90,7 @@ Material:
     - Color_FFAAE4B1: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_2A083235: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_AAE50A5E: {r: 1, g: 1, b: 0, a: 0}
-    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &5830714372542786203
 MonoBehaviour:

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LeafsShadow
+  m_Shader: {fileID: -6465566751694194690, guid: 07f382470a4d9d24dad9e78c96c4cdf2,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_13B5FE1C:
+        m_Texture: {fileID: 2800000, guid: 3bce13a3366f9c94095ef7c0fdbd98f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_675EF3D3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_8246F929:
+        m_Texture: {fileID: 2800000, guid: 3bce13a3366f9c94095ef7c0fdbd98f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_F31EBBF:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_335B3A86: 1
+    - Vector1_2DE3DE74: 1
+    - Vector1_5D30D814: 0
+    - Vector1_63F0706E: 0
+    - Vector1_6B76DB54: 0
+    - Vector1_8F91F117: 0
+    - Vector1_9613C4DF: 0
+    - Vector1_9D931DE5: 5
+    - Vector1_9FEED43D: 0
+    - Vector1_AB9AF20F: 0
+    m_Colors:
+    - Color_29A6BBFD: {r: 1, g: 1, b: 1, a: 0}
+    - Color_60FAA560: {r: 0.07098794, g: 1, b: 0, a: 0}
+    - Color_93038DE6: {r: 1, g: 1, b: 1, a: 0}
+    - Color_A9C02619: {r: 1, g: 1, b: 1, a: 0}
+    - Color_B6D25606: {r: 0, g: 0, b: 0, a: 1}
+    - Color_F38B9D1B: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
+    - Vector2_2B96130A: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_627A0F62: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_96C45AE4: {r: 1, g: 0, b: 0, a: 0}
+    - Vector2_BBF8CEC2: {r: 0, g: 0, b: 0, a: 0}
+    - Vector3_453BC6EB: {r: 0, g: 0, b: 2, a: 0}
