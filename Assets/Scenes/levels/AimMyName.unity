@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.9560451, g: 1.0244844, b: 0.66619635, a: 1}
+  m_IndirectSpecularColor: {r: 0.95660084, g: 1.02406, b: 0.6654954, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26241,30 +26241,10 @@ PrefabInstance:
       propertyPath: NavigatorManager
       value: 
       objectReference: {fileID: 987345266}
-    - target: {fileID: 1351443764564385470, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645020705359502380, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3427083568402651327, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3,
         type: 3}
       propertyPath: m_Name
       value: GameSettings
-      objectReference: {fileID: 0}
-    - target: {fileID: 5019691993027892121, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3,
-        type: 3}
-      propertyPath: m_projectionMatrixMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5019691993027892121, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3,
-        type: 3}
-      propertyPath: field of view
-      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5951451036178489321, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3,
         type: 3}
@@ -26321,8 +26301,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 313315574, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3, type: 3}
 --- !u!1001 &4156064037439732215
 PrefabInstance:
