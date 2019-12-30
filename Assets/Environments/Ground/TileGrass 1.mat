@@ -8,13 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TileGrass 1
-  m_Shader: {fileID: -6465566751694194690, guid: 576eda35a2e2db340b49c515095b48da,
+  m_Shader: {fileID: -6465566751694194690, guid: 07f382470a4d9d24dad9e78c96c4cdf2,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
   disabledShaderPasses:
@@ -39,14 +39,25 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_675EF3D3:
+        m_Texture: {fileID: 2800000, guid: f97a3fde0ea19fd4987a2dc76a71fb97, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_8246F929:
+        m_Texture: {fileID: 2800000, guid: 602e8211e8fa4fb47a123db329480314, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_25B1C2AC: 0.05
     - Vector1_2D57A03: -0.27
+    - Vector1_2DE3DE74: 0.1
     - Vector1_3F9FDE92: 0
     - Vector1_570F62BF: 0.17
     - Vector1_5E51BDDD: -1.3
     - Vector1_76FE6D2E: 0
     - Vector1_788EEB1B: 0.5
+    - Vector1_9613C4DF: 0.89
+    - Vector1_9D931DE5: 20
     - Vector1_A5B3A4F5: 1.75
     - Vector1_B0A2529A: 0
     - Vector1_D903B296: -0.49
@@ -84,11 +95,17 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
+    - Color_29A6BBFD: {r: 1, g: 1, b: 1, a: 0}
     - Color_2E29BB1F: {r: 0, g: 0, b: 0, a: 0}
+    - Color_93038DE6: {r: 1, g: 1, b: 1, a: 0}
     - Color_9E618AAB: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 0}
+    - Color_A9C02619: {r: 1, g: 1, b: 1, a: 0}
     - Color_DF34C157: {r: 0, g: 0.10735561, b: 0.254717, a: 1}
     - Color_E8ECA824: {r: 0, g: 0, b: 0, a: 0}
     - Color_FBD7D122: {r: 1, g: 1, b: 1, a: 0}
     - Vector2_2A083235: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_627A0F62: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_BBF8CEC2: {r: 0, g: 0, b: 0, a: 0}
+    - Vector3_73F21F97: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

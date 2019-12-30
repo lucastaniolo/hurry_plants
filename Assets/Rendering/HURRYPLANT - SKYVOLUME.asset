@@ -105,7 +105,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: 15
+    m_Value: 12
     min: -100
     max: 100
   tint:
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: -0.17
+    m_Value: -0.23
   contrast:
     m_OverrideState: 1
     m_Value: 4
@@ -173,7 +173,7 @@ MonoBehaviour:
     m_Value: 1
   focusDistance:
     m_OverrideState: 1
-    m_Value: 22
+    m_Value: 21.7
     min: 0.1
   nearFocusStart:
     m_OverrideState: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 0.52
+    m_Value: 0.77
   compensation:
     m_OverrideState: 0
     m_Value: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
     m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.0115254605, g: 0.3490566, b: 0.122046344, a: 1}
+    m_Value: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -561,7 +561,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.498
+    m_Value: 0.505
     min: 0
     max: 1
   smoothness:
@@ -619,8 +619,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.1934605
-          value: 0.24277455
+          time: 0.19891009
+          value: 0.26011562
           inSlope: 1
           outSlope: 1
           tangentMode: 0
@@ -628,8 +628,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.48228884
-          value: 0.5086705
+          time: 0.49591282
+          value: 0.43930638
           inSlope: 0.9496334
           outSlope: 0.9496334
           tangentMode: 0
@@ -637,8 +637,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.7683924
-          value: 0.7803468
+          time: 0.7574932
+          value: 0.75722545
           inSlope: -0.04821327
           outSlope: -0.04821327
           tangentMode: 0
@@ -815,24 +815,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f077503be6ae942a1e1245dbd53ea9, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 1
     m_Value: 3
   intensity:
     m_OverrideState: 1
-    m_Value: 0.067
+    m_Value: 0.154
     min: 0
     max: 1
   scatter:
     m_OverrideState: 1
-    m_Value: 0.099
+    m_Value: 0.152
     min: 0
     max: 1
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.947667, b: 0.08018869, a: 1}
+    m_Value: {r: 1, g: 0.9945203, b: 0.9009434, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 211.69
     min: 0
   cascadeShadowSplitCount:
     m_OverrideState: 1
@@ -880,10 +880,10 @@ MonoBehaviour:
     max: 4
   cascadeShadowSplit0:
     m_OverrideState: 1
-    m_Value: 0.21310128
+    m_Value: 0.16061221
   cascadeShadowSplit1:
     m_OverrideState: 1
-    m_Value: 0.3
+    m_Value: 0.25509
   cascadeShadowSplit2:
     m_OverrideState: 0
     m_Value: 0.3
