@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &748737048
+--- !u!1001 &5260638452084249353
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trail
       objectReference: {fileID: 0}
+    - target: {fileID: 4753103820807891718, guid: 5b39330ea1574804c941d41567d9ba55,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b39330ea1574804c941d41567d9ba55, type: 3}
 --- !u!1001 &6430834150090839012
@@ -79,7 +84,7 @@ PrefabInstance:
     - target: {fileID: 1888767666, guid: a665d45a0833e6641a0c94c0f51b820e, type: 3}
       propertyPath: trailFx
       value: 
-      objectReference: {fileID: 4753103820807891718, guid: 5b39330ea1574804c941d41567d9ba55,
+      objectReference: {fileID: 5967022405450161918, guid: 88fc7b07313c24e4b8b74198109e2845,
         type: 3}
     - target: {fileID: 2760038183984239165, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
@@ -90,12 +95,12 @@ PrefabInstance:
         type: 3}
       propertyPath: throwFx
       value: 
-      objectReference: {fileID: 4753103820807891718, guid: 5b39330ea1574804c941d41567d9ba55,
+      objectReference: {fileID: 5967022405450161918, guid: 88fc7b07313c24e4b8b74198109e2845,
         type: 3}
     - target: {fileID: 4995215340609783122, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: m_Name
-      value: Bomb Variant
+      value: Bomb Variant (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6493180928091183247, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
@@ -105,7 +110,7 @@ PrefabInstance:
     - target: {fileID: 8289376741092636481, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.64
+      value: 4.14
       objectReference: {fileID: 0}
     - target: {fileID: 8289376741092636481, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
@@ -120,17 +125,17 @@ PrefabInstance:
     - target: {fileID: 8289376741092636481, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8289376741092636481, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8289376741092636481, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8289376741092636481, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}

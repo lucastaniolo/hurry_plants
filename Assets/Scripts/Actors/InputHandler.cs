@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using GamepadInput;
@@ -134,7 +134,7 @@ public class InputHandler : MonoBehaviour
 
     private void HandleDirection()
     {
-        ThrowButton = Input.GetKeyDown(KeyCode.Alpha1);
+        ThrowButton = Input.GetKeyUp(KeyCode.Alpha1);
         PickMeButton = Input.GetKey(KeyCode.Alpha2);
         
         // UP
