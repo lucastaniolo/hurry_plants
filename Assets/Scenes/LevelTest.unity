@@ -4197,6 +4197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterBreak
       objectReference: {fileID: 0}
+    - target: {fileID: 4528981274153191825, guid: 8fe1e1481d32cf94f9c547ff93a180d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fe1e1481d32cf94f9c547ff93a180d0, type: 3}
 --- !u!1001 &347536472
@@ -4709,17 +4714,17 @@ PrefabInstance:
     - target: {fileID: 8542960241243353072, guid: 03191d11e7179f840ba526bd10216a11,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5
+      value: -3.92
       objectReference: {fileID: 0}
     - target: {fileID: 8542960241243353072, guid: 03191d11e7179f840ba526bd10216a11,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.313
       objectReference: {fileID: 0}
     - target: {fileID: 8542960241243353072, guid: 03191d11e7179f840ba526bd10216a11,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: 1.401
       objectReference: {fileID: 0}
     - target: {fileID: 8542960241243353072, guid: 03191d11e7179f840ba526bd10216a11,
         type: 3}
@@ -13311,6 +13316,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterBreak (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4528981274153191825, guid: 8fe1e1481d32cf94f9c547ff93a180d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fe1e1481d32cf94f9c547ff93a180d0, type: 3}
 --- !u!1001 &1059236579
@@ -18590,11 +18600,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4989778523936975286, guid: 9759089b8c95b3541b2db87a9c1a6d0f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.93683
       objectReference: {fileID: 0}
     - target: {fileID: 8314798271985097637, guid: 9759089b8c95b3541b2db87a9c1a6d0f,
         type: 3}
@@ -29247,12 +29252,12 @@ PrefabInstance:
     - target: {fileID: 5450502197545186187, guid: 04a1fd9ea617ad04db34a1f48f709f77,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.97
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 5450502197545186187, guid: 04a1fd9ea617ad04db34a1f48f709f77,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5450502197545186187, guid: 04a1fd9ea617ad04db34a1f48f709f77,
         type: 3}
@@ -29323,6 +29328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StripesWater
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079057863140983192, guid: 04a1fd9ea617ad04db34a1f48f709f77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04a1fd9ea617ad04db34a1f48f709f77, type: 3}
