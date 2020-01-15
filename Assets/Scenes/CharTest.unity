@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.61101097, g: 0.61010665, b: 0.3311491, a: 1}
+  m_IndirectSpecularColor: {r: 0.5487469, g: 0.5317482, b: 0.26144642, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -151,6 +151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HumanNPCs (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112406289605747336, guid: 5f2f663761e04614b8361e0b94664bf7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8421086244394275093, guid: 5f2f663761e04614b8361e0b94664bf7,
         type: 3}
@@ -29114,6 +29119,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPlant_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8542960241243353073, guid: 03191d11e7179f840ba526bd10216a11,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03191d11e7179f840ba526bd10216a11, type: 3}
 --- !u!4 &1432500668 stripped
@@ -38004,7 +38014,7 @@ PrefabInstance:
     - target: {fileID: 8421086244394275093, guid: 5f2f663761e04614b8361e0b94664bf7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 8421086244394275093, guid: 5f2f663761e04614b8361e0b94664bf7,
         type: 3}
@@ -38014,7 +38024,7 @@ PrefabInstance:
     - target: {fileID: 8421086244394275093, guid: 5f2f663761e04614b8361e0b94664bf7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.0524454
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 8421086244394275093, guid: 5f2f663761e04614b8361e0b94664bf7,
         type: 3}
