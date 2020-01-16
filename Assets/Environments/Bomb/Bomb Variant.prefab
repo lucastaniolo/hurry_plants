@@ -45,7 +45,7 @@ PrefabInstance:
     - target: {fileID: 4753103820807891717, guid: 5b39330ea1574804c941d41567d9ba55,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4753103820807891717, guid: 5b39330ea1574804c941d41567d9ba55,
         type: 3}
@@ -100,8 +100,13 @@ PrefabInstance:
     - target: {fileID: 4995215340609783122, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: m_Name
-      value: Bomb Variant (4)
+      value: Bomb Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5212343340728156296, guid: a665d45a0833e6641a0c94c0f51b820e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 562498fbe36caeb49bac271bd084c230, type: 2}
     - target: {fileID: 6493180928091183247, guid: a665d45a0833e6641a0c94c0f51b820e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
