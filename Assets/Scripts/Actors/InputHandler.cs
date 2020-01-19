@@ -66,7 +66,7 @@ public class InputHandler : MonoBehaviour
 
     private void HandleDirection4()
     {
-        ThrowButton = Input.GetKeyDown(KeyCode.Alpha5);
+        ThrowButton = Input.GetKeyUp(KeyCode.Alpha5);
         PickMeButton = Input.GetKey(KeyCode.Alpha6);
         
         // UP
@@ -100,7 +100,7 @@ public class InputHandler : MonoBehaviour
 
     private void HandleDirection3()
     {
-        ThrowButton = Input.GetKeyDown(KeyCode.Alpha7);
+        ThrowButton = Input.GetKeyUp(KeyCode.Alpha7);
         PickMeButton = Input.GetKey(KeyCode.Alpha8);
 
         // UP
@@ -168,7 +168,7 @@ public class InputHandler : MonoBehaviour
     
     private void HandleDirection2()
     {
-        ThrowButton = Input.GetKeyDown(KeyCode.Alpha3);
+        ThrowButton = Input.GetKeyUp(KeyCode.Alpha3);
         PickMeButton = Input.GetKey(KeyCode.Alpha4);
 
         // UP
@@ -215,7 +215,7 @@ public class InputHandler : MonoBehaviour
 
     private void HandleActions()
     {
-        ThrowButton = GamePad.GetButtonDown(GamePad.Button.A, gamePadIndex);
+        ThrowButton = GamePad.GetButtonUp(GamePad.Button.A, gamePadIndex);
         PickMeButton = GamePad.GetButton(GamePad.Button.B, gamePadIndex);
     }
 }

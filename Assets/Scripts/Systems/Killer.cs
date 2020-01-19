@@ -3,7 +3,9 @@
 public enum KillType
 {
     Cactus,
-    Hole
+    Hole,
+    Bomb,
+    Victim
 }
 
 public class Killer : MonoBehaviour

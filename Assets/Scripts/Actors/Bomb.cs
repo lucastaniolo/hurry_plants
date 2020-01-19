@@ -17,11 +17,13 @@ public class Bomb : PickUpElement<Crate>
 {
     [SerializeField] private int timeToExplode;
     [SerializeField] private TextMeshPro countdownLabel;
-
+    
     private int timer;
     private Transform label;
     private Transform cameraTransform;
 
+    protected override KillType KillType => KillType.Bomb;
+    
     private void Start()
     {
         countdownLabel.gameObject.SetActive(false);
@@ -30,8 +32,9 @@ public class Bomb : PickUpElement<Crate>
         timer = timeToExplode;
     }
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         countdownLabel.gameObject.SetActive(false);
         timer = timeToExplode;
         countdownLabel.text = timeToExplode.ToString();

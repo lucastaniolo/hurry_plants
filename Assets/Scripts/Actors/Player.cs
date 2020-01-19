@@ -19,6 +19,7 @@ public class Player : SimpleStateMachine
     {
         pickable.OnPicked.AddListener(() => currentState = PlayerStates.Captured);
         pickable.OnThrowed.AddListener(() => currentState = PlayerStates.Flying);
+        
         pickable.OnHit.AddListener(OnHit);
         
         currentState = PlayerStates.Idle;
@@ -39,9 +40,6 @@ public class Player : SimpleStateMachine
 
     protected override void EarlyGlobalSuperUpdate()
     {
-        pickable.IsPickBlocked = !inputHandler.PickMeButton;
-        Debug.LogWarning(gameObject.name + " PickBlocked =" + pickable.IsPickBlocked);
-                
         if (inputHandler.ThrowButton)
             picker.Throw();
 
@@ -55,12 +53,19 @@ public class Player : SimpleStateMachine
 
     protected override void LateGlobalSuperUpdate()
     {
-
+        if (!pickable.IsPickBlocked)
+            Debug.LogWarning(gameObject.name + " PickBlocked =" + pickable.IsPickBlocked);
     }
 
     private void Running_EnterState()
     {
         groundMovement.SetTrail(true);
+    }
+    
+    private void Running_Update()
+    {
+        if (!picker.IsBusy)
+            pickable.IsPickBlocked = !inputHandler.PickMeButton;
     }
     
     private void Running_FixedUpdate()
@@ -85,6 +90,9 @@ public class Player : SimpleStateMachine
 
     private void Idle_Update()
     {
+        if (!picker.IsBusy)
+            pickable.IsPickBlocked = !inputHandler.PickMeButton;
+        
         if (inputHandler.Direction != Vector3.zero)
             currentState = PlayerStates.Running;
     }
@@ -97,6 +105,7 @@ public class Player : SimpleStateMachine
     private void Captured_EnterState()
     {
         picker.Unavaiable = true;
+        pickable.IsPickBlocked = true;
     }
 
     private void Captured_Update()
@@ -132,6 +141,10 @@ public class Player : SimpleStateMachine
             case KillType.Cactus:
                 break;
             case KillType.Hole:
+                break;
+            case KillType.Bomb:
+                break;
+            case KillType.Victim:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(killType), killType, null);

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class Pickable : SimpleStateMachine
@@ -10,6 +11,7 @@ public class Pickable : SimpleStateMachine
     [HideInInspector] public UnityEvent OnThrowed = new UnityEvent();
     [HideInInspector] public UnityAction<Pickable> OnThrowFinished;
     [HideInInspector] public OnHit OnHit = new OnHit();
+    [HideInInspector] public UnityEvent OnReleased = new UnityEvent();
 
     private enum PickableStates { Idle, Picked, Thrown }
     private Picker picker;
@@ -20,15 +22,21 @@ public class Pickable : SimpleStateMachine
     private Animator animator = null;
     private new Rigidbody rigidbody;
 
-    private void Start()
+    private void Awake()
     {
-        currentState = PickableStates.Idle;
         rigidbody = GetComponent<Rigidbody>();
+    }
+
+    private void OnEnable()
+    {
+        SetIdle();
+        IsPickBlocked = false;
     }
 
     private void Idle_EnterState()
     {
         animator?.SetTrigger("Idle");
+        picker = null;
     }
 
     private void Picked_EnterState()
@@ -39,6 +47,7 @@ public class Pickable : SimpleStateMachine
         rigidbody.isKinematic = true;
         Physics.IgnoreCollision(trigger, picker.Collider);
         OnPicked.Invoke();
+        picker.OnPickerDie.AddListener(GetRelease);
     }
 
     private void Picked_ExitState()
@@ -71,6 +80,7 @@ public class Pickable : SimpleStateMachine
         airMovement.SetTrail(false);
         animator?.SetBool("IsFlying", false);
         OnThrowFinished.Invoke(this);
+        IsPickBlocked = true;
     }
 
     public bool Pick(Picker picker)
@@ -86,34 +96,32 @@ public class Pickable : SimpleStateMachine
         return true;
     }
 
-    public void ResolvePick(bool success)
+    public void ResolvePick(Picker resolvedPicker)
     {
-        if (success)
+        if (resolvedPicker != null)
         {
+            picker = resolvedPicker;
             currentState = PickableStates.Picked;
-            picker.OnPickerDie.AddListener(GetRelease);
         }
-        else
-        {
-            picker = null;
-        }
+//        else
+//        {
+//            picker = null;
+//        }
     }
 
     public void SetIdle() => currentState = PickableStates.Idle;
     public void SetThrow() => currentState = PickableStates.Thrown;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         // Return false if we can't be picked up at this moment
 //        if (picker != null && (IsPickBlocked || (PickableStates)currentState != PickableStates.Thrown))
         if (picker != null || IsPickBlocked/* || (PickableStates)currentState != PickableStates.Thrown*/)
             return;
-        
-        picker = collision.gameObject.GetComponent<Picker>();
 
-        if (picker != null && !picker.IsBusy)
+        if (collision.gameObject.TryGetComponent<Picker>(out var collisionPicker) && !collisionPicker.IsBusy)
         {
-            picker.TryPick(this);
+            collisionPicker.TryPick(this);
         }
         else if ((PickableStates)currentState == PickableStates.Thrown)    
         {
@@ -132,7 +140,10 @@ public class Pickable : SimpleStateMachine
         picker = null;
         transform.position = new Vector3(transform.position.x, 0, transform.position.z) + transform.forward * 0.5f;
         SetIdle();
+        OnReleased.Invoke();
     }
+
+    public void ResetKinematic() => rigidbody.isKinematic = true;
 }
 
 [System.Serializable] public class OnHit : UnityEvent<Pickable, GameObject> { }

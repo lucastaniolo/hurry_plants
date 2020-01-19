@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PickUpElement<O> : MonoBehaviour where O : IObjective
@@ -12,12 +13,26 @@ public class PickUpElement<O> : MonoBehaviour where O : IObjective
     protected Respawner Respawner => respawner;
     protected Pickable Pickable => pickable;
     
+    protected virtual KillType KillType { get; }
+    
     private void Awake()
     {
         pickable = GetComponent<Pickable>();
         pickable.OnHit.AddListener(OnHit);
         pickable.OnPicked.AddListener(OnPick);
         pickable.OnThrowed.AddListener(OnThrow);
+        pickable.OnReleased.AddListener(OnRelease);
+    }
+
+    protected virtual void OnEnable()
+    {
+        if (pickable != null)
+            pickable.ResetKinematic();
+    }
+
+    private void OnRelease()
+    {
+        respawner.Register();
     }
 
     private void OnThrow()
@@ -40,13 +55,20 @@ public class PickUpElement<O> : MonoBehaviour where O : IObjective
         {
             target.ObjectiveHit();
             Destroy(gameObject);
-            Debug.Log("Destroy on Hit");
+            Debug.Log($"{gameObject.name} hit objective {target}!");
             return;
         }
         
         respawner.Register();
 
-        if (hitObject.TryGetComponent<Respawner>(out var targetRespawn))
+        if (hitObject.TryGetComponent<Player>(out var player))
+        {
+            player.KillBy(KillType);
+        }
+        else if (hitObject.TryGetComponent<Respawner>(out var targetRespawn))
+        {
+            Debug.Log($"{gameObject.name} hit non objective {targetRespawn}");
             targetRespawn.Register();
+        }
     }
 }

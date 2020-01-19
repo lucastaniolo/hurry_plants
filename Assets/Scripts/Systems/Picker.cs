@@ -25,7 +25,8 @@ public class Picker : MonoBehaviour
     {
         if (pickable != null)
         {
-            pickable.OnHit.Invoke(pickable, gameObject);
+//            pickable.OnHit.Invoke(pickable, gameObject);
+            
             ResetCollision(pickable);
         }
     }
@@ -34,11 +35,11 @@ public class Picker : MonoBehaviour
     {
         if (pickable != null) 
         {
-            target.ResolvePick(false);
+            //target.ResolvePick(null);
             return;
         }
 
-        target.ResolvePick(true);
+        target.ResolvePick(this);
 
         pickable = target;
         pickable.OnThrowFinished = ResetCollision;
