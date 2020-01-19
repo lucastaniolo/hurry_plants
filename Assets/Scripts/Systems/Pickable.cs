@@ -6,6 +6,7 @@ public class Pickable : SimpleStateMachine
 {
     [SerializeField] private Collider trigger;
     [SerializeField] private AirMovement airMovement;
+    [SerializeField] private Rigidbody body;
 
     [HideInInspector] public UnityEvent OnPicked = new UnityEvent();
     [HideInInspector] public UnityEvent OnThrowed = new UnityEvent();
@@ -20,13 +21,7 @@ public class Pickable : SimpleStateMachine
     public Collider Collider => trigger;
     
     private Animator animator = null;
-    private new Rigidbody rigidbody;
-
-    private void Awake()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-    }
-
+    
     private void OnEnable()
     {
         SetIdle();
@@ -44,7 +39,7 @@ public class Pickable : SimpleStateMachine
         animator?.SetBool("IsPicked", true);
         // wall.enabled = false;
         trigger.enabled = false;
-        rigidbody.isKinematic = true;
+        body.isKinematic = true;
         Physics.IgnoreCollision(trigger, picker.Collider);
         OnPicked.Invoke();
         picker.OnPickerDie.AddListener(GetRelease);
@@ -55,7 +50,7 @@ public class Pickable : SimpleStateMachine
         animator?.SetBool("IsPicked", false);
         // wall.enabled = true;
         trigger.enabled = true;
-        rigidbody.isKinematic = false;
+        body.isKinematic = false;
     }
 
     private void Thrown_EnterState()
@@ -143,7 +138,7 @@ public class Pickable : SimpleStateMachine
         OnReleased.Invoke();
     }
 
-    public void ResetKinematic() => rigidbody.isKinematic = true;
+    public void ResetKinematic() => body.isKinematic = true;
 }
 
 [System.Serializable] public class OnHit : UnityEvent<Pickable, GameObject> { }

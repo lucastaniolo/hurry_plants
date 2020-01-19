@@ -26,8 +26,7 @@ public class PickUpElement<O> : MonoBehaviour where O : IObjective
 
     protected virtual void OnEnable()
     {
-        if (pickable != null)
-            pickable.ResetKinematic();
+        pickable.ResetKinematic();
     }
 
     private void OnRelease()

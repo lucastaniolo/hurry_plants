@@ -299,6 +299,7 @@ MonoBehaviour:
   DebugGuiTitle: Simple Machine
   trigger: {fileID: 1888767668}
   airMovement: {fileID: 1888767666}
+  body: {fileID: 1888767667}
   OnPicked:
     m_PersistentCalls:
       m_Calls: []
@@ -306,6 +307,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnReleased:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1888767666
@@ -587,7 +591,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
+  m_fontSize: 8.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
