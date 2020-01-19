@@ -10,6 +10,7 @@ public class Player : SimpleStateMachine
     [SerializeField] public GroundMovement groundMovement;
     [SerializeField] public InputHandler inputHandler;
     [SerializeField] public Respawner respawner;
+    [SerializeField] public GameObject pickMeFx;
 
     private enum PlayerStates { Idle, Running, Flying, Captured }
     
@@ -17,12 +18,19 @@ public class Player : SimpleStateMachine
 
     private void Start()
     {
+        picker.OnPick.AddListener(OnPick);
+        
         pickable.OnPicked.AddListener(() => currentState = PlayerStates.Captured);
         pickable.OnThrowed.AddListener(() => currentState = PlayerStates.Flying);
         
         pickable.OnHit.AddListener(OnHit);
         
         currentState = PlayerStates.Idle;
+    }
+
+    private void OnPick()
+    {
+        pickable.IsPickBlocked = true;
     }
 
     private void OnHit(Pickable pickable, GameObject other) => Land();
@@ -54,7 +62,16 @@ public class Player : SimpleStateMachine
     protected override void LateGlobalSuperUpdate()
     {
         if (!pickable.IsPickBlocked)
+        {
             Debug.LogWarning(gameObject.name + " PickBlocked =" + pickable.IsPickBlocked);
+            if (!pickMeFx.activeInHierarchy)
+                pickMeFx.SetActive(true);
+        }
+        else
+        {
+            if (pickMeFx.activeInHierarchy)
+                pickMeFx.SetActive(false);
+        }
     }
 
     private void Running_EnterState()

@@ -14,6 +14,7 @@ public class Picker : MonoBehaviour
     public bool Unavaiable { get; set; }
 
     [HideInInspector] public UnityEvent OnPickerDie = new UnityEvent();
+    [HideInInspector] public UnityEvent OnPick = new UnityEvent();
     
     private void Start()
     {
@@ -46,6 +47,7 @@ public class Picker : MonoBehaviour
         pickable.transform.SetParent(PickedPoint);
         pickable.transform.rotation = PickedPoint.rotation;
         pickable.transform.localPosition = Vector3.zero;
+        OnPick.Invoke();
     }
 
     private void ResetCollision(Pickable thrownPickable)
