@@ -13,6 +13,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7254895888249548065, guid: 0bf93039e69d0c449a96ca8618a2e3da,
         type: 3}
+    - target: {fileID: 2445494150703910255, guid: bc663f41e8e170f4bb7dee70e5c90818,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083282094072252671, guid: bc663f41e8e170f4bb7dee70e5c90818,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6398655270001111145, guid: bc663f41e8e170f4bb7dee70e5c90818,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68,10 +78,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7096418258396218087, guid: bc663f41e8e170f4bb7dee70e5c90818,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7969065432215585402, guid: bc663f41e8e170f4bb7dee70e5c90818,
         type: 3}
       propertyPath: m_Name
-      value: Crate Variant (2)
+      value: Crate Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940102292721287590, guid: bc663f41e8e170f4bb7dee70e5c90818,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc663f41e8e170f4bb7dee70e5c90818, type: 3}
