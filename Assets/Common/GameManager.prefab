@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7927388586451740172}
   - component: {fileID: 7899728421520521753}
-  - component: {fileID: 7131323511421818671}
-  - component: {fileID: 3230307730546973001}
   - component: {fileID: 9144554540112015758}
   m_Layer: 0
   m_Name: GameManager
@@ -46,48 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8c9701aca209d4992d20e0024dc3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickSystem: {fileID: 7131323511421818671}
-  NavigatorManager: {fileID: 3230307730546973001}
+  NavigatorManager: {fileID: 0}
   OnRoundStart:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnRoundFinish:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnRoundPause:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &7131323511421818671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8901528658590563939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64a1c1e3726562b4d9c8a68de2c368af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pickables: []
---- !u!114 &3230307730546973001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8901528658590563939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f90c22e911b204fb5184378cca47a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9144554540112015758
 MonoBehaviour:
   m_ObjectHideFlags: 0
