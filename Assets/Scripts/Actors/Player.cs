@@ -128,6 +128,7 @@ public class Player : SimpleStateMachine
 
     private void Captured_EnterState()
     {
+        groundMovement.LeaveWaterStream();
         picker.Unavaiable = true;
         pickable.IsPickBlocked = true;
     }
