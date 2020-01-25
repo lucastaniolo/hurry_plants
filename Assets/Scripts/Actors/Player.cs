@@ -15,7 +15,7 @@ public class Player : SimpleStateMachine
     private enum PlayerStates { Idle, Running, Flying, Captured }
     
     [HideInInspector] public UnityEvent OnPlayerDie = new UnityEvent();
-
+    
     private void Start()
     {
         picker.OnPick.AddListener(OnPick);
@@ -88,9 +88,16 @@ public class Player : SimpleStateMachine
     private void Running_FixedUpdate()
     {
         if (inputHandler.Direction != Vector3.zero) //Comment this to enable always moving mechanic
-            groundMovement.Move(inputHandler.Direction);
+        {
+            if (groundMovement.InsideWaterStream)
+                groundMovement.Move(inputHandler.Direction, 0.35f);
+            else
+                groundMovement.Move(inputHandler.Direction);
+        }
         else
+        {
             currentState = PlayerStates.Idle;
+        }
     }
 
     private void Running_ExitState()

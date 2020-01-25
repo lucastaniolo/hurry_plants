@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 public abstract class BaseMovement : MonoBehaviour
 {
     [SerializeField] protected float baseSpeed;
-    [SerializeField] protected Rigidbody rigidbody;
+    [FormerlySerializedAs("rigidbody")] [SerializeField] protected Rigidbody body;
     [SerializeField] protected GameObject trailFx;
-
+    
     private void Awake()
     {
         SetTrail(false);
@@ -13,12 +14,17 @@ public abstract class BaseMovement : MonoBehaviour
 
     public virtual void Move(Vector3 direction)
     {
-        rigidbody.MovePosition(rigidbody.position + baseSpeed * Time.deltaTime * direction.normalized);
+        body.MovePosition(body.position + baseSpeed * Time.deltaTime * direction.normalized);
     }
     
     public virtual void Move(Vector3 direction, float multiplier)
     {
-        rigidbody.MovePosition(rigidbody.position + baseSpeed * Time.deltaTime * multiplier * direction.normalized);
+        body.MovePosition(body.position + baseSpeed * Time.deltaTime * multiplier * direction.normalized);
+    }
+    
+    public void Drag(Vector3 direction, float speed)
+    {
+        body.MovePosition(body.position + speed * Time.deltaTime * direction.normalized);
     }
     
     protected void Rotate(Vector3 input)
@@ -48,7 +54,7 @@ public abstract class BaseMovement : MonoBehaviour
                 angle = -90f;
         }
 
-        rigidbody.transform.eulerAngles = new Vector3(0, angle, 0);
+        body.transform.eulerAngles = new Vector3(0, angle, 0);
     }
 
     public void SetTrail(bool active)

@@ -12,14 +12,14 @@ public class WaterStream : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<GroundMovement>(out var groundMovement))
-            groundMovements.Add(groundMovement);
+            RegisterGroundMovement(groundMovement);
     }
 
     private void OnTriggerExit(Collider other)
     {
         var groundExiting = groundMovements.FirstOrDefault(g => g.gameObject == other.gameObject);
         if (groundExiting != null)
-            groundMovements.Remove(groundExiting);
+            ReleaseGroundMovement(groundExiting);
     }
 
     private void FixedUpdate()
@@ -29,16 +29,25 @@ public class WaterStream : MonoBehaviour
         GroundMovement groundExiting = null;
         foreach (var groundMovement in groundMovements)
         {
-            if (transform.forward == groundMovement.transform.forward)
-                groundMovement.Move(transform.forward, velocity);
-            else
-                groundMovement.Move(transform.forward, counterVelocity);
+            groundMovement.Drag(transform.forward, velocity);
 
             if (!groundMovement.gameObject.activeInHierarchy)
                 groundExiting = groundMovement;
         }
         
         if (groundExiting != null)
-            groundMovements.Remove(groundExiting);
+            ReleaseGroundMovement(groundExiting);
+    }
+
+    private void RegisterGroundMovement(GroundMovement groundMovement)
+    {
+        groundMovements.Add(groundMovement);
+        groundMovement.EnterWaterStream();
+    }
+    
+    private void ReleaseGroundMovement(GroundMovement groundMovement)
+    {
+        groundMovement.LeaveWaterStream();
+        groundMovements.Remove(groundMovement);
     }
 }
