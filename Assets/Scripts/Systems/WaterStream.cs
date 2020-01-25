@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -31,7 +32,7 @@ public class WaterStream : MonoBehaviour
         {
             groundMovement.Drag(transform.forward, velocity);
 
-            if (!groundMovement.gameObject.activeInHierarchy)
+            if (!groundMovement.gameObject.activeInHierarchy || !groundMovement.InsideWaterStream)
                 groundExiting = groundMovement;
         }
         
@@ -45,7 +46,7 @@ public class WaterStream : MonoBehaviour
         groundMovement.EnterWaterStream();
     }
     
-    private void ReleaseGroundMovement(GroundMovement groundMovement)
+    public void ReleaseGroundMovement(GroundMovement groundMovement)
     {
         groundMovement.LeaveWaterStream();
         groundMovements.Remove(groundMovement);
