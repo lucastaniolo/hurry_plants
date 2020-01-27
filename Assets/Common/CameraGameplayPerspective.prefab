@@ -98,17 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8c9701aca209d4992d20e0024dc3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickSystem: {fileID: 0}
-  NavigatorManager: {fileID: 0}
-  OnRoundStart:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRoundFinish:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRoundPause:
-    m_PersistentCalls:
-      m_Calls: []
+  navigator: {fileID: 0}
 --- !u!114 &4125063685476443446
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6110043, g: 0.61009234, b: 0.33114433, a: 1}
+  m_IndirectSpecularColor: {r: 0.61061186, g: 0.60947376, b: 0.33065945, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5218,7 +5218,7 @@ Transform:
   - {fileID: 316002208}
   - {fileID: 1915212078}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &700066336
 PrefabInstance:
@@ -5977,6 +5977,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1207747934}
     m_Modifications:
+    - target: {fileID: 6084801526272906584, guid: d38ac4fde400e5c4088f941bc4d5bd59,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6795206497162706120, guid: d38ac4fde400e5c4088f941bc4d5bd59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6457,6 +6462,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1207747934}
     m_Modifications:
+    - target: {fileID: 1582393494115964143, guid: 03191d11e7179f840ba526bd10216a11,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2307696549972233165, guid: 03191d11e7179f840ba526bd10216a11,
         type: 3}
       propertyPath: m_IsKinematic
@@ -7447,6 +7457,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1207747934}
     m_Modifications:
+    - target: {fileID: 6179166721974877325, guid: a46da3c3a997bde4891919760637aae1,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6953830159151070018, guid: a46da3c3a997bde4891919760637aae1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11496,6 +11511,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1207747934}
     m_Modifications:
+    - target: {fileID: 2747664614130387745, guid: 295f86e9cd8b3734daae788247d3f899,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3037983617173747290, guid: 295f86e9cd8b3734daae788247d3f899,
         type: 3}
       propertyPath: m_Name
@@ -14028,6 +14048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5019691993027892121, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 19.417356
       objectReference: {fileID: 0}
     - target: {fileID: 9135605962298687089, guid: 5a08d47a3b2cd0748bbd6afd20d7c4f3,
         type: 3}
