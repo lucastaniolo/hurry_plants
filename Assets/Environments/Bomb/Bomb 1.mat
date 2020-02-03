@@ -8,15 +8,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bomb 1
-  m_Shader: {fileID: -6465566751694194690, guid: 07f382470a4d9d24dad9e78c96c4cdf2,
-    type: 3}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2050
   stringTagMap:
     MotionVector: User
+    RenderType: Opaque
   disabledShaderPasses:
   - TransparentBackface
   m_SavedProperties:
@@ -24,6 +24,10 @@ Material:
     m_TexEnvs:
     - Texture2D_187C01E1:
         m_Texture: {fileID: 2800000, guid: aaf17c0c7fa56f24fa9379e2d129542f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_589137F6:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_5E38C12A:
@@ -46,32 +50,88 @@ Material:
         m_Texture: {fileID: 2800000, guid: 5e4f0c1452875d64f976b3a534fee989, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_24DEBF68: 0
+    - Boolean_ED438E34: 0
+    - Vector1_29A8EAB: 0.7
+    - Vector1_29E4DF93: 0.1
     - Vector1_2A83F532: 0
     - Vector1_2D57A03: 0.61
     - Vector1_2DE3DE74: 185.7
     - Vector1_31FAECE3: 1
     - Vector1_39E8F1A8: 5
+    - Vector1_3C2CF0EB: 0.0047
+    - Vector1_53B9698E: 15
+    - Vector1_6D9DC178: 87.3
+    - Vector1_93DCFAA9: 9.91
+    - Vector1_95BBCBE0: 215.91
     - Vector1_9613C4DF: 0
     - Vector1_9D931DE5: -2.09
     - Vector1_B0A2529A: 0
     - Vector1_BDF28BF7: 0
+    - Vector1_C5543ECF: 4.8
     - Vector1_CA724AD8: 0.05
     - Vector1_DBEED185: 0
     - Vector1_DC37A47B: 0.5
+    - Vector1_E23798DE: 1
     - Vector1_ECF6F036: 0
+    - Vector1_F8F1095: 0.1
+    - _AlphaClip: 0
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 0
     - _AlphaSrcBlend: 1
+    - _Blend: 0
     - _BlendMode: 0
+    - _BumpScale: 1
+    - _Cull: 2
     - _CullMode: 2
     - _CullModeForward: 2
+    - _Cutoff: 0.5
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _ReceivesSSR: 1
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _StencilRef: 2
     - _StencilRefDepth: 0
@@ -83,11 +143,13 @@ Material:
     - _StencilWriteMaskDistortionVec: 64
     - _StencilWriteMaskGBuffer: 51
     - _StencilWriteMaskMV: 176
+    - _Surface: 0
     - _SurfaceType: 0
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentSortPriority: 0
     - _UseShadowThreshold: 0
+    - _WorkflowMode: 1
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
@@ -97,18 +159,27 @@ Material:
     - Color_29A6BBFD: {r: 0.5943396, g: 0.2629134, b: 0.11494303, a: 0}
     - Color_29EE7DFA: {r: 1, g: 1, b: 1, a: 0}
     - Color_2E29BB1F: {r: 0.5330188, g: 0.626862, b: 1, a: 0}
+    - Color_59B2F0B0: {r: 1, g: 0, b: 0.03164482, a: 0}
     - Color_93038DE6: {r: 1, g: 0, b: 0, a: 1}
     - Color_9E618AAB: {r: 0.6792453, g: 0, b: 0.4755642, a: 0}
+    - Color_A271762B: {r: 0, g: 0.04231142, b: 0.1682695, a: 0.9215686}
     - Color_A9C02619: {r: 1, g: 0, b: 0.18431377, a: 0}
+    - Color_AFFD055F: {r: 0.7454045, g: 0.7454045, b: 0.7454045, a: 1}
+    - Color_E0824245: {r: 0.05126947, g: 0.1912017, b: 0.4341537, a: 0.4823529}
+    - Color_EBFEF514: {r: 1, g: 0, b: 0, a: 0}
     - Color_FBD7D122: {r: 1, g: 0.033018887, b: 0.033018887, a: 0}
     - Color_FFAAE4B1: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_2A083235: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_54ABE124: {r: 0, g: 10, b: 0, a: 0}
     - Vector2_627A0F62: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_AAE50A5E: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_BBF8CEC2: {r: 0, g: 0, b: 0, a: 0}
     - Vector3_73F21F97: {r: 0, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 0.9622642, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
 --- !u!114 &5830714372542786203
 MonoBehaviour:
   m_ObjectHideFlags: 11
