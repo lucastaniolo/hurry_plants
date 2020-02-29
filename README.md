@@ -6,7 +6,7 @@
 
 _This document is currently work-in-progress_
 
-##Scripting/Programming Disclaimer
+## Scripting/Programming Disclaimer
 
 This document does not apply to Scripts(of any language) assets or conventions regarding variable or code syntax conventions. Will be updated on the topic as the need arises.
 
@@ -50,7 +50,7 @@ Terms used interchangeably to refer to public exposed variables in Unity's Shade
 
 ##### Word Standards/Semantics 
 
-oldBoys Studio adopts U.S. English semantics and practices. Meaning, if an asset contains words that can be written in a different way based on region to describe the same thing, opt for the U.S. Englishway, e.g. `Gray` (and not UK's `Grey`), `Center` (and not Canada's `Centre`), `Cookie`(and not UK's `Biscuit`).
+oldBoys Studio adopts U.S. English semantics and practices. Meaning, if an asset contains words that can be written in a different way based on region to describe the same thing, opt for the U.S. English way, e.g. `Gray` (and not UK's `Grey`), `Center` (and not Canada's `Centre`), `Cookie`(and not UK's `Biscuit`).
 
 ## 0. Principles
 
@@ -86,7 +86,7 @@ If someone is working either against a style guide or no style guide, try to cor
 <a name="1"></a>
 ## 1. Asset Naming Conventions
 
-Naming conventions should be treated as law. A project that conforms to a naming convention is able to have its assets managed, searched, and maintained with ease. Also, As of Unity 2019.3, asset's preview thumbnails have refresh and display issues, so having a style guide helps distinguishing assets when the preview won't help you.
+Naming conventions should be treated as law. A project that conforms to a naming convention is able to have its assets managed, searched, and maintained with ease. Also, as of Unity 2019.3, asset's preview thumbnails have refresh and display issues, so having a style guide helps distinguishing assets when the preview won't help you.
 
 Most assets are sufixed with sufixes being generally an acronym of the asset type preceded by underscores. That way, assets with similar names or variations and all its related content(materials, textures, etc) can stay close to each other inside the project directory folders. 
 
@@ -130,19 +130,29 @@ You can see in the examples above that whenever the `variation` can have multipl
 ##### 1.1e2 Bad example - `bossPlant` and `bossPlant` with `pirate` skin: Order of related assets inside a directory using only one underscore for Asset Type Suffix.
 
 > bossPlant_geo
+>
 > bossPlant_mat
+>
 > bossPlant_pirate_geo
+>
 > bossPlant_pirate_mat
+>
 > bossPlant_pirate_tex_normal
+>
 > bossPlant_tex_normal
 
 ##### 1.1e3 Proposed convention example - `bossPlant` and `bossPlant` with `pirate` skin: Order of related assets inside a directory using two underscores for Asset Type Suffix
 
 > bossPlant__geo
+>
 > bossPlant__mat
+>
 > bossPlant__tex_normal
+>
 > bossPlant_pirate__geo
+>
 > bossPlant_pirate__mat
+>
 > bossPlant_pirate__tex_normal
 
 ### 1.2 Asset Name Modifiers
@@ -176,7 +186,7 @@ You can see in the examples above that whenever the `variation` can have multipl
 | Material                           | __mat                | _"materialPart"                  | Optional subcategory for assets with multiple submaterials/texture sets                                                          |
 | Static Mesh                        | __geo                |                                  | Non-deforming meshes. Generally receives pre-baked data (e.g. Lightmaps)                                                         |
 | Skinned Mesh                       | __sk                 |                                  | Deforming meshes                                                                                                                 |
-| Texture                            | __tex                | _"materialPart"_"texturePurpose" | Optional _"materialPart" subcategory for assets with multiple submaterials. for "texturePupose" See [Textures](#anc-textures)    |                                                               
+| Texture                            | __tex                | _"materialPart" _"texturePurpose"| Optional _"materialPart" subcategory for assets with multiple submaterials. for "texturePupose" See [Textures](#anc-textures)    |                                                               
 | Prefab                             | None                 | _Variant                         | Prefabs are the only asset types without defining suffixes. BaseAssetName and its following prefab variants should be PascalCase |
 
 <a name="anc-textures"></a>
@@ -185,7 +195,7 @@ You can see in the examples above that whenever the `variation` can have multipl
 
 When in doubt of which subcategory to use on textures containing unusual information, opt for clarity over brevity.
 
-Note that for Unity's default shaders(such as _URP Lit_) that expects information in the texture Alpha Channel on some map slots, always add the name of the map that goes into the Alpha Channel, even if the materials is opaque the channel is not being used (e.g. `wallBrick_tex_albedoTransparency`). 
+Note that for Unity's default shaders(such as _URP Lit_) that expects information in the texture Alpha Channel on some map slots, always add the name of the map that goes into the Alpha Channel, even if the materials is opaque and the channel is not being used (e.g. `wallBrick_tex_albedoTransparency`). 
 
 | Asset Type                          | Suffix                | Subcategory                                 | Notes                                                                                                                                                                                                                                  |   
 | ----------------------------------- | --------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -215,13 +225,13 @@ Note that when creating materials from a Shader Graph, the Shader Graph name is 
 <a name="1.2.4"></a>
 #### 1.2.4 Animation
 
-| Asset Type                         | Suffix                | Subcategory                      | Notes                                                         |   
-| ---------------------------------- | --------------------- | -------------------------------- | ------------------------------------------------------------- |
-| Skinned Mesh                       | __sk                  |                                  | Deforming meshes                                              |
-| FBX file with animated joints      |                       | @clipName                        | Unity specific convention. e.g. bossPlant_sk@idle             |
-| FBX file with animated Joints      |                       | @clipName_"variation"            | e.g. bossPlant_idleDab_left, soldierEnemy_aimingWalk_backward |
-| Animation                          | __animation           |                                  | Unity's animation files                                       |
-| Animation Controller               | __animationController |                                  |                                                               |                      
+| Asset Type                         | Suffix                | Subcategory                      | Notes                                                                 |   
+| ---------------------------------- | --------------------- | -------------------------------- | --------------------------------------------------------------------- |
+| Skinned Mesh                       | __sk                  |                                  | Deforming meshes                                                      |
+| FBX file with animated joints      |                       | @clipName                        | Unity specific convention. e.g. bossPlant__sk@idle                    |
+| FBX file with animated Joints      |                       | @clipName_"variation"            | e.g. bossPlant__sk@idleDab_left, soldierEnemy__sk@aimingWalk_backward |
+| Animation                          | __animation           |                                  | Unity's animation files                                               |
+| Animation Controller               | __animationController |                                  |                                                                       |                      
 
 <a name="anc-rendering"></a>
 <a name="1.2.5"></a>
@@ -258,6 +268,7 @@ Note that when creating materials from a Shader Graph, the Shader Graph name is 
 ## 2. Directory Structure
 
 Prefer horizontal folder hierarchy over deep vertical ones. Meaning, avoid burying content inside many subfolders. Use Unity's filters and searches by asset base names and sufixes to quickly filter through content even on populated folders. Folder names are always PascalCase with no spaces or special characters, unless it comes from an external source(Unity or 3rd Party Packages). Content that is shared throughout the project(like utilities SubGraphs, dummy texturesand meshes) should be placed in a "Common" Folder.
+
 **W.I.P.**
 
 <a name="3"></a>
@@ -265,6 +276,7 @@ Prefer horizontal folder hierarchy over deep vertical ones. Meaning, avoid buryi
 ## 3. Game Objects
 
 Never leave Game Objects unnamed. Reset its Transform to (0,0,0) unless explicit using transforms for something else. Names in PascalCase without spaces or special characters.
+
 **W.I.P.**
 
 <a name="4"></a>
@@ -297,7 +309,7 @@ oldBoys Studio uses PNGs as the standard texture format for UI and Shader consup
 
 All working assets textures are _required_ to be authored at 16-bit(to avoid low precision issues) and at least double the inteded-use resolution. During export, scale the resolution back to the intended-use size and 8-bit precision. Although it is possible to clamp the texture size inside Unity, importing the image at the intended-use size will keep the project leaner and the repository lighter. If you don't know what the final resolution will be yet, 2048 is a safe temporary size.
 
-All imported textures should be properly configured on import according to its usage. All textures except the albedoTransparency(and emission maps) need to have the sRGB checkbox turned off.
+All imported textures should be properly configured on import according to its usage. All textures except the albedoTransparency(and emission maps) **must** have the sRGB checkbox turned off.
 
 Normal maps should be baked, authored and imported in the OpenGL(Y+) format for its Green Channel. During the baking process, make sure your baker is set to use Mikkelsen Tangent Space(MikkT) and Bitangets calculated per pixel. Your low poly mesh must be triangulated before baking with hard edges on uv seams to avoid harsh normal map gradients.
 
