@@ -117,13 +117,13 @@ You can see in the examples above that whenever the `variation` can have multipl
 
 | Asset Type                         | Asset Name                                                 |
 | ---------------------------------- | ---------------------------------------------------------- |
-| Skinned Mesh                       | bossPlant__sk                                               |
-| Shader Graph                       | bossPlant__shaderGraph                                      |
-| Material                           | bossPlant__mat                                              |
-| Material(Body)                     | bossPlant__mat_body                                         |
-| Material(Head)                     | bossPlant__mat_head                                         |
-| Texture(Albedo/Transparency)       | bossPlant__tex_albedoTransparency                           |
-| Texture(Body-Albedo/Transparency)  | bossPlant__tex_body_albedoTransparency                      |
+| Skinned Mesh                       | bossPlant__sk                                              |
+| Shader Graph                       | bossPlant__shaderGraph                                     |
+| Material                           | bossPlant__mat                                             |
+| Material(Body)                     | bossPlant__matBody                                         |
+| Material(Head)                     | bossPlant__matHead                                         |
+| Texture(Albedo/Transparency)       | bossPlant__tex_albedoTransparency                          |
+| Texture(Body-Albedo/Transparency)  | bossPlant__texBody_albedoTransparency                      |
 | Prefab                             | BossPlant                                                  |
 | Prefab Variant                     | BossPlant_Damaged                                          |
 
@@ -179,15 +179,15 @@ You can see in the examples above that whenever the `variation` can have multipl
 <a name="1.2.1"></a>
 #### 1.2.1 Most Common
 
-| Asset Type                         | Suffix               | Subcategory                      | Notes                                                                                                                            |   
-| ---------------------------------- | -------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Unity Scene                        | __scene              |                                  | Used for Master/Persistent Scene                                                                                                 |
-| Unity Subscene                     | __scene              | _"scenePurpose"                  | Used for Multi-Scene workflows (e.g. tavern__scene_props)                                                                        |
-| Material                           | __mat                | _"materialPart"                  | Optional subcategory for assets with multiple submaterials/texture sets                                                          |
-| Static Mesh                        | __geo                |                                  | Non-deforming meshes. Generally receives pre-baked data (e.g. Lightmaps)                                                         |
-| Skinned Mesh                       | __sk                 |                                  | Deforming meshes                                                                                                                 |
-| Texture                            | __tex                | _"materialPart" _"texturePurpose"| Optional _"materialPart" subcategory for assets with multiple submaterials. for "texturePupose" See [Textures](#anc-textures)    |                                                               
-| Prefab                             | None                 | _Variant                         | Prefabs are the only asset types without defining suffixes. BaseAssetName and its following prefab variants should be PascalCase |
+| Asset Type                         | Suffix               | Subcategory                      | Notes                                                                                                                                                                                                                                |   
+| ---------------------------------- | -------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------                                                                                                     |
+| Unity Scene                        | __scene              |                                  | Used for Master/Persistent Scene                                                                                                                                                                                                     |
+| Unity Subscene                     | __scene              | _"scenePurpose"                  | Used for Multi-Scene workflows (e.g. tavern__scene_props)                                                                                                                                                                            |
+| Material                           | __mat                | "MaterialPart"                   | Optional subcategory for assets with multiple submaterials/texture sets. Appended after main suffix without underscores, with capital letter, respecting the camelCase standard(e.g. bossPlant_matHead)                              |
+| Static Mesh                        | __geo                |                                  | Non-deforming meshes. Generally receives pre-baked data (e.g. Lightmaps)                                                                                                                                                             |
+| Skinned Mesh                       | __sk                 |                                  | Deforming meshes                                                                                                                                                                                                                     |
+| Texture                            | __tex                | "MaterialPart" _"texturePurpose" | Optional "MaterialPart" subcategory for assets with multiple submaterials. Appended after main suffix without underscores, with capital letter, respecting the camelCase standard. For "texturePupose" See [Textures](#anc-textures) |                                                               
+| Prefab                             | None                 | _Variant                         | Prefabs are the only asset types without defining suffixes. BaseAssetName and its following prefab variants should be PascalCase                                                                                                     |
 
 <a name="anc-textures"></a>
 <a name="1.2.2"></a>
@@ -197,17 +197,17 @@ When in doubt of which subcategory to use on textures containing unusual informa
 
 Note that for Unity's default shaders(such as _URP Lit_) that expects information in the texture Alpha Channel on some map slots, always add the name of the map that goes into the Alpha Channel, even if the materials is opaque and the channel is not being used (e.g. `wallBrick_tex_albedoTransparency`). 
 
-| Asset Type                          | Suffix                | Subcategory                                 | Notes                                                                                                                                                                                                                                  |   
-| ----------------------------------- | --------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Texture                             | __tex                 | _"materialPart"                             | SubCategory can be left blank if the texture is used as dummy or without a specific shader output in mind(e.g. baseGray__tex). Optional _materialPart for assets with multiple submaterials(e.g. bossPlant_tex_head_metallicSmoothness)|
-| Texture(URP Lit-Base Map Slot)      | __tex                 | _"materialPart"_albedoTransparency          | Transparency Map(if used) is always stored in the image Alpha Channel                                                                                                                                                                  |
-| Texture(URP Lit-Metallic Map Slot)  | __tex                 | _"materialPart"_metallicSmoothness          | Smoothness Map(if used) is always stored in the Metallic Alpha                                                                                                                                                                         |
-| Texture(URP Lit-Normal Map Slot)    | __tex                 | _"materialPart"_normal                      |                                                                                                                                                                                                                                        |
-| Texture(URP Lit-Occlusion Map Slot) | __tex                 | _"materialPart"_occlusion                   | Ambient Occlusion                                                                                                                                                                                                                      |
-| Texture(URP Lit-Emission Map Slot)  | __tex                 | _"materialPart"_emission                    | Emissive Textures                                                                                                                                                                                                                      |                                                               
-| Texture(Custom Packing Example)     | __tex                 | _"materialPart"_occlusionSmoothnessMetallic | Occlusion in Red Channel, Smoothness in Green Channel, Metallic on Blue Channel                                                                                                                                                        |
-| Texture(Cubemaps)                   | __tex                 | _cube                                       | Generally used for HDRIs                                                                                                                                                                                                               |
-| Render Texture                      | __renderTex           |                                             | Special kind of textures generated & updated at runtime for some special effects                                                                                                                                                       |
+| Asset Type                          | Suffix                | Subcategory                                 | Notes                                                                                                                                                                                                                                   |   
+| ----------------------------------- | --------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Texture                             | __tex                 | "MaterialPart"                              | SubCategory can be left blank if the texture is used as dummy or without a specific shader output in mind(e.g. baseGray__tex). Optional "MaterialPart" for assets with multiple submaterials(e.g. bossPlant_texHead_metallicSmoothness) |
+| Texture(URP Lit-Base Map Slot)      | __tex                 | "MaterialPart"_albedoTransparency           | Transparency Map(if used) is always stored in the image Alpha Channel                                                                                                                                                                   |
+| Texture(URP Lit-Metallic Map Slot)  | __tex                 | "MaterialPart"_metallicSmoothness           | Smoothness Map(if used) is always stored in the Metallic Alpha                                                                                                                                                                          |
+| Texture(URP Lit-Normal Map Slot)    | __tex                 | "MaterialPart"_normal                       |                                                                                                                                                                                                                                         |
+| Texture(URP Lit-Occlusion Map Slot) | __tex                 | "MaterialPart"_occlusion                    | Ambient Occlusion                                                                                                                                                                                                                       |
+| Texture(URP Lit-Emission Map Slot)  | __tex                 | "MaterialPart"_emission                     | Emissive Textures                                                                                                                                                                                                                       |                                                               
+| Texture(Custom Packing Example)     | __tex                 | "MaterialPart"_occlusionSmoothnessMetallic  | Occlusion in Red Channel, Smoothness in Green Channel, Metallic on Blue Channel                                                                                                                                                         |
+| Texture(Cubemaps)                   | __tex                 | _cube                                       | Generally used for HDRIs                                                                                                                                                                                                                |
+| Render Texture                      | __renderTex           |                                             | Special kind of textures generated & updated at runtime for some special effects                                                                                                                                                        |
 
 <a name="anc-materials"></a>
 <a name="1.2.3"></a>
@@ -215,11 +215,11 @@ Note that for Unity's default shaders(such as _URP Lit_) that expects informatio
 
 Note that when creating materials from a Shader Graph, the Shader Graph name is appended to the new material asset. Remember to rename it properly.
 
-| Asset Type                         | Suffix               | Subcategory                      | Notes                                                                   |   
-| ---------------------------------- | -------------------- | -------------------------------- | ----------------------------------------------------------------------- |
-| Material                           | __mat                | _"materialPart"                  | Optional subcategory for assets with multiple submaterials/texture sets |
-| Shader Graph                       | __shaderGraph        | _"materialPart"                  | Optional subcategory for assets with multiple submaterials/texture sets |
-| Subgraph                           | __subGraph           |                                  |                                                                         |
+| Asset Type                         | Suffix               | Subcategory                      | Notes                                                                                                                                                                                          |   
+| ---------------------------------- | -------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Material                           | __mat                | "MaterialPart"                   | Optional "MaterialPart" subcategory for assets with multiple submaterials/texture sets. Appended after main suffix without underscores, with capital letter, respecting the camelCase standard |
+| Shader Graph                       | __shaderGraph        | "MaterialPart"                   | Optional "MaterialPart" subcategory for assets with multiple submaterials/texture sets. Appended after main suffix without underscores, with capital letter, respecting the camelCase standard |
+| Subgraph                           | __subGraph           |                                  |                                                                                                                                                                                                |
 
 <a name="anc-animation"></a>
 <a name="1.2.4"></a>
