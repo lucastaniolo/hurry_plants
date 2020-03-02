@@ -785,12 +785,6 @@ Transform:
   m_Father: {fileID: 999859318}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &277456729 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9210745827918887555, guid: 9f5e7102a44025145bcbd43dee710298,
-    type: 3}
-  m_PrefabInstance: {fileID: 9210745828179549658}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &307635852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1274,7 @@ Transform:
   m_Children:
   - {fileID: 109663156}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &632116416
 PrefabInstance:
@@ -1386,7 +1380,7 @@ Transform:
   m_Children:
   - {fileID: 108072497}
   - {fileID: 1437771136}
-  - {fileID: 277456729}
+  - {fileID: 9210745828179549659}
   m_Father: {fileID: 999859318}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2102,13 +2096,13 @@ MonoBehaviour:
   m_CameraType: 0
   m_CameraOutput: 0
   m_Cameras: []
-  m_RendererIndex: 0
+  m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 256
   m_VolumeTrigger: {fileID: 1946040578}
   m_RenderPostProcessing: 1
-  m_Antialiasing: 2
+  m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 1
@@ -4832,26 +4826,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5469318181374880730, guid: e966be52049b41a4ead8acaec3afa79c,
-        type: 3}
-      propertyPath: sharedProfile
-      value: 
-      objectReference: {fileID: 11400000, guid: f943b94ebb6fc014db48adec01007057,
-        type: 2}
     - target: {fileID: 5469318181374880733, guid: e966be52049b41a4ead8acaec3afa79c,
         type: 3}
       propertyPath: m_Name
       value: Post-process Volume
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469318181374880733, guid: e966be52049b41a4ead8acaec3afa79c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469318181374880733, guid: e966be52049b41a4ead8acaec3afa79c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e966be52049b41a4ead8acaec3afa79c, type: 3}
@@ -5292,3 +5270,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5e7102a44025145bcbd43dee710298, type: 3}
+--- !u!4 &9210745828179549659 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 9210745828179549658}
+  m_PrefabAsset: {fileID: 0}
