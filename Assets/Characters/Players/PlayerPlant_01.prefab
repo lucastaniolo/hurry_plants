@@ -377,12 +377,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef427bff1d554c46b181d38486aa39f, type: 3}
---- !u!1 &2045751783399894985 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1725872579171375869, guid: 9ef427bff1d554c46b181d38486aa39f,
-    type: 3}
-  m_PrefabInstance: {fileID: 833306252027426100}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2307696550201898529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -390,27 +384,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 844168683, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
-      propertyPath: baseSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 844168685, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
-      propertyPath: DebugGui
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 844168685, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
-      propertyPath: pickMeFx
-      value: 
-      objectReference: {fileID: 2045751783399894985}
-    - target: {fileID: 844168686, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
-      propertyPath: baseSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 844168686, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
-      propertyPath: trailFx
-      value: 
-      objectReference: {fileID: 3995965208516405322, guid: e079a24cca110f841a5964af72bb453b,
-        type: 3}
     - target: {fileID: 844168690, guid: 10d25c009ce780546ab6fb6c2bf9a3a1, type: 3}
       propertyPath: gamePadIndex
       value: 1

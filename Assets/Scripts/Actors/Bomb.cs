@@ -28,7 +28,7 @@ public class Bomb : PickUpElement<Crate>
     {
         countdownLabel.gameObject.SetActive(false);
         label = countdownLabel.transform;
-        cameraTransform = GameObject.FindWithTag("LookAt").transform;
+        cameraTransform = FindObjectOfType<Camera>().transform;
         timer = timeToExplode;
     }
 

@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using GamepadInput;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -58,10 +57,10 @@ public class NavigatorManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || GamePad.GetButtonDown(GamePad.Button.Start, GamePad.Index.Any))
+        if (Input.GetKeyDown(KeyCode.Escape))
             TogglePauseMenu();
         
-        if (Input.GetKeyDown(KeyCode.Return) || GamePad.GetButtonDown(GamePad.Button.Back, GamePad.Index.Any))
+        if (Input.GetKeyDown(KeyCode.Return))
             ReloadLevel();
     }
 

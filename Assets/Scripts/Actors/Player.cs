@@ -1,24 +1,33 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class Player : SimpleStateMachine
 {
-    [SerializeField] public Pickable pickable;
-    [SerializeField] public Picker picker;
-    [SerializeField] public AirMovement airMovement;
-    [SerializeField] public GroundMovement groundMovement;
-    [SerializeField] public InputHandler inputHandler;
-    [SerializeField] public Respawner respawner;
-    [SerializeField] public GameObject pickMeFx;
+    [SerializeField] private int playerIndex;
+    
+    [SerializeField] private Pickable pickable;
+    [SerializeField] private Picker picker;
+    [SerializeField] private AirMovement airMovement;
+    [SerializeField] private GroundMovement groundMovement;
+    [SerializeField] private Respawner respawner;
+    [SerializeField] private GameObject pickMeFx;
 
+    private InputHandler inputHandler;
+    
     private enum PlayerStates { Idle, Running, Flying, Captured }
     
     [HideInInspector] public UnityEvent OnPlayerDie = new UnityEvent();
-    
+
+    private void Awake()
+    {
+    }
+
     private void Start()
     {
-        picker.OnPick.AddListener(OnPick);
+        PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
         
         pickable.OnPicked.AddListener(() => currentState = PlayerStates.Captured);
         pickable.OnThrowed.AddListener(() => currentState = PlayerStates.Flying);
@@ -26,6 +35,17 @@ public class Player : SimpleStateMachine
         pickable.OnHit.AddListener(OnHit);
         
         currentState = PlayerStates.Idle;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
+    }
+
+    private void OnPlayerJoined(PlayerInput playerInput)
+    {
+        if (playerInput.playerIndex == playerIndex)
+            inputHandler = playerInput.GetComponent<InputHandler>();
     }
 
     private void OnPick()
@@ -48,6 +68,8 @@ public class Player : SimpleStateMachine
 
     protected override void EarlyGlobalSuperUpdate()
     {
+        if (!inputHandler) return;
+        
         if (inputHandler.ThrowButton)
             picker.Throw();
 
@@ -114,6 +136,8 @@ public class Player : SimpleStateMachine
 
     private void Idle_Update()
     {
+        if (!inputHandler) return;
+        
         if (!picker.IsBusy)
             pickable.IsPickBlocked = !inputHandler.PickMeButton;
         

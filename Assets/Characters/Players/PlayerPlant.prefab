@@ -140,9 +140,8 @@ GameObject:
   - component: {fileID: 844168687}
   - component: {fileID: 844168688}
   - component: {fileID: 844168689}
-  - component: {fileID: 844168690}
   m_Layer: 8
-  m_Name: PlayerPlant_Base
+  m_Name: PlayerPlant
   m_TagString: Player
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -209,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb8fd96e674179479a6b74344e6541a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 3.1
+  baseSpeed: 5
   body: {fileID: 844168684}
   trailFx: {fileID: 0}
 --- !u!114 &844168685
@@ -227,13 +226,13 @@ MonoBehaviour:
   DebugGui: 1
   DebugGuiPosition: {x: 0, y: 0}
   DebugGuiTitle: Simple Machine
+  playerIndex: 0
   pickable: {fileID: 844168689}
   picker: {fileID: 844168688}
   airMovement: {fileID: 844168686}
   groundMovement: {fileID: 844168683}
-  inputHandler: {fileID: 844168690}
   respawner: {fileID: 844168687}
-  pickMeFx: {fileID: 1060478697923443039}
+  pickMeFx: {fileID: 352099710272434629}
   OnPlayerDie:
     m_PersistentCalls:
       m_Calls: []
@@ -321,19 +320,6 @@ MonoBehaviour:
   OnReleased:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &844168690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6235274205126318544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53c87004ede47a148806c2ec6db897a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gamePadIndex: 2
 --- !u!1001 &98240566365383232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408,12 +394,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7e73888e147ecd449c03e297b4bb496, type: 3}
---- !u!1 &1060478697923443039 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1146894564320449311, guid: d7e73888e147ecd449c03e297b4bb496,
-    type: 3}
-  m_PrefabInstance: {fileID: 98240566365383232}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1060478697923443024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1146894564320449296, guid: d7e73888e147ecd449c03e297b4bb496,
@@ -509,6 +489,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef427bff1d554c46b181d38486aa39f, type: 3}
+--- !u!1 &352099710272434629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1725872579171375869, guid: 9ef427bff1d554c46b181d38486aa39f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1374001567460928312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &352099710272434634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1725872579171375858, guid: 9ef427bff1d554c46b181d38486aa39f,

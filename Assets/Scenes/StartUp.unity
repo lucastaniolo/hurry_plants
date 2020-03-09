@@ -583,7 +583,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &684481541
 MonoBehaviour:
@@ -635,13 +635,14 @@ GameObject:
   - component: {fileID: 968171431}
   - component: {fileID: 968171430}
   - component: {fileID: 968171429}
+  - component: {fileID: 968171432}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &968171429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,98 +655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 7
-  m_ObsoleteRenderingPath: 0
-  m_ObsoleteFrameSettings:
-    overrides: 0
-    enableShadow: 0
-    enableContactShadows: 0
-    enableShadowMask: 0
-    enableSSR: 0
-    enableSSAO: 0
-    enableSubsurfaceScattering: 0
-    enableTransmission: 0
-    enableAtmosphericScattering: 0
-    enableVolumetrics: 0
-    enableReprojectionForVolumetrics: 0
-    enableLightLayers: 0
-    enableExposureControl: 1
-    diffuseGlobalDimmer: 0
-    specularGlobalDimmer: 0
-    shaderLitMode: 0
-    enableDepthPrepassWithDeferredRendering: 0
-    enableTransparentPrepass: 0
-    enableMotionVectors: 0
-    enableObjectMotionVectors: 0
-    enableDecals: 0
-    enableRoughRefraction: 0
-    enableTransparentPostpass: 0
-    enableDistortion: 0
-    enablePostprocess: 0
-    enableOpaqueObjects: 0
-    enableTransparentObjects: 0
-    enableRealtimePlanarReflection: 0
-    enableMSAA: 0
-    enableAsyncCompute: 0
-    runLightListAsync: 0
-    runSSRAsync: 0
-    runSSAOAsync: 0
-    runContactShadowsAsync: 0
-    runVolumeVoxelizationAsync: 0
-    lightLoopSettings:
-      overrides: 0
-      enableDeferredTileAndCluster: 0
-      enableComputeLightEvaluation: 0
-      enableComputeLightVariants: 0
-      enableComputeMaterialVariants: 0
-      enableFptlForForwardOpaque: 0
-      enableBigTilePrepass: 0
-      isFptlEnabled: 0
-  clearColorMode: 0
-  backgroundColorHDR: {r: 0.025, g: 0.07, b: 0.19, a: 0}
-  clearDepth: 1
-  volumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  volumeAnchorOverride: {fileID: 0}
-  antialiasing: 0
-  SMAAQuality: 2
-  dithering: 0
-  stopNaNs: 0
-  taaSharpenStrength: 0.6
-  physicalParameters:
-    m_Iso: 200
-    m_ShutterSpeed: 0.005
-    m_Aperture: 16
-    m_BladeCount: 5
-    m_Curvature: {x: 2, y: 11}
-    m_BarrelClipping: 0.25
-    m_Anamorphism: 0
-  flipYMode: 0
-  fullscreenPassthrough: 0
-  allowDynamicResolution: 0
-  customRenderingSettings: 0
-  invertFaceCulling: 0
-  probeLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  hasPersistentHistory: 0
-  m_RenderingPathCustomFrameSettings:
-    bitDatas:
-      data1: 70280697347917
-      data2: 4539628424926265344
-    lodBias: 1
-    lodBiasMode: 0
-    lodBiasQualityLevel: 0
-    maximumLODLevel: 0
-    maximumLODLevelMode: 0
-    maximumLODLevelQualityLevel: 0
-    materialQuality: 0
-  renderingPathCustomFrameSettingsOverrideMask:
-    mask:
-      data1: 0
-      data2: 0
-  defaultFrameSettings: 0
 --- !u!20 &968171430
 Camera:
   m_ObjectHideFlags: 0
@@ -803,6 +712,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &968171432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968171428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_CameraOutput: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1081417791
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,55 +857,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - sceneAsset: {fileID: 102900000, guid: 84bbfadb1e87ee247b143f9e2b450add, type: 3}
-    scenePath: Assets/Scenes/levels/AimMyName.unity
+    scenePath: Assets/Scenes/Levels/aimMyName__scene.unity
   - sceneAsset: {fileID: 102900000, guid: b8fa1f5478851924eaef952698860975, type: 3}
-    scenePath: Assets/Scenes/levels/AnyWay.unity
+    scenePath: Assets/Scenes/Levels/anyWay__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 152d8f2a64f9aab4d90735660ff88acb, type: 3}
-    scenePath: Assets/Scenes/levels/ArticOne.unity
+    scenePath: Assets/Scenes/Levels/articOne__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 3b6942b80740b4b4b8172b132bd779d0, type: 3}
-    scenePath: Assets/Scenes/levels/BabyPlants.unity
+    scenePath: Assets/Scenes/Levels/babyPlants__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 85c7e3c432ca4d5408ee1b8be9544794, type: 3}
-    scenePath: Assets/Scenes/levels/BoomBox.unity
+    scenePath: Assets/Scenes/Levels/boomBox__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 359d1d81f2387e04483d486b15b76f50, type: 3}
-    scenePath: Assets/Scenes/levels/BoundaryBreak.unity
+    scenePath: Assets/Scenes/Levels/boundaryBreak__scene.unity
   - sceneAsset: {fileID: 102900000, guid: b5920a88738f24141bb468e05dea2f19, type: 3}
-    scenePath: Assets/Scenes/levels/BrumbleFast.unity
+    scenePath: Assets/Scenes/Levels/brumbleFast__scene.unity
   - sceneAsset: {fileID: 102900000, guid: f9c117abf175b66418d5de2bf9b7f777, type: 3}
-    scenePath: Assets/Scenes/levels/ChooseYourSide.unity
+    scenePath: Assets/Scenes/Levels/chooseYourSide__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 31814c023566a1a45bbc3bba5060984a, type: 3}
-    scenePath: Assets/Scenes/levels/FellowshipOfThePlant.unity
+    scenePath: Assets/Scenes/Levels/fellowshipOfThePlant__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 71b1641aa75e5714fa38ae685e810638, type: 3}
-    scenePath: Assets/Scenes/levels/FinalCut.unity
+    scenePath: Assets/Scenes/Levels/finalCut__scene.unity
   - sceneAsset: {fileID: 102900000, guid: b551490631e0e22428b0065c9960e758, type: 3}
-    scenePath: Assets/Scenes/levels/GoGetem!.unity
+    scenePath: Assets/Scenes/Levels/goGetem__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 1c8d153ac43b0eb40b78b3e265d10e09, type: 3}
-    scenePath: Assets/Scenes/levels/InfinityRock.unity
+    scenePath: Assets/Scenes/Levels/infinityRock__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 2911843d3e8980d449f791f5b0476edd, type: 3}
-    scenePath: Assets/Scenes/levels/Islanders.unity
+    scenePath: Assets/Scenes/Levels/islanders__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 357470434b3191647afc751c2a9654fe, type: 3}
-    scenePath: Assets/Scenes/levels/LineOfShot.unity
+    scenePath: Assets/Scenes/Levels/lineOfShot__scene.unity
   - sceneAsset: {fileID: 102900000, guid: eebd31eeb951e334fa11d7f7f922dad0, type: 3}
-    scenePath: Assets/Scenes/levels/LockOn.unity
+    scenePath: Assets/Scenes/Levels/lockOn__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 4a6f242b3e3ed064f852b8ef8ba00ff4, type: 3}
-    scenePath: Assets/Scenes/levels/Plantorial.unity
+    scenePath: Assets/Scenes/Levels/plantorial__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 68224650669481e4c8765db120ab9711, type: 3}
-    scenePath: Assets/Scenes/levels/PrisonBreak.unity
+    scenePath: Assets/Scenes/Levels/prisonBreak__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 215479e41c6f78b4291b8a3ed62098f5, type: 3}
-    scenePath: Assets/Scenes/levels/ProductionLine.unity
+    scenePath: Assets/Scenes/Levels/productionLine__scene.unity
   - sceneAsset: {fileID: 102900000, guid: ac9460c6b58d43c4fb567244a3136660, type: 3}
-    scenePath: Assets/Scenes/levels/Repetition.unity
+    scenePath: Assets/Scenes/Levels/repetition__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 20aa8974cf976c74cacda8e9638018aa, type: 3}
-    scenePath: Assets/Scenes/levels/RiverRush.unity
+    scenePath: Assets/Scenes/Levels/riverRush__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 183ffcca00723cf449881864f20166a6, type: 3}
-    scenePath: Assets/Scenes/levels/SimpleScheme.unity
+    scenePath: Assets/Scenes/Levels/simpleScheme__scene.unity
   - sceneAsset: {fileID: 102900000, guid: e9d7030ceca0f9c4f949e36d48767731, type: 3}
-    scenePath: Assets/Scenes/levels/Suburbia.unity
+    scenePath: Assets/Scenes/Levels/suburbia__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 4d3afecc827e01e4386ce607b38fa1e4, type: 3}
-    scenePath: Assets/Scenes/levels/SuicideSquad.unity
+    scenePath: Assets/Scenes/Levels/suicideSquad__scene.unity
   - sceneAsset: {fileID: 102900000, guid: 49bf4ad091b977a4eaf221464370d464, type: 3}
-    scenePath: Assets/Scenes/levels/Waterial.unity
+    scenePath: Assets/Scenes/Levels/waterial__scene.unity
   - sceneAsset: {fileID: 102900000, guid: ca40f447aea60554ebbc2053cacd40d2, type: 3}
-    scenePath: Assets/Scenes/levels/ZIGZAG.unity
+    scenePath: Assets/Scenes/Levels/zigzag__scene.unity
   levelsContainer: {fileID: 684481540}
   levelButtonPrefab: {fileID: 2804448142402236110, guid: f022ce0d97830f347adee0d2fdce9a9f,
     type: 3}
@@ -1068,7 +1008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1891490336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,3 +1194,93 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050315364}
   m_CullTransparentMesh: 0
+--- !u!1001 &6654249565038155841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6654249564917799214, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerInputManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799216, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799217, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_JoinAction.m_Action.m_Id
+      value: b8b0c127-d27e-498f-a28c-7bd677fc0254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799217, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_JoinAction.m_Action.m_Name
+      value: Join
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799217, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_JoinAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654249564917799217, guid: 5c24bfa6ef872d9459ab53848bc20036,
+        type: 3}
+      propertyPath: m_JoinAction.m_Reference
+      value: 
+      objectReference: {fileID: -1011278787820903911, guid: 9f5582228745a514489f61791c5491b1,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c24bfa6ef872d9459ab53848bc20036, type: 3}
