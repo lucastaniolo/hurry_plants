@@ -90,15 +90,11 @@ Naming conventions should be treated as law. A project that conforms to a naming
 
 Most assets are sufixed with sufixes being generally an acronym of the asset type preceded by underscores. That way, assets with similar names or variations and all its related content(materials, textures, etc) can stay close to each other inside the project directory folders. 
 
-### 1.1 Base Asset Name - `baseAssetName_variation__suffix(Asset Type)_subcategory(Asset Type)`
+### 1.1 Base Asset Name - `baseAssetName_variation_suffix(File Extension Sub-Type)_subcategory(File Extension Sub-Type)`
 
-*Note that suffix is preceded by two underscores*
+All assets should have a _Base Asset Name_. A Base Asset Name represents a logical grouping of related assets. Any asset that is part of this logical group should follow the the standard of `baseAssetName_variation_suffix(File Extension Sub-Type)_subcategory(File Extension Sub-Type)`.
 
-All assets should have a _Base Asset Name_. A Base Asset Name represents a logical grouping of related assets. Any asset that is part of this logical group should follow the the standard of `baseAssetName_variation__suffix(Asset Type)_subcategory(Asset Type)`.
-
-Keeping the pattern `baseAssetName_variation__suffix(Asset Type)_subcategory(Asset Type)` in mind and using common sense is generally enough to warrant good asset names. Here are some detailed rules regarding each element.
-
-Suffix is determined by the asset type following the Asset Name Modifier Tables. The reason why two underscores are used before the Asset Type Suffix is to safeguard against situations where the variation could mess the desired order to keep similar assets organized inside the folder. Examples below.
+Keeping the pattern `baseAssetName_variation_suffix(File Extension Sub-Type)_subcategory(File Extension Sub-Type)` in mind and using common sense is generally enough to warrant good asset names. Here are some detailed rules regarding each element.
 
 `baseAssetName` should be determined by short and easily recognizable name related to the context of this group of assets. For example, if you had a character named `bossPlant`, all of `bossPlant`'s assets would have the _Base Asset Name_ of `bossPlant`.
 
@@ -111,49 +107,25 @@ Depending on how your asset variations are made, you can chain together variatio
 
 You can see in the examples above that whenever the `variation` can have multiple descriptive words in a similar category, use the standard camelCase to separate them. e.g. `rock_mossWet`, `rock_mossDry`. Note that the adjective comes last, as the noun defining the variation is used to group similar assets in folder. This rule can also be applied to the baseAssetName itself, e.g. `bossPlant`, `bossAlien`.
 
+Suffixes are used to differentiate parts with the same file extension. So in a character with multiple materials, they could be named as `blossPlant_body` and `bossPlant_head`. The complete asset file extension name and its editor icon then become natural separators against name clashes. So `bossPlant_head.mat` and `bossPlant_head.shadergraph` designates the same sub-part or division of a given asset across different asset types. Because each asset is more likely to require parts, materials, textures set, etc than a `variation`, whenever there's a suffix right after the `baseAssetName`, assume it's a part of said asset. Should any `variation` occur it would naturally be placed between `baseAssetName` and said part(e.g. `blossPlant_pirate_body`).
+
+Subcategory are used to further specify assets intended to be used with parts defined by the asset suffix. Common use cases are textures to used with specific materials of an asset(`blossPlant_body_normal.png`), animation clips or Sub-Graphs to be used inside larger specific Shader Graphs.   
+
 #### 1.1 Examples
 
-##### 1.1e1 bossPlant
+##### 1.1e1 bossPlant (file extensions omitted)
 
-| Asset Type                         | Asset Name                                                 |
-| ---------------------------------- | ---------------------------------------------------------- |
-| Skinned Mesh                       | bossPlant__sk                                              |
-| Shader Graph                       | bossPlant__shaderGraph                                     |
-| Material                           | bossPlant__mat                                             |
-| Material(Body)                     | bossPlant__matBody                                         |
-| Material(Head)                     | bossPlant__matHead                                         |
-| Texture(Albedo/Transparency)       | bossPlant__tex_albedoTransparency                          |
-| Texture(Body-Albedo/Transparency)  | bossPlant__texBody_albedoTransparency                      |
-| Prefab                             | BossPlant                                                  |
-| Prefab Variant                     | BossPlant_Damaged                                          |
-
-##### 1.1e2 Bad example - `bossPlant` and `bossPlant` with `pirate` skin: Order of related assets inside a directory using only one underscore for Asset Type Suffix.
-
-> bossPlant_geo
->
-> bossPlant_mat
->
-> bossPlant_pirate_geo
->
-> bossPlant_pirate_mat
->
-> bossPlant_pirate_tex_normal
->
-> bossPlant_tex_normal
-
-##### 1.1e3 Proposed convention example - `bossPlant` and `bossPlant` with `pirate` skin: Order of related assets inside a directory using two underscores for Asset Type Suffix
-
-> bossPlant__geo
->
-> bossPlant__mat
->
-> bossPlant__tex_normal
->
-> bossPlant_pirate__geo
->
-> bossPlant_pirate__mat
->
-> bossPlant_pirate__tex_normal
+| Asset Type                                           | Asset Name                                                 |
+| ---------------------------------------------------- | ---------------------------------------------------------- |
+| Skinned Mesh                                         | bossPlant_sk                                               |
+| Static Mesh                                          | bossPlant_geo                                              |
+| Single Material                                      | bossPlant                                                  |
+| Material (Body)                                      | bossPlant_body                                             |
+| Material (Head)                                      | bossPlant_head                                             |
+| Texture (Single Material-Albedo/Transparency)        | bossPlant_albedoTransparency                               |
+| Texture (Body-Albedo/Transparency)                   | bossPlant_body_albedoTransparency                          |
+| Prefab                                               | BossPlant                                                  |
+| Prefab Variant(Damaged)                              | BossPlant_Damaged                                          |
 
 ### 1.2 Asset Name Modifiers
 
@@ -181,33 +153,33 @@ You can see in the examples above that whenever the `variation` can have multipl
 
 | Asset Type                         | Suffix               | Subcategory                      | Notes                                                                                                                                                                                                                                |   
 | ---------------------------------- | -------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------                                                                                                     |
-| Unity Scene                        | __scene              |                                  | Used for Master/Persistent Scene                                                                                                                                                                                                     |
-| Unity Subscene                     | __scene              | _"scenePurpose"                  | Used for Multi-Scene workflows (e.g. tavern__scene_props)                                                                                                                                                                            |
-| Material                           | __mat                | "MaterialPart"                   | Optional subcategory for assets with multiple submaterials/texture sets. Appended after main suffix without underscores, with capital letter, respecting the camelCase standard(e.g. bossPlant_matHead)                              |
-| Static Mesh                        | __geo                |                                  | Non-deforming meshes. Generally receives pre-baked data (e.g. Lightmaps)                                                                                                                                                             |
-| Skinned Mesh                       | __sk                 |                                  | Deforming meshes                                                                                                                                                                                                                     |
-| Texture                            | __tex                | "MaterialPart" _"texturePurpose" | Optional "MaterialPart" subcategory for assets with multiple submaterials. Appended after main suffix without underscores, with capital letter, respecting the camelCase standard. For "texturePupose" See [Textures](#anc-textures) |                                                               
-| Prefab                             | None                 | _Variant                         | Prefabs are the only asset types without defining suffixes. BaseAssetName and its following prefab variants should be PascalCase                                                                                                     |
+| Unity Scene                        |                      |                                  | Unity scenes doesn't adhere to any naming convention. They can be named with spaces and special characters, as didcated by their design docs names                                                                                   |
+| Material                           | _"materialPart"      |                                  | Materials for assets with a single material slot can be named as `baseAssetName`. Assets with multiple material slots should have a descriptive suffix, the same as it was named in the source application                           |
+| Static Mesh                        | _geo                 |                                  | Non-deforming meshes. Generally receives pre-baked data (e.g. Lightmaps)                                                                                                                                                             |
+| Skinned Mesh                       | _sk                  | @"clipPurpose"                   | Deforming meshes. For "clipPurpose" See [Animation](#anc-animation)                                                                                                                                                                  |
+| Texture                            | _"materialPart"      | _"texturePurpose"                | Optional "_materialPart" suffix for assets with multiple submaterials. For "texturePupose" See [Textures](#anc-textures)                                                                                                             |                                                               
+| Prefab                             | _"Variant"           |                                  | Prefabs are named after `baseAssetName`(and its `variation`) in PascalCase. Prefabs Variants are appended as suffixes, also named in PascalCase.                                                                                     |
 
 <a name="anc-textures"></a>
 <a name="1.2.2"></a>
 #### 1.2.2 Textures
 
 When in doubt of which subcategory to use on textures containing unusual information, opt for clarity over brevity.
+If the texture usage is generic(i.e. flat values to used as placeholders in Shader Graphs, the `baseAssetName` and  an optional `variation` should be enough to clarify its use(i.e. flat_grayscale.png, flat_white.png) 
 
-Note that for Unity's default shaders(such as _URP Lit_) that expects information in the texture Alpha Channel on some map slots, always add the name of the map that goes into the Alpha Channel, even if the materials is opaque and the channel is not being used (e.g. `wallBrick_tex_albedoTransparency`). 
+Note that for Unity's default shaders(such as _URP Lit_) that expects information in the texture Alpha Channel on some map slots, always add the name of the map that goes into the Alpha Channel, even if the materials is opaque and the channel is not being used (e.g. `crate_albedoTransparency`). 
 
 | Asset Type                          | Suffix                | Subcategory                                 | Notes                                                                                                                                                                                                                                   |   
 | ----------------------------------- | --------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Texture                             | __tex                 | "MaterialPart"                              | SubCategory can be left blank if the texture is used as dummy or without a specific shader output in mind(e.g. baseGray__tex). Optional "MaterialPart" for assets with multiple submaterials(e.g. bossPlant_texHead_metallicSmoothness) |
-| Texture(URP Lit-Base Map Slot)      | __tex                 | "MaterialPart"_albedoTransparency           | Transparency Map(if used) is always stored in the image Alpha Channel                                                                                                                                                                   |
-| Texture(URP Lit-Metallic Map Slot)  | __tex                 | "MaterialPart"_metallicSmoothness           | Smoothness Map(if used) is always stored in the Metallic Alpha                                                                                                                                                                          |
-| Texture(URP Lit-Normal Map Slot)    | __tex                 | "MaterialPart"_normal                       |                                                                                                                                                                                                                                         |
-| Texture(URP Lit-Occlusion Map Slot) | __tex                 | "MaterialPart"_occlusion                    | Ambient Occlusion                                                                                                                                                                                                                       |
-| Texture(URP Lit-Emission Map Slot)  | __tex                 | "MaterialPart"_emission                     | Emissive Textures                                                                                                                                                                                                                       |                                                               
-| Texture(Custom Packing Example)     | __tex                 | "MaterialPart"_occlusionSmoothnessMetallic  | Occlusion in Red Channel, Smoothness in Green Channel, Metallic on Blue Channel                                                                                                                                                         |
-| Texture(Cubemaps)                   | __tex                 | _cube                                       | Generally used for HDRIs                                                                                                                                                                                                                |
-| Render Texture                      | __renderTex           |                                             | Special kind of textures generated & updated at runtime for some special effects                                                                                                                                                        |
+| Texture                             | _"materialPart"       | "_texturePurpose"                           | Optional suffix designates material slot the texture belongs to. "texturePurpose" usually designates the intended shader output for the image, as seen listed in this table.                                                            |
+| Texture(URP Lit-Base Map Slot)      | _"materialPart"       | _albedoTransparency                         | Transparency Map(if used) is always stored in the image Alpha Channel                                                                                                                                                                   |
+| Texture(URP Lit-Metallic Map Slot)  | _"materialPart"       | _metallicSmoothness                         | Smoothness Map(if used) is always stored in the Metallic Alpha                                                                                                                                                                          |
+| Texture(URP Lit-Normal Map Slot)    | _"materialPart"       | _normal                                     |                                                                                                                                                                                                                                         |
+| Texture(URP Lit-Occlusion Map Slot) | _"materialPart"       | _occlusion                                  | Ambient Occlusion                                                                                                                                                                                                                       |
+| Texture(URP Lit-Emission Map Slot)  | _"materialPart"       | _emission                                   | Emissive Textures                                                                                                                                                                                                                       |                                                               
+| Texture(Custom Packing Example)     | _"materialPart"       | "MaterialPart"_occlusionSmoothnessMetallic  | Occlusion in Red Channel, Smoothness in Green Channel, Metallic on Blue Channel                                                                                                                                                         |
+| Texture(Cubemaps)                   |                       |                                             | HDRIs are used for cubemaps, so the baseAssetName and the file extension are enough to infer the image target use                                                                                                                       |
+                                                                                                                                                    
 
 <a name="anc-materials"></a>
 <a name="1.2.3"></a>
@@ -215,33 +187,35 @@ Note that for Unity's default shaders(such as _URP Lit_) that expects informatio
 
 Note that when creating materials from a Shader Graph, the Shader Graph name is appended to the new material asset. Remember to rename it properly.
 
-| Asset Type                         | Suffix               | Subcategory                      | Notes                                                                                                                                                                                          |   
-| ---------------------------------- | -------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Material                           | __mat                | "MaterialPart"                   | Optional "MaterialPart" subcategory for assets with multiple submaterials/texture sets. Appended after main suffix without underscores, with capital letter, respecting the camelCase standard |
-| Shader Graph                       | __shaderGraph        | "MaterialPart"                   | Optional "MaterialPart" subcategory for assets with multiple submaterials/texture sets. Appended after main suffix without underscores, with capital letter, respecting the camelCase standard |
-| Subgraph                           | __subGraph           |                                  |                                                                                                                                                                                                |
+| Asset Type                         | Suffix               | Subcategory                      | Notes                                                                                                                                                                                                      |   
+| ---------------------------------- | -------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Material                           | _"materialPart"      |                                  | Materials for assets with a single material slot can be named as `baseAssetName`. Assets with multiple material slots should have a descriptive suffix, the same as it was named in the source application |
+| Shader Graph                       | _"materialPart"      |                                  | Optional Suffix subcategory for assets with multiple submaterials/texture sets.                                                                                                                            |
+| Subgraph                           |                      |                                  | Name of the subgraph should generally describe the SubGraph role inside a bigger Shader Graph(i.e.: "fitRange", "smoothStep")                                                                           |
 
 <a name="anc-animation"></a>
 <a name="1.2.4"></a>
 #### 1.2.4 Animation
 
-| Asset Type                         | Suffix                | Subcategory                      | Notes                                                                 |   
-| ---------------------------------- | --------------------- | -------------------------------- | --------------------------------------------------------------------- |
-| Skinned Mesh                       | __sk                  |                                  | Deforming meshes                                                      |
-| FBX file with animated joints      |                       | @clipName                        | Unity specific convention. e.g. bossPlant__sk@idle                    |
-| FBX file with animated Joints      |                       | @clipName_"variation"            | e.g. bossPlant__sk@idleDab_left, soldierEnemy__sk@aimingWalk_backward |
-| Animation                          | __animation           |                                  | Unity's animation files                                               |
-| Animation Controller               | __animationController |                                  |                                                                       |                      
+| Asset Type                         | Suffix                | Subcategory                      | Notes                                                                                                                                                                                                                                   |   
+| ---------------------------------- | --------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skinned Mesh                       | _sk                   |                                  | Skinned meshes with no animation.                                                                                                                                                                                                       |
+| FBX file with animated joints      | _sk                   | @clipName                        | Unity specific convention for animation clips. Should have the same `baseAssetName` before the suffix as the target skinned mesh in the same directory, so Unity can correctly assign the clip the to its mesh.  e.g. bossPlant_sk@idle |
+| FBX file with animated Joints      | _sk                   | @clipName_"variation"            | e.g. bossPlant_sk@idleDab_left, soldierEnemy_sk@aimingWalk_backward                                                                                                                                                                     |
+| Animation                          | _"animationPurpose"   |                                  | Suffix is a descriptive name for the animation use                                                                                                                                                                                      |
+| Animation Controller               | _"controllerPurpose"  |                                  | Optional suffix in case the controller needs a specific description                                                                                                                                                                                                                                         |                      
 
 <a name="anc-rendering"></a>
 <a name="1.2.5"></a>
 #### 1.2.5 Rendering
 
+As of Unity 2019.3, common rendering related assets have no dedicated icon and file extensions, so suffixes are need to clarify the asset target-use 
+
 | Asset Type                         | Suffix               | Subcategory                      | Notes                                                                            |   
 | ---------------------------------- | -------------------- | -------------------------------- | -------------------------------------------------------------------------------- |
-| Universal Render Pipeline Asset    | __urp                | _renderer                        | Stores project-wide render settings                                              |
-| Post Process Profile               | __postProcess        |                                  |                                                                                  |
-| Volume Profile                     | __volumeProfile      | _"volumePurpose"                 | Generic Volume Asset. Describe its purpose with subcategories(e.g. _postProcess) |
+| Universal Render Pipeline Asset    | _urp                 | _renderer                        | Stores project-wide render settings                                              |
+| Post Process Profile               | _postProcess         |                                  |                                                                                  |
+| Volume Profile                     | _volumeProfile       | _"volumePurpose"                 | Generic Volume Asset. Describe its purpose with subcategories(e.g. _postProcess) |
 
 <a name="anc-ui"></a>
 <a name="1.2.6"></a>

@@ -20,9 +20,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bossPlant__matBody_01
+  m_Name: bossPlant_body
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 038ebada7d7dedc47a3714a512eafe02, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -80,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 038ebada7d7dedc47a3714a512eafe02, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -141,7 +141,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossinessSource: 0
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.029
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -152,9 +152,9 @@ Material:
     - _RequireSplitLighting: 0
     - _SampleGI: 0
     - _Shininess: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0.485
     - _SmoothnessSource: 0
-    - _SmoothnessTextureChannel: 0
+    - _SmoothnessTextureChannel: 1
     - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -197,7 +197,7 @@ Material:
     - Vector2_627A0F62: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_BBF8CEC2: {r: 0, g: 0, b: 0, a: 0}
     - Vector3_73F21F97: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 0.18828154, g: 0, b: 1, a: 1}
+    - _BaseColor: {r: 0.6886792, g: 0.5438108, b: 0.24363652, a: 1}
     - _Color: {r: 0.9245283, g: 0.039248828, b: 0.048010644, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
