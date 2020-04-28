@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3458386195943052813
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: waterfall
+  m_Shader: {fileID: -6465566751694194690, guid: 77581f90ccd348a4d9fd9f48363e76d6,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - Vector1_1586E8B: 1.27
+    - Vector1_1BD3D2D3: -1
+    - Vector1_30E1DD60: -0.12
+    - Vector1_4D2BA7A5: 357.39
+    - Vector1_63AC474A: -0.89
+    - Vector1_85F9ECE5: 0
+    - Vector1_881CA426: 1.1
+    - Vector1_98993937: 28
+    - Vector1_E7843860: 0.298
+    - Vector1_F1ED96E: 0
+    m_Colors:
+    - Color_ADE12A7: {r: 0.73810816, g: 1.6089631, b: 2.143547, a: 0}
+    - Color_AFAD8D03: {r: 1, g: 1, b: 1, a: 0}
