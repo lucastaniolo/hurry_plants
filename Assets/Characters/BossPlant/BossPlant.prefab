@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7778662920148294750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75107, y: 0.75107, z: 0.75107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5226741971746941486}
   - {fileID: 2495825408742795617}
@@ -438,17 +438,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 1305fe20dd0c2114281c909e377dca16,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.000012532
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1305fe20dd0c2114281c909e377dca16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.031
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1305fe20dd0c2114281c909e377dca16,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.067604
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1305fe20dd0c2114281c909e377dca16,
         type: 3}
@@ -489,6 +489,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 1305fe20dd0c2114281c909e377dca16,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.0157
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 1305fe20dd0c2114281c909e377dca16,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.0157
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 1305fe20dd0c2114281c909e377dca16,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.0157
       objectReference: {fileID: 0}
     - target: {fileID: -4127710107216286628, guid: 1305fe20dd0c2114281c909e377dca16,
         type: 3}
@@ -638,7 +653,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 1305fe20dd0c2114281c909e377dca16,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -814789813427254589, guid: 1305fe20dd0c2114281c909e377dca16,
         type: 3}
@@ -1161,6 +1176,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FrogPlant
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6e10e49b6324ab1409bc38c789cf7755,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e10e49b6324ab1409bc38c789cf7755, type: 3}

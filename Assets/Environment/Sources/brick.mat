@@ -21,15 +21,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: brick
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 775be95224529fa4b8bd80952fe9d064,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
+  m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
-    RenderType: Opaque
   disabledShaderPasses:
   - TransparentBackface
   - MOTIONVECTORS
@@ -56,6 +56,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_453B3E06:
+        m_Texture: {fileID: 2800000, guid: 3e6a8c87ab0d12b4ebe241ac558271cc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_57D68442:
+        m_Texture: {fileID: 2800000, guid: 62f6cd576a2b4664aa6d8d257d3b720b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_589137F6:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,12 +84,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: 62f6cd576a2b4664aa6d8d257d3b720b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_ECC9A3A5:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_F31EBBF:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 051a47acb5d41a44082341cf3625eb82, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6c3e0ef98246277489293c5f2eceda8a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -111,11 +123,14 @@ Material:
     m_Floats:
     - Boolean_24DEBF68: 0
     - Boolean_335B3A86: 1
+    - Boolean_D82B6D1B: 1
     - Boolean_ED438E34: 0
+    - Vector1_1E968103: 0.09
     - Vector1_25B1C2AC: 0.05
     - Vector1_29E4DF93: 0.1
     - Vector1_2D57A03: -0.27
     - Vector1_2DE3DE74: 1
+    - Vector1_3BCB08F5: -0.15
     - Vector1_3F9FDE92: 0
     - Vector1_570F62BF: 0.17
     - Vector1_5D30D814: 0
@@ -134,6 +149,7 @@ Material:
     - Vector1_B0A2529A: 0
     - Vector1_D7F6F83C: 0
     - Vector1_D903B296: 0
+    - Vector1_DD9E2F56: 0
     - Vector1_ECF6F036: 0
     - Vector1_F8F1095: 0.1
     - _AlphaClip: 0
@@ -161,6 +177,7 @@ Material:
     - _ReceivesSSR: 1
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
+    - _SampleGI: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -199,6 +216,7 @@ Material:
     - Color_DF34C157: {r: 0, g: 0, b: 1.7411011, a: 0}
     - Color_E0F07555: {r: 0.9245283, g: 0.52189195, b: 0.44045925, a: 0}
     - Color_E8ECA824: {r: 0, g: 0, b: 0, a: 0}
+    - Color_EA318800: {r: 0.3773585, g: 0.012459958, b: 0.012459958, a: 0}
     - Color_EBFEF514: {r: 1, g: 0, b: 0, a: 0}
     - Color_F38B9D1B: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
     - Color_FBD7D122: {r: 0.38679248, g: 0, b: 0.13409586, a: 0}
@@ -211,7 +229,7 @@ Material:
     - Vector2_BBF8CEC2: {r: 0, g: 0, b: 0, a: 0}
     - Vector3_453BC6EB: {r: 0, g: 0, b: 0, a: 0}
     - Vector3_73F21F97: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 0.6226415, g: 0.0029369951, b: 0.0029369951, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

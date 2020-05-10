@@ -21,15 +21,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: levelTile_light
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 775be95224529fa4b8bd80952fe9d064,
+    type: 3}
   m_ShaderKeywords: _ENVIRONMENTREFLECTIONS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
+  m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
-    RenderType: Opaque
   disabledShaderPasses:
   - MOTIONVECTORS
   - TransparentBackface
@@ -48,6 +48,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 602e8211e8fa4fb47a123db329480314, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_453B3E06:
+        m_Texture: {fileID: 2800000, guid: b7cf28c2866892d478c375df8d811360, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_57D68442:
+        m_Texture: {fileID: 2800000, guid: 1a3591cb21645bf458f282980465fc79, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_589137F6:
         m_Texture: {fileID: 2800000, guid: ed2042ac3df93e9428dd1ed78a2171a8, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -62,6 +70,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - Texture2D_8246F929:
         m_Texture: {fileID: 2800000, guid: 602e8211e8fa4fb47a123db329480314, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_ECC9A3A5:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -94,11 +106,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_24DEBF68: 0
+    - Boolean_D82B6D1B: 1
     - Boolean_ED438E34: 0
+    - Vector1_1E968103: 1
     - Vector1_25B1C2AC: 0.05
     - Vector1_29E4DF93: 0.1
     - Vector1_2D57A03: -0.27
     - Vector1_2DE3DE74: 0.1
+    - Vector1_3BCB08F5: 0.67
     - Vector1_3F9FDE92: 0
     - Vector1_570F62BF: 0.17
     - Vector1_5E51BDDD: -1.3
@@ -109,6 +124,7 @@ Material:
     - Vector1_A5B3A4F5: 1.75
     - Vector1_B0A2529A: 0
     - Vector1_D903B296: -0.49
+    - Vector1_DD9E2F56: 0
     - Vector1_ECF6F036: 0
     - Vector1_F8F1095: 0.1
     - _AlphaClip: 0
@@ -170,6 +186,7 @@ Material:
     - Color_A9C02619: {r: 0.566694, g: 0.8867924, b: 0.56470275, a: 0}
     - Color_DF34C157: {r: 0, g: 0.10735561, b: 0.254717, a: 1}
     - Color_E8ECA824: {r: 0, g: 0, b: 0, a: 0}
+    - Color_EA318800: {r: 1, g: 1, b: 1, a: 0}
     - Color_EBFEF514: {r: 1, g: 0, b: 0, a: 0}
     - Color_FBD7D122: {r: 1, g: 1, b: 1, a: 0}
     - Vector2_2A083235: {r: 1, g: 1, b: 0, a: 0}
